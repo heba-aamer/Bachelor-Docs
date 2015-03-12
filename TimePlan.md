@@ -11,13 +11,13 @@ April:
     - Think of implementation and put a design. [23/4]
     - Start writing the Thesis. [30/4]
          - Introduction / Problem Statement
-         - Background / Theory
 
 May:
 ----
     - Finish implementation. [18/5]
     - Adding configurations. [23/5]
     - Continue writing the Thesis. [31/5]
+         - Background / Theory
          - Design
 
 June:
@@ -31,6 +31,12 @@ June:
 
 July:
 -----
-    - Solve Interesting things that happened :). [16/7]
+    - Fix Interesting things that happened :) . [16/7]
     - Work on adding extra features. (work dependant). [16/7]
     - Prepare for the Presentation. [25/7]
+
+To add:
+-------
+    - detailed plan for the design and implementation phases.
+    - times for the small talks and presentations.
+
