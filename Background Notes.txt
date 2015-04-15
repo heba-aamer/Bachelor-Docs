@@ -1,0 +1,37 @@
+# Defintions:
+-------------
+
+///////////TODO///////////
+
+_____________________________________________________________________________________________
+# Notes about EPR:
+-------------------
+
+EPR (Effectively propositional calculus) or sometimes known as Bernays-Schonfinkel class
+is a class of first order logic in which all of its formulas follow the following format:
+(exits)* (all)* F, where F is the formula.
+Moreover, F has no proper functions symbols (all functions present are nullary ones "constants").
+
+These will make our transformations (procedures) get simplified.
+Specifically, in range restricting transformations and blocking since they have some steps related
+to functions in the domain, and in the case of the EPR no function symbols will be found.  
+
+
+______________________________________________________________________________________________
+# Notes about finite interpretations:
+-------------------------------------
+
+
+______________________________________________________________________________________________
+# Notes about Herbrand Universe:
+--------------------------------
+
+
+______________________________________________________________________________________________
+# Notes about E:
+----------------
+E is a theorem prover for full equational first order logic.
+It is a saturation based theorem prover.
+
+
+______________________________________________________________________________________________
