@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{book}%, oneside
+\documentclass[12pt, a4paper, oneside]{book}%, oneside to be removed if printing needed
 
 \usepackage[headings]{fullpage}
 \usepackage{setspace}
@@ -28,16 +28,16 @@
 
 \newcommand{\submissionDay}{XX}
 \newcommand{\submissionMonth}{July}
-\newcommand{\submissionYear}{20XX}
+\newcommand{\submissionYear}{2015}
 \newcommand{\submissionDate}{\submissionDay~\submissionMonth,~\submissionYear}
 \newcommand{\typeOfThesis}{Bachelor Thesis}
 
-\newcommand{\titleOfThesisOne}{Bachelor Thesis Title}
+\newcommand{\titleOfThesisOne}{Mission impossible: Disproving failed conjectures}
 
-\newcommand{\authorOfThesis}{Author}
-\newcommand{\supervisorOne}{Sup 1}
-\newcommand{\supervisorTwo}{Sup 2}
-\newcommand{\supervisorThree}{Sup 3}
+\newcommand{\authorOfThesis}{Heba Aamer Anwar Mohamed}
+\newcommand{\supervisorOne}{Professor Dr. Stephan Schulz}
+%\newcommand{\supervisorTwo}{Sup 2}
+%\newcommand{\supervisorThree}{Sup 3}
 
 \newcommand{\includefig}[4]{
     \begin{figure}[ht]
@@ -81,7 +81,7 @@
 \pagestyle{plain}
 \pagenumbering{Roman}
 
-\include{GUC_TitlePage}
+\include{titlePage}
 
 \include{acknowledgments}
 
@@ -102,7 +102,9 @@
 \include{introduction}
 \include{background}
 
-% add more chapters here
+\include{methodology_and_implementation}
+\include{testing_and_validation}
+\include{results_and_literature_review}
 
 \include{conclusion}
 \include{future_work}

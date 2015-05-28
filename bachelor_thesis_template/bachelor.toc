@@ -1,11 +1,16 @@
-\contentsline {chapter}{Acknowledgments}{V}{chapter*.1}
+\contentsline {chapter}{Acknowledgments}{III}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Section Name}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Another Section}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}Conclusion}{5}{chapter.3}
-\contentsline {chapter}{\numberline {4}Future Work}{7}{chapter.4}
-\contentsline {chapter}{Appendix}{8}{section*.6}
+\contentsline {chapter}{\numberline {2}Background}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background on first order logic topics}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}E's implementation and state}{2}{section.2.2}
+\contentsline {chapter}{\numberline {3}Methodology and Implementation}{3}{chapter.3}
+\contentsline {chapter}{\numberline {4}Testing and Validation}{4}{chapter.4}
+\contentsline {section}{\numberline {4.1}Section Name}{4}{section.4.1}
+\contentsline {section}{\numberline {4.2}Another Section}{4}{section.4.2}
+\contentsline {chapter}{\numberline {5}Results and Literature review}{5}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{6}{chapter.6}
+\contentsline {chapter}{\numberline {7}Future Work}{7}{chapter.7}
+\contentsline {chapter}{Appendix}{8}{section*.9}
 \contentsline {chapter}{\numberline {A}Lists}{9}{appendix.A}
-\contentsline {section}{List of Abbreviations}{9}{section*.7}
-\contentsline {section}{List of Figures}{10}{appendix*.8}
+\contentsline {section}{List of Abbreviations}{9}{section*.10}
+\contentsline {section}{List of Figures}{10}{appendix*.11}

@@ -1,11 +1,16 @@
 \BOOKMARK [0][-]{chapter*.1}{Acknowledgments}{}
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{Section Name}{chapter.1}
-\BOOKMARK [1][-]{section.1.2}{Another Section}{chapter.1}
 \BOOKMARK [0][-]{chapter.2}{Background}{}
-\BOOKMARK [0][-]{chapter.3}{Conclusion}{}
-\BOOKMARK [0][-]{chapter.4}{Future Work}{}
-\BOOKMARK [0][-]{section*.6}{Appendix}{}
+\BOOKMARK [1][-]{section.2.1}{Background on first order logic topics}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{E's implementation and state}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Methodology and Implementation}{}
+\BOOKMARK [0][-]{chapter.4}{Testing and Validation}{}
+\BOOKMARK [1][-]{section.4.1}{Section Name}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Another Section}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Results and Literature review}{}
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}
+\BOOKMARK [0][-]{chapter.7}{Future Work}{}
+\BOOKMARK [0][-]{section*.9}{Appendix}{}
 \BOOKMARK [0][-]{appendix.A}{Lists}{}
-\BOOKMARK [1][-]{section*.7}{List of Abbreviations}{appendix.A}
-\BOOKMARK [1][-]{appendix*.8}{List of Figures}{appendix.A}
+\BOOKMARK [1][-]{section*.10}{List of Abbreviations}{appendix.A}
+\BOOKMARK [1][-]{appendix*.11}{List of Figures}{appendix.A}
