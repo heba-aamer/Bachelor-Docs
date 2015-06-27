@@ -1,2 +1,42 @@
-\section{E's implementation and state} \label{sec:c2s2}
-E is a saturation-based theorem prover. It is known to be a fast one because of the unique and various heuristics implemented in it.  
+\section{The theorem prover E} \label{sec:c2s3}
+E is a saturation-based theorem prover that is concerned with full \ac{fol} with equality. It is known to be a fast one because of the unique and various heuristics implemented in it.
+\\
+The current state of E, that it could prove the un-satisfiability of set of axioms with the negation of the conjecture(s) by finding the empty clause, or returning the saturated set if the empty clause was not found and no more new clauses can be inferenced/simplified.
+\\
+\subsection{The main proof procedure}
+This part is devoted from giving a brief on the main proof saturation procedure.
+\\Search state: U ∪ P
+\\U contains unprocessed clauses, P contains processed clauses.
+\\Initially, all clauses are in U , P is empty.
+\\The given clause is denoted by g.
+\\while U = {}
+\\g = delete best(U )
+\\g = simplify(g, P )
+\\if g ==
+\\SUCCESS, Proof found
+\\if g is not subsumed by any clause in P (or otherwise redundant w.r.t. P )
+\\P = P \ {c ∈ P | c subsumed by (or otherwise redundant w.r.t.) g}
+\\T = {c ∈ P | c can be simplified with g}
+\\P = (P \ T ) ∪ {g}
+\\T = T ∪ generate(g, P )
+\\foreach c ∈ T
+\\c = cheap simplify(c, P )
+\\if c is not trivial
+\\U = U ∪ {c}
+\\SUCCESS, original U is satisfiable
+\\Remarks: delete best(U ) finds and extracts the clause with the best heuristic eval-
+\\uation (see 3.3) from U . generate(g, P ) performs all generating inferences using g
+\\as one premise, and clauses from P as additional premises. It uses inference rules
+\\(SP) or (SSP), (SN) or (SSN), (ER) and (EF).
+\\simplify(c, S) applies all simplification inferences in which the main (simplified)
+\\premise is c and all the other premises are clauses from S. This typically includes
+\\full rewriting, (CD) and (CLC). cheap simplify(c, S) works similarly, but only ap-
+\\plies inference rules with a particularly low cost implementation, usually including
+\\rewriting with orientable units, but not (CLC). The exact set of contraction rules
+\\used is configurable in either case.
+\\Fig. 2. Saturation procedure of E
+
+%TODO add a picture instead or just simplify it more without all these details and a link to it from the paper.
+  
+\subsection{Latest results}
+The latest results showed performance approaching 70\% over all the CNF and FOF problems and this is according to \cite{E13} 

@@ -1,0 +1,13 @@
+\subsection{Skolemization}\label{sub:c2s1s3}
+Skolemization is the step that transforms \ac{pnf} formulas into \ac{snf}.
+In which all the existentially quantified variables are removed and replaced by some function terms and its arguments are all the universally quantified variables appeared before the one in concern.\\
+Example for a formula in \ac{pnf}:\newline
+\begin{displaymath}
+\exists W \forall X \forall Y \exists Z  \left(P(a,W,X,Y,Z)\right).  
+\end{displaymath}\newline
+After it transformed into \ac{snf}:\newline
+\begin{displaymath}
+\forall X \forall Y  \left(P(a,b,X,Y,f(X,Y))\right).  
+\end{displaymath}
+
+%TODO add link to the algorithm of the transformation in the appendix. 

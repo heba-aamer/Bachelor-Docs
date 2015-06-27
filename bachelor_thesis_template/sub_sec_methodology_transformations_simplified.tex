@@ -1,0 +1,45 @@
+\subsection{Simplified transformations}\label{sub:c3s1s2}
+
+This part is concerned about discussing the simplifications that were added to the original transformations highlighted in \ref{sub:c3s1s1}.
+\\
+Keeping in mind the definition of \ac{epr} as mentioned here in \ref{sub:c2s1s4}.
+\\
+So the following were made to each of the procedures:
+\\
+1- Every step that only deals with proper function symbols is removed since they are not existing in \ac{epr}.
+\\
+2- Any step or procedure that was introduced because of the existence of problems because of proper function symbols were removed as well. Ex.: pf, sh, and bl.
+\\
+\\
+Therefore the resultant simplified procedures are the following:
+\\
+For crr:
+\\
+(0) Initialization. Initially, let crr(M) := M.
+\\
+(1) Add a constant. Let dom be a “fresh” unary predicate symbol not in ΣP , and let c
+be some constant. Extend crr(M) by the clause dom(c) ← . (The constant c can
+be “fresh” or belong to Σ f .)
+\\
+(2) Range-restriction. For each clause H ← B in crr(M), let {x1 , . . . , xk } be the set of
+variables occurring in H but not in B . Replace H ← B by the clause
+H ← B ∧ dom(x1 ) ∧ · · · ∧ dom(xk ).
+\\
+\\
+For rr:
+\\
+(0) Initialization. Initially, let rr(M) := M.
+\\
+(1) Add a constant. Same as Step (1) in the definition of crr.
+\\
+(2) Domain elements from clause bodies. For each clause H ← B in M and each atom
+P(t1 , . . . ,tn ) from B , let P(s1 , . . . , sn ) be the term abstraction of P(t1 , . . . ,tn ) and let α be the corresponding abstraction substitution. Extend rr(M) by the set
+{dom(xi )α ← P(s1 , . . . , sn ) | 1 ≤ i ≤ n and xi → ti ∈ α}.
+\\
+(3) Range-restriction. Same as Step (2) in the definition of crr.
+\\
+(4) Domain elements from ΣP . For each n-ary P in Σ p , extend rr(M) by the set
+{dom(xi ) ← P(x1 , . . . , xn ) | i ≤ i ≤ n}.
+
+
+  

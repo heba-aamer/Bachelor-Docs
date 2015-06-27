@@ -1,0 +1,22 @@
+\subsection{Original transformations}\label{sub:c3s1s1}
+The original procedures discussed in \cite{BMUG06} generally work for all sub-classes of \ac{fol}.
+Those procedures should be applied to a given set of axioms in a specific form "implication form" which is explained here -- , and here -- to know how to transform to that form.
+\\
+Transformations are series of procedures, mainly about changing the clauses to certain form named range restricted form. 
+In general the transfromations deal with clauses in the implication from.
+Range restricted clauses: are the clauses in which all the variables that appear in the succeedent must exist in the anticedent as well.
+Transformations also add a domain predicate that will help in finding the interpretations.
+\\
+There are 3 types of transformations:
+\\
+First 2 transformations: "Range restricting transformations" 'crr' and a variant of it 'rr'
+mainly responsible for changing the clauses to the range restricted form.
+The difference is that 'rr' adds elements to the domain when it needs them, while 'crr' enumerate the Herbrand Universe.
+\\
+Second 2 transfromations: "Shifting transformations" 'bs' and 'pf'
+mainly for preventing non-termination and generating unpleasant clauses from steps in 'rr' 
+\\
+Last transfromation: "Blocking transformation" 'bl'
+mainly for detecting periodictiy, so it defines a new predicate sub/2 that represents a subterm relation
+\\
+Order of applying those transformations is shifting -> range restricting -> blocking

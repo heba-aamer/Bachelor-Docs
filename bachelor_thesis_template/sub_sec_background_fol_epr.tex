@@ -1,0 +1,15 @@
+\subsection{\ac{epr}}\label{sub:c2s1s4}
+\ac{epr} or sometimes known as Bernays-Schoenfinkel class
+is a class of first order logic in which all of its formulas follow the following format:\\*
+$\exists *$ $\forall *$ F, where F is the formula.
+Moreover, F has no proper functions symbols (all functions present are nullary ones "constants").\newline
+Example for a formula in \ac{epr}:\newline
+\begin{displaymath}
+\exists X \exists Y \forall Z  \left(P(a,X,Y,Z)\right).
+\end{displaymath}
+\\
+Keeping \ref{sub:c2s1s3} in mind, this will make every skolemized formula that originally was in \ac{epr} format have no proper function symbols.
+After transforming the above equation, it will be: \newline
+\begin{displaymath}
+\forall Z \left( P(a,b,c,Z) \right).
+\end{displaymath}

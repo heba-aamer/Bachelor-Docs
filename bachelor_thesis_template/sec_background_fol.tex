@@ -1,10 +1,15 @@
 \section{Background on first order logic topics} \label{sec:c2s1}
 
-\ac{fol} is an expressive logic that allow us to formulate most of our language sentences.\\*
+\ac{fol}, which is also known as first order predicate logic, is an expressive logic that allows us to formulate most of our spoken language sentences in a defined way such that it could be further handled with rules such as simplification, inference rules, etc.\\*
+We could represent formulas in \ac{fol} in so many forms. So \ref{sub:c2s1s1} will be devoted to that part of background.\newline
+Moreover, in general the universe of \ac{fol} is infinite because of the existence of the quantifiers and function terms. So in \ref{sub:c2s1s2} some topics related to that property will be mentioned including Herbrand Universe.\newline    
+Also this project is concerned to a specific class of \ac{fol} its calculus named \ac{epr}, and this will be discussed in \ref{sub:c2s1s4}.
 
-\ac{epr} or sometimes known as Bernays-Schönfinkel class
-is a class of first order logic in which all of its formulas follow the following format:
-$\exists *$ $\forall *$ F, where F is the formula.
-Moreover, F has no proper functions symbols (all functions present are nullary ones "constants").
+\input{sub_sec_background_fol_forms}
+\input{sub_sec_background_fol_her}
+
+\input{sub_sec_background_fol_snf}
+\input{sub_sec_background_fol_epr}
+
 
    
