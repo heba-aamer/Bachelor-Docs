@@ -2,9 +2,40 @@
 Testing and Validation
 
 
-\section{Section Name} \label{sec:s1}
-Some sample text with an \ac{ac}, some citation \cite{citeKey1}, and some more \ac{ac2}.
+%\section{Section Name} \label{sec:s1}
+%Some sample text with an \ac{ac}, some citation \cite{citeKey1}, and some more \ac{ac2}.
 
 
-\section{Another Section}
-Reference to Section \ref{sec:s1}, and reuse of \ac{ac} nad \ac{ac2} with also full use of \acf{ac2}.
+%\section{Another Section}
+%Reference to Section \ref{sec:s1}, and reuse of \ac{ac} nad \ac{ac2} with also full use of %\acf{ac2}.
+
+\section{Efficiency}
+\subsection{Memory Efficiency}
+The first part of the implementation which is related to applying the transformations to the the clause set introduces no memory leaks to the whole program.
+%TODO add number of problems checked upon
+\\
+Tools to check this: \\
+1- Script implemented in E for giving a summary on the allocated and de-allocated memory structures, and the results showed that they are equal.
+\\
+Ex.:\\
+\# -------------------------------------------------
+\\
+\# Total SizeMalloc()ed memory: 68536168 Bytes (131507 requests)
+\\
+\# Total SizeFree()ed   memory: 68536168 Bytes (131507 requests)
+\\
+\# New requests:    214 (   197 by SecureMalloc(),     17 by SecureRealloc())
+\\
+\# Total SecureMalloc()ed memory: 277647 Bytes
+\\
+\# Returned:       214 (   214 by FREE(),              0 by SecureRealloc())
+\\
+\# SecureRealloc(ptr):     19 (    17 Allocs,      0 Frees,      2 Reallocs)
+\\
+\# -------------------------------------------------
+\\
+\\
+2- Tool named 'valgrind' which also showed the same results as the above script.
+
+\section{Accuracy of the transformations}
+The results of ./edisprover part is the same as the author of the paper implemented program in all the tested problems.
