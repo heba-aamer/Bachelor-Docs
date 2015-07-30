@@ -2,15 +2,39 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}
 \BOOKMARK [0][-]{chapter.2}{Background}{}
 \BOOKMARK [1][-]{section.2.1}{Background on first order logic topics}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{E's implementation and state}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.1.1}{Different forms of FOL}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.2}{The universe of FOL}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.3}{Skolemization}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.4}{EPR}{section.2.1}
+\BOOKMARK [1][-]{section.2.2}{TPTP Problem set}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{The theorem prover E}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{The main proof procedure}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Latest results}{section.2.3}
 \BOOKMARK [0][-]{chapter.3}{Methodology and Implementation}{}
+\BOOKMARK [1][-]{section.3.1}{Transformations}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Original transformations}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{Simplified transformations}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Code Flow}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{Testing and Validation}{}
-\BOOKMARK [1][-]{section.4.1}{Section Name}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Another Section}{chapter.4}
+\BOOKMARK [1][-]{section.4.1}{Efficiency}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.1.1}{Memory Efficiency}{section.4.1}
+\BOOKMARK [1][-]{section.4.2}{Accuracy of the transformations}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{Results and Literature review}{}
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}
 \BOOKMARK [0][-]{chapter.7}{Future Work}{}
-\BOOKMARK [0][-]{section*.9}{Appendix}{}
+\BOOKMARK [1][-]{section.7.1}{Implementational Future Work}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.1.1}{Extension for Transformations}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.2}{Adding Splitting Techniques}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.3}{Implement Other Model Construction Techniques}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.4}{More on Bachmair and Ganzinger Model Construction Technique}{section.7.1}
+\BOOKMARK [1][-]{section.7.2}{Testing and Evaluational Future Work}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.2.1}{Testing on a Server}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.2}{More Testing on the Transformations}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.3}{More Testing on the Bachmair and Ganzinger Model Construction Technique}{section.7.2}
+\BOOKMARK [0][-]{section*.13}{Appendix}{}
 \BOOKMARK [0][-]{appendix.A}{Lists}{}
-\BOOKMARK [1][-]{section*.10}{List of Abbreviations}{appendix.A}
-\BOOKMARK [1][-]{appendix*.11}{List of Figures}{appendix.A}
+\BOOKMARK [1][-]{section*.14}{List of Abbreviations}{appendix.A}
+\BOOKMARK [1][-]{appendix*.15}{List of Figures}{appendix.A}
+\BOOKMARK [0][-]{appendix.B}{Forms of first order logic formulas}{}
+\BOOKMARK [0][-]{appendix.C}{Algorithms}{}
+\BOOKMARK [0][-]{appendix*.16}{References}{}

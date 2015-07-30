@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{TIMSORT}
+Proving that android’s, java’s and python’s sorting algorithm is broken
+  (and showing how to fix it).
+\newblock
+  \url{http://www.envisage-project.eu/proving-android-java-and-python-sorting-%
+algorithm-is-broken-and-how-to-fix-it/}.
+\newblock Accessed: 2015-7-27.
+
+\bibitem{BMUG06}
+P.~Baumgartner and R.A. Schmidt.
+\newblock {Blocking and Other Enhancements for Bottom-Up Model Generation
+  Methods}.
+\newblock 2006.
+
+\bibitem{BGMC}
+Christopher Lynch.
+\newblock {Constructing Bachmair-Ganzinger Models}.
+\newblock 7797, 2013.
+
+\bibitem{E13}
+Stephan Schulz.
+\newblock {System Description: E 1.8}.
+\newblock 2013.
+
+\end{thebibliography}
