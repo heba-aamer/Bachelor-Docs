@@ -1,4 +1,5 @@
 *.pdf
+!bachelor_thesis_template/pictures/*.pdf
 *.log
 *.aux
 *.gz
