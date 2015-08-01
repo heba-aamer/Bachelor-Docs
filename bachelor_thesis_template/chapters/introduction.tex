@@ -1,5 +1,8 @@
 \chapter{Introduction}\label{chap:intro}
 
+	\nocite{*} 
+	%TODO :: add this in better position	
+	
 	\paragraph{    Constructing Models} has a huge importance in many fields specially in debugging tasks. It helps in modelling and highlighting the existence of bugs. And because of this it is used extensively in the field of Software and Hardware verification, also in analyzing and verifying Theorems.
 
 	\paragraph{    So a concrete example} to show its importance is the verification of Timsort, which was explained in details here \cite{TIMSORT}. Timsort is a hybrid sorting algorithm that was developed in 2002. It combines merge sort and insertion sort. And it was developed in the beginning to be used in python, but later on it was added to java. And today in Open JDK, Sun's JDK, and Android SDK it is the default sorting algorithm since it showed a great performance on real data. That resulted in using it in billions of devices because of the popularity of those platforms. In 2015, a formal verification for Timsort was tried to be done by a team using KeY, a verification tool for java programs that could be found here \url{http://www.key-project.org/}. And their analysis showed that the TimSort algorithm was broken and they found a bug and they corrected it, then after that they were able to formally verify the correction of the algorithm. And all the happened by the help of KeY. So it really beneficial to have models.
