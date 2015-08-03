@@ -67,7 +67,101 @@ Output: model
 		
 		
 		\paragraph{}
-		\textbf{The algorithm works} as follows:
+		\textbf{An Example} for applying the Bachmair and Ganzinger Model Construction Technique is given below:
+
+			\begin{minipage}{\textwidth}
+			\begin{lstlisting}[caption=Example for applying Bachmair and Ganzinger Model Construction Technique,mathescape,escapeinside={(*}{*)}]
+	Let the unordered saturated set of clauses be:
+	{
+		$R(a, b) | Q(b)$,
+		$P(a)$,
+		$P(a) | Q(b)$,
+		$R(b, b)$
+	}
+	
+	Let the order of the present clauses:
+	{
+		P(a) < Q(b) < R(a, b) < R(b, b)
+	}			
+
+	% the left most literal in each of the
+	% ordered clauses is the maximal
+	(* \begin{table}[H]
+		\centering
+		\begin{tabular}{||c c c c||}
+ 		Order & Ordered Clause & Partial Model & Change in Model \\ [0.5ex] 
+ 		(1) & P(a) 			& {} 				& P(a) \\ 
+ 		(2) & Q(b) $\vert$ P(a)  	& {P(a)} 			& --- \\
+ 		(3) & R(a, b) $\vert$ Q(b)	& {P(a)}		 		& R(a, b) \\
+ 		(4) & R(b, b) 		& {P(a), R(a, b)} 	& R(b, b) \\ [1ex]
+		\end{tabular}
+		\caption{Table to test captions and labels}
+		\label{table:1}
+	\end{table} *)
+		
+	Then the explicit Model:
+	{
+		$P(a)$,
+		$R(a, b)$,
+		$R(b, b)$	
+	}		
+			\end{lstlisting}
+			\end{minipage}
 		
 		
+%Then the ordered clauses	 :  partialModel		  : change in the partial model
+%	{
+		% the left most literal in each clause is the maximal
+%		(1) $P(a)$			 :	{}				  :		$P(a)$
+%		(2) $Q(b) | P(a)$	 :	{$P(a)$}			  :		-----
+%		(3) $R(a, b) | Q(b)$	 :	{$P(a)$}			  :		$R(a, b)$
+%		(4) $R(b, b)$		 :	{$P(a), R(a, b)$	} :		$R(b, b)$
+%	}
+	
+
+	\subsubsection{Discussion on the Output}
+		\paragraph{}		
+		\textbf{The output of the Model Construction Technique} is the final one. It gives back the positive literals in the constructed explicit model. An Example for the output is given below in \ref{list:model_example}.
+		
+		
+			\begin{minipage}{\textwidth}
+			\begin{lstlisting}[caption=Example for the returned Model,label={list:model_example},frame=single]
+		dom(t).
+		bird(t).
+		fly(t).
+			\end{lstlisting} 
+			\end{minipage}						
+		
+		
+		\textbf{Moreover, we augmented} the output with a visual part. It prints out a dot graph representing the positive clauses linked with the positive literal, that belongs to the model, that makes them true or satisfiable in other words. Example of the returned dot graph will be listed in \ref{list:dot_graph}, and a rendered Figure for the same graph will be in \ref{fig:dot_graph}.
+		
+			\begin{minipage}{\textwidth}
+			\begin{lstlisting}[caption=Example of returned dot graph,label={list:dot_graph},breaklines=true,frame=single]
+digraph model {
+ rankdir=LR;
+ subgraph cluster_model {
+  label="Model"; 
+  0 [shape=ellipse,fillcolor=lightskyblue1,style=filled,label="fly(t)"]
+  1 [shape=ellipse,fillcolor=lightskyblue1,style=filled,label="bird(t)"]
+  2 [shape=ellipse,fillcolor=lightskyblue1,style=filled,label="dom(t)"]
+ }
+ subgraph cluster_clauses {
+  label="Positive Ground Clauses"; 
+  3 [shape=box,fillcolor=lightpink1,style=filled,label="cnf(i_0_3, plain, (fly(t)))."]
+  3 -> 0
+  4 [shape=box,fillcolor=lightpink1,style=filled,label="cnf(i_0_1, plain, (bird(t)))."]
+  4 -> 1
+  5 [shape=box,fillcolor=lightpink1,style=filled,label="cnf(i_0_2, plain, (dom(t)))."]
+  5 -> 2
+ }
+}
+			\end{lstlisting} 
+			\end{minipage}						
+
+						
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.42]{pictures/dot_graph.png}
+				\caption{Rendered dot graph of Model\label{fig:dot_graph}}
+			\end{figure}
 		
