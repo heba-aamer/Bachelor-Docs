@@ -1,98 +1,99 @@
 \contentsline {chapter}{Acknowledgments}{III}{chapter*.1}
 \contentsline {paragraph}{}{IV}{section*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {paragraph}{ Constructing Models}{1}{section*.7}
-\contentsline {paragraph}{ So a concrete example}{1}{section*.8}
-\contentsline {paragraph}{ Having that importance in mind,}{1}{section*.9}
-\contentsline {paragraph}{ So a discussion of the work done}{1}{section*.10}
+\contentsline {paragraph}{ Constructing Models}{1}{section*.8}
+\contentsline {paragraph}{ So a concrete example}{1}{section*.9}
+\contentsline {paragraph}{ Having that importance in mind,}{1}{section*.10}
+\contentsline {paragraph}{ So a discussion of the work done}{1}{section*.11}
 \contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Background on first order logic topics}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Different forms of \ac {fol}}{3}{subsection.2.1.1}
-\contentsline {subsubsection}{General Form}{4}{section*.11}
-\contentsline {subsubsection}{Clausal normal form}{4}{section*.12}
-\contentsline {subsubsection}{Prenex normal form}{4}{section*.14}
-\contentsline {subsubsection}{Skolem normal form}{4}{section*.16}
+\contentsline {subsection}{\numberline {2.1.1}Different forms of \ac {fol}}{4}{subsection.2.1.1}
+\contentsline {subsubsection}{General Form}{4}{section*.12}
+\contentsline {subsubsection}{Clausal normal form}{4}{section*.13}
+\contentsline {subsubsection}{Prenex normal form}{4}{section*.15}
+\contentsline {subsubsection}{Skolem normal form}{4}{section*.17}
 \contentsline {subsection}{\numberline {2.1.2}The universe of \ac {fol}}{4}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Skolemization}{4}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}\ac {epr}}{5}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}TPTP Problem set}{5}{section.2.2}
+\contentsline {section}{\numberline {2.2}\acf {atp}}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}The theorem prover E}{5}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}The main proof procedure}{5}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Latest results}{6}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Methodology and Implementation}{7}{chapter.3}
-\contentsline {paragraph}{}{7}{section*.18}
-\contentsline {paragraph}{}{7}{section*.19}
-\contentsline {section}{\numberline {3.1}Transformations}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Original transformations}{7}{subsection.3.1.1}
-\contentsline {paragraph}{The original procedures}{7}{section*.20}
-\contentsline {subsubsection}{What are the Transformations}{8}{section*.21}
-\contentsline {paragraph}{}{8}{section*.22}
-\contentsline {paragraph}{}{8}{section*.23}
-\contentsline {paragraph}{}{8}{section*.24}
-\contentsline {subsubsection}{How do the transformations work}{8}{section*.25}
-\contentsline {paragraph}{}{8}{section*.26}
-\contentsline {paragraph}{}{9}{section*.32}
-\contentsline {subsection}{\numberline {3.1.2}Simplified transformations}{11}{subsection.3.1.2}
-\contentsline {paragraph}{}{11}{section*.34}
-\contentsline {subsubsection}{The Reason for doing the simplifications}{11}{section*.35}
-\contentsline {paragraph}{}{11}{section*.36}
-\contentsline {subsubsection}{What are the steps of the simplifications}{11}{section*.37}
-\contentsline {paragraph}{}{11}{section*.38}
-\contentsline {subsubsection}{The resulted simplified transformations}{12}{section*.39}
-\contentsline {paragraph}{}{12}{section*.40}
-\contentsline {subsubsection}{The Intermediate output}{13}{section*.43}
-\contentsline {paragraph}{}{13}{section*.44}
-\contentsline {subsubsection}{Discussion on the Output of the prover}{14}{section*.45}
-\contentsline {paragraph}{}{14}{section*.46}
-\contentsline {section}{\numberline {3.2}Model Construction}{14}{section.3.2}
-\contentsline {subsubsection}{What is the used technique for Model Construction}{15}{section*.47}
-\contentsline {paragraph}{}{15}{section*.48}
-\contentsline {subsubsection}{How does Bachmair and Ganzinger Model Construction Technique works}{15}{section*.49}
-\contentsline {paragraph}{}{15}{section*.50}
-\contentsline {paragraph}{}{15}{section*.51}
-\contentsline {paragraph}{}{15}{section*.52}
+\contentsline {section}{\numberline {2.4}Problem Set}{6}{section.2.4}
+\contentsline {chapter}{\numberline {3}Methodology and Implementation}{8}{chapter.3}
+\contentsline {paragraph}{}{8}{section*.19}
+\contentsline {paragraph}{}{8}{section*.20}
+\contentsline {section}{\numberline {3.1}Transformations}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Original transformations}{8}{subsection.3.1.1}
+\contentsline {paragraph}{The original procedures}{8}{section*.21}
+\contentsline {subsubsection}{What are the Transformations}{9}{section*.22}
+\contentsline {paragraph}{}{9}{section*.23}
+\contentsline {paragraph}{}{9}{section*.24}
+\contentsline {paragraph}{}{9}{section*.25}
+\contentsline {subsubsection}{How do the transformations work}{9}{section*.26}
+\contentsline {paragraph}{}{9}{section*.27}
+\contentsline {paragraph}{}{10}{section*.33}
+\contentsline {subsection}{\numberline {3.1.2}Simplified transformations}{12}{subsection.3.1.2}
+\contentsline {paragraph}{}{12}{section*.35}
+\contentsline {subsubsection}{The Reason for doing the simplifications}{12}{section*.36}
+\contentsline {paragraph}{}{12}{section*.37}
+\contentsline {subsubsection}{What are the steps of the simplifications}{12}{section*.38}
+\contentsline {paragraph}{}{12}{section*.39}
+\contentsline {subsubsection}{The resulted simplified transformations}{13}{section*.40}
+\contentsline {paragraph}{}{13}{section*.41}
+\contentsline {subsubsection}{The Intermediate output}{14}{section*.44}
+\contentsline {paragraph}{}{14}{section*.45}
+\contentsline {subsubsection}{Discussion on the Output of the prover}{15}{section*.46}
+\contentsline {paragraph}{}{15}{section*.47}
+\contentsline {section}{\numberline {3.2}Model Construction}{15}{section.3.2}
+\contentsline {subsubsection}{What is the used technique for Model Construction}{16}{section*.48}
+\contentsline {paragraph}{}{16}{section*.49}
+\contentsline {subsubsection}{How does Bachmair and Ganzinger Model Construction Technique works}{16}{section*.50}
+\contentsline {paragraph}{}{16}{section*.51}
+\contentsline {paragraph}{}{16}{section*.52}
 \contentsline {paragraph}{}{16}{section*.53}
-\contentsline {subsubsection}{Discussion on the Output}{17}{section*.55}
-\contentsline {paragraph}{}{17}{section*.56}
-\contentsline {section}{\numberline {3.3}Code FLow}{19}{section.3.3}
-\contentsline {paragraph}{}{19}{section*.58}
-\contentsline {chapter}{\numberline {4}Testing and Validation}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Efficiency}{21}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Memory Efficiency}{21}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Accuracy of the transformations}{22}{section.4.2}
-\contentsline {chapter}{\numberline {5}Results and Literature review}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Related Work}{23}{section.5.1}
-\contentsline {subsubsection}{Different theorem provers}{23}{section*.60}
-\contentsline {subsubsection}{Model Construction Techniques}{24}{section*.61}
-\contentsline {subsubsection}{CASC competition}{24}{section*.62}
-\contentsline {subsubsection}{\ac {epr} reasoning Techniques}{27}{section*.66}
-\contentsline {subsubsection}{Range Restricting Transformations}{28}{section*.68}
-\contentsline {chapter}{\numberline {6}Conclusion}{29}{chapter.6}
-\contentsline {chapter}{\numberline {7}Future Work}{30}{chapter.7}
-\contentsline {paragraph}{ }{30}{section*.69}
-\contentsline {section}{\numberline {7.1}Implementational Future Work}{30}{section.7.1}
-\contentsline {paragraph}{ }{30}{section*.70}
-\contentsline {subsection}{\numberline {7.1.1}Extension for Transformations}{30}{subsection.7.1.1}
-\contentsline {paragraph}{ }{30}{section*.71}
-\contentsline {subsection}{\numberline {7.1.2}Adding Splitting Techniques}{30}{subsection.7.1.2}
-\contentsline {paragraph}{ }{30}{section*.72}
+\contentsline {paragraph}{}{17}{section*.54}
+\contentsline {subsubsection}{Discussion on the Output}{18}{section*.56}
+\contentsline {paragraph}{}{18}{section*.57}
+\contentsline {section}{\numberline {3.3}Code FLow}{20}{section.3.3}
+\contentsline {paragraph}{}{20}{section*.59}
+\contentsline {chapter}{\numberline {4}Testing and Validation}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Efficiency}{22}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Memory Efficiency}{22}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Accuracy of the transformations}{23}{section.4.2}
+\contentsline {chapter}{\numberline {5}Results and Literature review}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Related Work}{24}{section.5.1}
+\contentsline {subsubsection}{Different theorem provers}{24}{section*.61}
+\contentsline {subsubsection}{Model Construction Techniques}{25}{section*.62}
+\contentsline {subsubsection}{CASC competition}{25}{section*.63}
+\contentsline {subsubsection}{\ac {epr} reasoning Techniques}{28}{section*.67}
+\contentsline {subsubsection}{Range Restricting Transformations}{29}{section*.69}
+\contentsline {chapter}{\numberline {6}Conclusion}{30}{chapter.6}
+\contentsline {chapter}{\numberline {7}Future Work}{31}{chapter.7}
+\contentsline {paragraph}{ }{31}{section*.70}
+\contentsline {section}{\numberline {7.1}Implementational Future Work}{31}{section.7.1}
+\contentsline {paragraph}{ }{31}{section*.71}
+\contentsline {subsection}{\numberline {7.1.1}Extension for Transformations}{31}{subsection.7.1.1}
+\contentsline {paragraph}{ }{31}{section*.72}
+\contentsline {subsection}{\numberline {7.1.2}Adding Splitting Techniques}{31}{subsection.7.1.2}
 \contentsline {paragraph}{ }{31}{section*.73}
-\contentsline {subsection}{\numberline {7.1.3}Implement Other Model Construction Techniques}{31}{subsection.7.1.3}
-\contentsline {paragraph}{ }{31}{section*.74}
-\contentsline {subsection}{\numberline {7.1.4}More on Bachmair and Ganzinger Model Construction Technique}{31}{subsection.7.1.4}
-\contentsline {paragraph}{ }{31}{section*.75}
-\contentsline {section}{\numberline {7.2}Testing and Evaluational Future Work}{31}{section.7.2}
-\contentsline {paragraph}{ }{31}{section*.76}
-\contentsline {subsection}{\numberline {7.2.1}Testing on a Server}{31}{subsection.7.2.1}
-\contentsline {paragraph}{ }{31}{section*.77}
-\contentsline {subsection}{\numberline {7.2.2}More Testing on the Transformations}{31}{subsection.7.2.2}
-\contentsline {paragraph}{ }{31}{section*.78}
-\contentsline {subsection}{\numberline {7.2.3}More Testing on the Bachmair and Ganzinger Model Construction Technique}{32}{subsection.7.2.3}
+\contentsline {paragraph}{ }{32}{section*.74}
+\contentsline {subsection}{\numberline {7.1.3}Implement Other Model Construction Techniques}{32}{subsection.7.1.3}
+\contentsline {paragraph}{ }{32}{section*.75}
+\contentsline {subsection}{\numberline {7.1.4}More on Bachmair and Ganzinger Model Construction Technique}{32}{subsection.7.1.4}
+\contentsline {paragraph}{ }{32}{section*.76}
+\contentsline {section}{\numberline {7.2}Testing and Evaluational Future Work}{32}{section.7.2}
+\contentsline {paragraph}{ }{32}{section*.77}
+\contentsline {subsection}{\numberline {7.2.1}Testing on a Server}{32}{subsection.7.2.1}
+\contentsline {paragraph}{ }{32}{section*.78}
+\contentsline {subsection}{\numberline {7.2.2}More Testing on the Transformations}{32}{subsection.7.2.2}
 \contentsline {paragraph}{ }{32}{section*.79}
-\contentsline {chapter}{Appendix}{33}{section*.80}
-\contentsline {chapter}{\numberline {A}Lists}{34}{appendix.A}
-\contentsline {section}{List of Abbreviations}{34}{section*.81}
-\contentsline {section}{List of Figures}{35}{appendix*.82}
-\contentsline {section}{List of Tables}{36}{appendix*.83}
-\contentsline {section}{List of Examples}{37}{appendix*.84}
-\contentsline {chapter}{References}{39}{appendix*.85}
+\contentsline {subsection}{\numberline {7.2.3}More Testing on the Bachmair and Ganzinger Model Construction Technique}{33}{subsection.7.2.3}
+\contentsline {paragraph}{ }{33}{section*.80}
+\contentsline {chapter}{Appendix}{34}{section*.81}
+\contentsline {chapter}{\numberline {A}Lists}{35}{appendix.A}
+\contentsline {section}{List of Abbreviations}{35}{section*.82}
+\contentsline {section}{List of Figures}{36}{appendix*.83}
+\contentsline {section}{List of Tables}{37}{appendix*.84}
+\contentsline {section}{List of Examples}{38}{appendix*.85}
+\contentsline {chapter}{References}{40}{appendix*.86}
