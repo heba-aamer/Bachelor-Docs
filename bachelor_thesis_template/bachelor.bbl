@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{TIMSORT}
 Proving that android’s, java’s and python’s sorting algorithm is broken
@@ -8,20 +8,170 @@ Proving that android’s, java’s and python’s sorting algorithm is broken
 algorithm-is-broken-and-how-to-fix-it/}.
 \newblock Accessed: 2015-7-27.
 
+\bibitem{BAGA01}
+Leo Bachmair and Harald Ganzinger.
+\newblock Resolution theorem proving.
+\newblock {\em Handbook of automated reasoning}, 1:19--99, 2001.
+
 \bibitem{BMUG06}
-P.~Baumgartner and R.A. Schmidt.
-\newblock {Blocking and Other Enhancements for Bottom-Up Model Generation
-  Methods}.
-\newblock 2006.
+Peter Baumgartner and Renate~A Schmidt.
+\newblock Blocking and other enhancements for bottom-up model generation
+  methods.
+\newblock In {\em Automated Reasoning}, pages 125--139. Springer, 2006.
+
+\bibitem{MOD03}
+Peter Baumgartner and Cesare Tinelli.
+\newblock The model evolution calculus.
+\newblock In Franz Baader, editor, {\em Automated Deduction – CADE-19},
+  volume 2741 of {\em Lecture Notes in Computer Science}, pages 350--364.
+  Springer Berlin Heidelberg, 2003.
+
+\bibitem{SL_14}
+Chin-Liang Chang and Richard Char-Tung Lee.
+\newblock {\em Symbolic logic and mechanical theorem proving}.
+\newblock Academic press, 2014.
+
+\bibitem{DEC_CHURCH}
+Alonzo Church.
+\newblock An unsolvable problem of elementary number theory.
+\newblock {\em American journal of mathematics}, pages 345--363, 1936.
+
+\bibitem{MODEL_FINDER}
+Koen Claessen and Niklas S{\"o}rensson.
+\newblock New techniques that improve mace-style finite model finding.
+\newblock In {\em Proceedings of the CADE-19 Workshop: Model
+  Computation-Principles, Algorithms, Applications}, pages 11--27, 2003.
+
+\bibitem{RES93}
+Christian Ferm{\"u}ller.
+\newblock {\em Resolution methods for the decision problem}, volume 679.
+\newblock Springer Science \& Business Media, 1993.
+
+\bibitem{FOL96}
+Melvin Fitting.
+\newblock {\em First-order logic and automated theorem proving}.
+\newblock 1996.
+
+\bibitem{INST03}
+Harald Ganzinger and Konstantin Korovin.
+\newblock New directions in instantiation-based theorem proving.
+\newblock In {\em Logic in Computer Science, 2003. Proceedings. 18th Annual
+  IEEE Symposium on}, pages 55--64. IEEE, June 2003.
+
+\bibitem{RES76}
+William~H. Joyner, Jr.
+\newblock Resolution strategies as decision procedures.
+\newblock {\em J. ACM}, 23(3):98--417, July 1976.
+
+\bibitem{korovin2008system}
+Konstantin Korovin.
+\newblock System description: iprover-an instantiation-based theorem prover for
+  first-order logic.
+\newblock In {\em IJCAR}, pages 292--298, 2008.
+
+\bibitem{korovin2013inst}
+Konstantin Korovin.
+\newblock Inst-gen--a modular approach to instantiation-based automated
+  reasoning.
+\newblock In {\em Programming Logics}, pages 239--270. Springer, 2013.
+
+\bibitem{kovacs2013first}
+Laura Kov{\'a}cs and Andrei Voronkov.
+\newblock First-order theorem proving and vampire.
+\newblock In {\em Computer Aided Verification}, pages 1--35. Springer, 2013.
 
 \bibitem{BGMC}
 Christopher Lynch.
-\newblock {Constructing Bachmair-Ganzinger Models}.
-\newblock 7797, 2013.
+\newblock Constructing bachmair-ganzinger models.
+\newblock In {\em Programming Logics}, pages 285--301. Springer, 2013.
+
+\bibitem{navarro2008proof}
+Juan~Antonio Navarro and Andrei Voronkov.
+\newblock Proof systems for effectively propositional logic.
+\newblock In {\em Automated Reasoning}, pages 426--440. Springer, 2008.
+
+\bibitem{EPR_PHD}
+Juan~Antonio Navarro-P{\'e}rez.
+\newblock {\em Encoding and Solving Problems in Effectively Propositional
+  Logic}.
+\newblock PhD thesis, Citeseer, 2007.
+
+\bibitem{CASC02}
+F.J. Pelletier, G.~Sutcliffe, and C.B. Suttner.
+\newblock {The Development of CASC}.
+\newblock {\em AI Communications}, 15(2-3):79--90, 2002.
+
+\bibitem{piskac2008deciding}
+Ruzica Piskac, Leonardo de~Moura, and Nikolaj Bj{\o}rner.
+\newblock Deciding effectively propositional logic with equality.
+\newblock Technical report, Technical Report MSR-TR-2008-181, Microsoft
+  Research, 2008.
+
+\bibitem{sep-reasoning-automated}
+Frederic Portoraro.
+\newblock Automated reasoning.
+\newblock In Edward~N. Zalta, editor, {\em The Stanford Encyclopedia of
+  Philosophy}. Winter 2014 edition, 2014.
+
+\bibitem{riazanov2002design}
+Alexandre Riazanov and Andrei Voronkov.
+\newblock The design and implementation of vampire.
+\newblock {\em AI communications}, 15(2, 3):91--110, 2002.
+
+\bibitem{RES_65}
+John~Alan Robinson.
+\newblock A machine-oriented logic based on the resolution principle.
+\newblock {\em Journal of the ACM (JACM)}, 12(1):23--41, 1965.
+
+\bibitem{E02}
+Stephan Schulz.
+\newblock E-a brainiac theorem prover.
+\newblock {\em Ai Communications}, 15(2):111--126, 2002.
 
 \bibitem{E13}
 Stephan Schulz.
-\newblock {System Description: E 1.8}.
-\newblock 2013.
+\newblock System description: E 1.8.
+\newblock In Ken McMillan, Aart Middeldorp, and Andrei Voronkov, editors, {\em
+  Logic for Programming, Artificial Intelligence, and Reasoning}, volume 8312
+  of {\em Lecture Notes in Computer Science}, pages 735--743. Springer Berlin
+  Heidelberg, 2013.
+
+\bibitem{sep-logic-classical}
+Stewart Shapiro.
+\newblock Classical logic.
+\newblock In Edward~N. Zalta, editor, {\em The Stanford Encyclopedia of
+  Philosophy}. Winter 2013 edition, 2013.
+
+\bibitem{CASC06}
+G.~Sutcliffe and C.~Suttner.
+\newblock {The State of CASC}.
+\newblock {\em AI Communications}, 19(1):35--48, 2006.
+
+\bibitem{sutcliffe2002ijcar}
+G.~Sutcliffe, C.B. Suttner, and F.J. Pelletier.
+\newblock The ijcar atp system competition.
+\newblock {\em Journal of Automated Reasoning}, 28(3):307--320, 2002.
+
+\bibitem{TPTP09}
+Geoff Sutcliffe.
+\newblock The tptp problem library and associated infrastructure.
+\newblock {\em Journal of Automated Reasoning}, 43(4):337--362, 2009.
+
+\bibitem{CASC_24}
+Geoff Sutcliffe.
+\newblock The cade-24 automated theorem proving system competition--casc-24.
+\newblock {\em AI Communications}, 27(4):405--416, 2014.
+
+\bibitem{CASC_J7}
+Geoff Sutcliffe.
+\newblock The 7th ijcar automated theorem proving system competition--casc-j7.
+\newblock {\em AI Communications}, 28, 2015.
+\newblock To appear.
+
+\bibitem{DEC_TUR}
+Alan~Mathison Turing.
+\newblock On computable numbers, with an application to the
+  entscheidungsproblem.
+\newblock {\em J. of Math}, 58(5):345--363, 1936.
 
 \end{thebibliography}

@@ -1,15 +1,70 @@
-\section{Background on first order logic topics} \label{sec:c2s1}
+\section{\acf{fol}} \label{sec:c2s1}
 
-\ac{fol}, which is also known as first order predicate logic, is an expressive logic that allows us to formulate most of our spoken language sentences in a defined way such that it could be further handled with rules such as simplification, inference rules, etc.\\*
-We could represent formulas in \ac{fol} in so many forms. So \ref{sub:c2s1s1} will be devoted to that part of background.\newline
-Moreover, in general the universe of \ac{fol} is infinite because of the existence of the quantifiers and function terms. So in \ref{sub:c2s1s2} some topics related to that property will be mentioned including Herbrand Universe.\newline    
-Also this project is concerned to a specific class of \ac{fol} its calculus named \ac{epr}, and this will be discussed in \ref{sub:c2s1s4}.
+\ac{fol}, which is also known as first order predicate logic, is an expressive logic that allows us to formulate and encode most of our spoken language sentences in a defined way such that it could be further handled with rules such as simplification, inference rules. That allows automating the reasoning for \ac{fol} problems.
 
-\input{subsections/sub_sec_background_fol_forms}
-\input{subsections/sub_sec_background_fol_her}
 
-\input{subsections/sub_sec_background_fol_snf}
-\input{subsections/sub_sec_background_fol_epr}
+In order to have a general background on the topics of \ac{fol}, we will devote this section to that mission. So we are going to discuss the following points:
+	
+	\begin{itemize}
+		\item Summary over \ac{fol} and Example on using it
+		\item Decidability of \ac{fol}
+		\item Herbrand Universe
+	\end{itemize}	    
+
+%TODO : remove comment later
+\begin{comment}
+	We could represent formulas in \ac{fol} in so many forms. So \ref{sub:c2s1s1} will be devoted to that part of background.
+\end{comment}
+
+
+
+\subsection{\ac{fol} overview and Example on it}
+
+\subsubsection{Overview on \ac{fol}}
+Quantifiers, variables, and functions are what signifies \ac{fol} over propositional logic. Being able to formulate "some", "all" is what added a lot to the expressiveness of \ac{fol}. So a review on the syntax and the structure of \ac{fol} if needed will be found in the appendix here \ref{chap:appendix_fol}.
+
+
+\subsubsection{Example on \ac{fol}}
+A very famous example on \ac{fol} is the following:
+\begin{lstlisting}[caption=Example on \ac{fol},mathescape,breaklines=true,frame=single]
+
+ We want to formulate the following three sentences in $\ac{fol}$:
+
+  (1) All Humans are mortals.
+  (2) Socrates is a human.
+  (3) Therefore, Socrates is mortal.
+  
+ So in $\ac{fol}$ syntax they are:
+
+  (1) $\forall X (Human(X) \rightarrow Mortal(X))$
+  (2) $Human(socrates)$
+  (3) $Mortal(socrates)$
+  
+ Where $Human$ and $Mortal$ are predicates here since they represent property over the elements of the domain. While $socrates$ is a constant or in other words a function symbol with arity 0. 
+
+\end{lstlisting}
+
+
+\subsection{Decidability of \ac{fol}}
+\paragraph{}
+The Problem of proving validity, or in other words unsatisfiability, of a formula in \acf{fol} had a lot of attention and experiments in the beginning. A lot of trials were made to prove that it is decidable as mentioned in \cite{SL_14}. But those trials were not successful. Later on, in the same year both \cite{DEC_TUR, DEC_CHURCH} proved that this problem in general is un-decidable.
+
+
+Some algorithms were developed such that if the formula is unsatisfiable it will give a refutation, or proof in simpler words, however if it was not unsatisfiable then the algorithm may halt/terminate and give the correct result and may not halt/terminate, so this problem is semi-decidable. An example for such procedure is resolution, with some refinements, in which its basic idea was first developed in \cite{RES_65}. So \acf{fol} is semi-decidable logic.
+
+\subsection{Universe of \ac{fol}}
+
+
+%TODO : remove comment later
+\begin{comment}
+	\input{subsections/sub_sec_background_fol_forms}
+
+	\input{subsections/sub_sec_background_fol_her}
+
+	\input{subsections/sub_sec_background_fol_snf}
+
+	\input{subsections/sub_sec_background_fol_epr}
+\end{comment}
 
 
    

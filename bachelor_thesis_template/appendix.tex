@@ -23,12 +23,62 @@
   \acro{bl}[BL]{Blocking Transformation}
 \end{acronym}
 \clearpage
+
 \listoffigures
 \addcontentsline{toc}{section}{List of Figures}
+
 \listoftables
 \addcontentsline{toc}{section}{List of Tables}
+
 \lstlistoflistings
 \addcontentsline{toc}{section}{List of Examples}
+
+
+\chapter{Syntax of \ac{fol}}\label{chap:appendix_fol}
+\subsubsection{Syntax of \ac{fol}}
+The syntax of \ac{fol} consists of:
+	\begin{itemize}
+		\item Predicates, which is a mapping for properties in a language. Moreover, the symbols used for representing predicates are finite and specific for each problem.
+		\item Terms, which consists of functions and variables as shown below:		
+			\begin{itemize}
+				\item Functions, which itself can be divided according to the arity of the function symbol as follows:
+					\begin{itemize}
+						\item if (arity == 0), then it is considered a constant
+						\item if (arity $>$ 0), then it is a proper function symbol 
+					\end{itemize}
+				\item Variables, and they are infinite list of symbols
+			\end{itemize}
+		\item Special symbols
+			\begin{itemize}
+				\item $\bot$ which represents false
+				\item $\top$ which represents true
+			\end{itemize}									
+	\end{itemize}
+
+
+Atoms which are the basic building blocks of a formula, follow the following format:
+$$ p(t1,...,tk)$$ where p is a predicate symbols, any ti is a term, and k is the arity of the predicate symbol p. A Literal is an atom or a negated atom. A formula consists of only one atom is called an Atomic formula.
+
+Compound formulas are formed by:
+	\begin{itemize}
+		\item Connectives, and they are divided into:
+			\begin{itemize}
+				\item $\rightarrow$ : implication
+				\item $\neg$ or $\sim$ : negation
+				\item $\vee$ or $\vert$ : disjunction
+				\item $\wedge$ or $\&$ : conjunction
+				\item $\equiv$ : equivalence
+			\end{itemize}				
+		\item Quantifiers, and they are the following two:
+			\begin{itemize}
+				\item $\forall$ which is the universal quantifier
+				\item $\exists$ which is the existential quantifier
+			\end{itemize}
+	\end{itemize}
+
+
+A Clause is a disjunction of Literals. A ground clause is a clause having no variables. A positive clause is a clause who has no negated atoms. While a negative clause is a clause who contains only negated atoms. A mixed clause is a clause who consists of both atoms and negated atoms. A unit clause is a clause containing one Literal.
+
 
 %TODO : add the commented chapter back
 
