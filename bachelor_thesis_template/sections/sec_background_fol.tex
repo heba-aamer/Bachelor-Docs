@@ -9,6 +9,7 @@ In order to have a general background on the topics of \ac{fol}, we will devote 
 		\item Summary over \ac{fol} and Example on using it
 		\item Decidability of \ac{fol}
 		\item Herbrand Universe
+		\item Equality
 	\end{itemize}	    
 
 %TODO : remove comment later
@@ -21,7 +22,7 @@ In order to have a general background on the topics of \ac{fol}, we will devote 
 \subsection{\ac{fol} overview and Example on it}
 
 \subsubsection{Overview on \ac{fol}}
-Quantifiers, variables, and functions are what signifies \ac{fol} over propositional logic. Being able to formulate "some", "all" is what added a lot to the expressiveness of \ac{fol}. So a review on the syntax and the structure of \ac{fol} if needed will be found in the appendix here \ref{chap:appendix_fol}.
+Quantifiers, variables, and functions are what signifies \ac{fol} over propositional logic. Having functions and being able to formulate "some", "all" is what added a lot to the expressiveness of \ac{fol}. So a review on the syntax and the structure of \ac{fol}, if needed, will be found here in appendix \ref{chap:appendix_fol}.
 
 
 \subsubsection{Example on \ac{fol}}
@@ -45,14 +46,55 @@ A very famous example on \ac{fol} is the following:
 \end{lstlisting}
 
 
+
 \subsection{Decidability of \ac{fol}}
 \paragraph{}
 The Problem of proving validity, or in other words unsatisfiability, of a formula in \acf{fol} had a lot of attention and experiments in the beginning. A lot of trials were made to prove that it is decidable as mentioned in \cite{SL_14}. But those trials were not successful. Later on, in the same year both \cite{DEC_TUR, DEC_CHURCH} proved that this problem in general is un-decidable.
 
 
-Some algorithms were developed such that if the formula is unsatisfiable it will give a refutation, or proof in simpler words, however if it was not unsatisfiable then the algorithm may halt/terminate and give the correct result and may not halt/terminate, so this problem is semi-decidable. An example for such procedure is resolution, with some refinements, in which its basic idea was first developed in \cite{RES_65}. So \acf{fol} is semi-decidable logic.
+Some algorithms were developed such that if the formula is unsatisfiable it will give a refutation, or proof in simpler words, however if it was not unsatisfiable then the algorithm may halt/terminate and give the correct result and may not halt/terminate at all, so this problem is semi-decidable. An example for such procedure is resolution, with some refinements, in which its basic idea was first developed in \cite{RES_65}. So \acf{fol} is a semi-decidable logic.
+
+
 
 \subsection{Universe of \ac{fol}}
+\paragraph{}
+Herbrand devised a procedure for generating the Universe of set of first order formulas; where the universe is the set of constants and grounded function symbols that represent terms in predicates. The procedure is defined recursively. So in most of the cases the Herbrand Universe of any set of first order formulas is infinite.
+
+
+\subsection{Equality}
+The Equality relation adds a lot of expressiveness and it is so intuitive to have it in logic. Adding equality to \ac{fol} is very beneficial such that it eases encoding problems to \ac{fol}, however it adds a burden for how it should be handled. So \ac{fol} with equality adds a distinguished predicate symbol $=$ or $\approx$ that represents equality to the set of predicate symbols. Moreover, it adds to the problem specification some axioms that helps in dealing with such as: reflexivity and symmetry.
+
+
+In general, Equations are of the form: $t1$ $\approx$ $t2$, Where each of the t1 and t2 is a term.
+
+
+%TODO : remove comments
+\begin{comment}
+One representation of Herbrand Theorem states that:
+"Let F be a formula in CNF. The formula F is unsatisfiable iff there is an unsatisfiable set G containing only ground instances of clauses in F."
+
+
+So this theorem reduces any \ac{fol} problem to an equivalent propositional problem. And this a very important reduction.
+\end{comment}
+
+
+
+
+\section{\acf{epr}}
+\paragraph{}
+This section is discussing important points related to \ac{epr}, so the following points will be covered:
+
+	\begin{itemize}
+		\item subsection -- will explain what \ac{epr} is.
+		\item Example on \ac{epr} will be given in subsection --.
+		\item Universe and Decidability of \ac{epr} will discussed in subsection --.
+		\item And last but not least in subsection -- we will talk about Equality in \ac{epr}. 
+	\end{itemize}
+
+
+	\input{subsections/sub_sec_background_fol_epr}
+
+
 
 
 %TODO : remove comment later

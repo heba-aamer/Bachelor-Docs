@@ -1,42 +1,41 @@
-\chapter{Testing and Validation}\label{chap:test_and_val}
-Testing and Validation
+\chapter{Testing, Validation and Evaluation}\label{chap:test_and_val}
+Here in this chapter, we explain what was done for validating the output and Evaluating the program. So we divide this chapter into two sections:
+\begin{itemize}
+	\item Validating and Evaluating the Simplified Transformations.
+	\item Validating and Evaluating the Implementation of Bachmair and Ganzinger Model Construction Technique.
+\end{itemize} 
 
+\section{Simplified Transformations}
 
-\section{Efficiency}
-\subsection{Memory Efficiency}
+\subsection{Evaluating Memory Efficiency}\label{sub:val_tran_mem}
 The first part of the implementation which is related to applying the transformations to the the clause set introduces no memory leaks to the whole program.
 %TODO add number of problems checked upon
-\\
+
+
 Tools to check this:
 \begin{enumerate}
-
-\item Script implemented in E for giving a summary on the allocated and de-allocated memory structures, and the results showed that they are equal.
-\begin{lstlisting}
-\\
-Ex.:\\
-\# -------------------------------------------------
-\\
-\# Total SizeMalloc()ed memory: 68536168 Bytes (131507 requests)
-\\
-\# Total SizeFree()ed   memory: 68536168 Bytes (131507 requests)
-\\
-\# New requests:    214 (   197 by SecureMalloc(),     17 by SecureRealloc())
-\\
-\# Total SecureMalloc()ed memory: 277647 Bytes
-\\
-\# Returned:       214 (   214 by FREE(),              0 by SecureRealloc())
-\\
-\# SecureRealloc(ptr):     19 (    17 Allocs,      0 Frees,      2 Reallocs)
-\\
-\# -------------------------------------------------
-\\
-\end{lstlisting}
-
-
-\item Tool named 'valgrind' which also showed the same results as the above script.
-
+	\item Script implemented in E for giving a summary on the allocated and de-allocated memory structures, and the results showed that they are equal.
+		\begin{lstlisting}
+# -------------------------------------------------
+# Total SizeMalloc()ed memory: 68536168 Bytes (131507 requests)
+# Total SizeFree()ed   memory: 68536168 Bytes (131507 requests)
+# New requests: 214 (197 by SecureMalloc(), 17 by SecureRealloc())
+# Total SecureMalloc()ed memory: 277647 Bytes
+# Returned: 214 (214 by FREE(), 0 by SecureRealloc())
+# SecureRealloc(ptr): 19 (17 Allocs, 0 Frees, 2 Reallocs)
+# -------------------------------------------------\\
+		\end{lstlisting}
+	\item Tool named 'valgrind' which also showed the same results as the above script.
 \end{enumerate}
 
 
-\section{Accuracy of the transformations}
-The results of ./edisprover part is the same as the author of the paper implemented program in all the tested problems.
+\subsection{Accuracy of the transformations}
+In all tested problems, The results of the Transformations were the same as an implemented program called Yarralumla \url{http://users.cecs.anu.edu.au/~baumgart/systems/yarralumla/}, implemented by Peter Baumgartner, one of the authors of \cite{BMUG06}. So we believe it is correct.
+
+
+\section{Bachmair and Ganzinger Model Construction Technique}
+\subsection{Evaluating Memory Efficiency}
+The same tools mentioned for The Transformations in \ref{sub:val_tran_mem} part were used. And the same results were achieved for the Implemented Model Construction Technique.
+
+\subsection{Accuracy of Implementation}
+To Be added later 

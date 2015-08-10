@@ -3,23 +3,14 @@
 
 This chapter is devoted for introducing and familiarizing the reader to the theoretical concepts behind this project, and give the reader a background on the theorem prover E as well. So it will include the following sections:
 	\begin{itemize}
-		\item A background on \ac{fol} in section %TODO add a reference
-		\item A background on \ac{epr} in section %TODO add a reference
-		\item A background on \ac{atp} in section %TODO add a reference
+		\item A background on \acf{fol} in section %TODO add a reference
+		\item A background on \acf{epr} in section %TODO add a reference
 		\item A background on E in section %TODO add a reference
 		\item A background on Problem set in section %TODO add a reference
 	\end{itemize}
 
 
 \input{sections/sec_background_fol}
-
-
-
-\section{\acf{atp}}
-
-
-
-\input{sections/sec_background_e}
 
 
 
@@ -32,6 +23,7 @@ TPTP has its own language; TPTP for problems and TSTP for solutions. TPTP langua
 
 An example for a problem, i.e., GRP004-1 problem, from the TPTP problem set is given below in CNF format:
 
+	\begin{minipage}{\textwidth}
 	\begin{lstlisting}[caption=GRP004-1.p problem,basicstyle=\footnotesize,breaklines=true,frame=single]
 %--------------------------------------------------------------------------
 % File     : GRP004-1 : TPTP v6.1.0. Released v1.0.0.
@@ -81,3 +73,9 @@ cnf(prove_there_is_a_right_inverse,negated_conjecture,
     ( ~ product(a,X,identity) )).
 %--------------------------------------------------------------------------
 	\end{lstlisting}
+	\end{minipage}
+
+
+
+\input{sections/sec_background_e}
+	

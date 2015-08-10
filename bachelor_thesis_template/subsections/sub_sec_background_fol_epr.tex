@@ -1,15 +1,46 @@
-\subsection{\ac{epr}}\label{sub:c2s1s4}
-\ac{epr} or sometimes known as Bernays-Schoenfinkel class
-is a class of first order logic in which all of its formulas follow the following format:\\*
-$\exists *$ $\forall *$ F, where F is the formula.
-Moreover, F has no proper functions symbols (all functions present are nullary ones "constants").\newline
-Example for a formula in \ac{epr}:\newline
-\begin{displaymath}
-\exists X \exists Y \forall Z  \left(P(a,X,Y,Z)\right).
-\end{displaymath}
-\\
-Keeping \ref{sub:c2s1s3} in mind, this will make every skolemized formula that originally was in \ac{epr} format have no proper function symbols.
-After transforming the above equation, it will be: \newline
-\begin{displaymath}
-\forall Z \left( P(a,b,c,Z) \right).
-\end{displaymath}
+\subsection{What is \ac{epr}}\label{sub:c2s1s4}
+\acf{epr} or sometimes known as Bernays-Sch\"onfinkel class is a fragment of \acf{fol} in which all of its formulas follow the following format:
+
+\begin{lstlisting}[caption=Format of \ac{epr} formula,breaklines=true,mathescape,frame=single]
+                          $\exists *$ $\forall *$ $F$
+  where $F$ is the formula.
+  Moreover, $F$ has no proper functions symbols (all functions present are nullary ones "constants").
+\end{lstlisting}
+
+\ac{epr} fragment has a huge number of applications, e.g. Planning and Verifcation. 
+
+
+\subsection{Example on \ac{epr}}
+Example for a formula in \ac{epr}:
+
+\begin{lstlisting}[caption=Example for an \ac{epr} formula,breaklines=true,escapeinside={(*}{*)},frame=single]
+(* \begin{displaymath}
+		\exists X \exists Y \forall Z  \left(P(a,X,Y,Z)\right).
+	\end{displaymath} *)
+\end{lstlisting}
+
+
+Keeping \ref{sub:c2s1s3} in mind, this will make every skolemized formula that originally was in \ac{epr} format have no proper function symbols. After transforming the above equation, it will be:
+
+\begin{lstlisting}[caption=Example for a skolemized \ac{epr} formula,breaklines=true,escapeinside={(*}{*)},frame=single]
+(* \begin{displaymath}
+	\forall Z \left( P(a,b,c,Z) \right).
+	\end{displaymath} *)
+\end{lstlisting}
+
+
+
+\subsection{Decidability and Universe of \ac{epr}}
+Since the domain of \ac{epr} formulas contains only constants, and the number of constants in a formula is finite. So Herbrand universe of \ac{epr} formulas is finite. From that we could prove that \ac{epr} fragment is a decidable fragment in \ac{fol}, because of the finite number of ground interpretations it can have.
+
+
+\subsection{Equality in \ac{epr}}
+As we have mentioned before that \ac{epr} formulas will never contain proper function symbols. So terms will be one of two options:
+\begin{itemize}
+	\item constant
+	\item variable
+\end{itemize}
+
+
+And since Equality may be added to \ac{fol} as discussed in subsection --, then we should consider the case if the formulas are from the \ac{epr} fragment. Equations are in the following form $t1$ $\approx$ $t2$, where t1 and t2 are terms. And since terms in \ac{epr} are only variables and constants. So the ground case of the Equation will contain only of constants. This result is important and we will refer to it later in chapter \ref{chap:meth_and_impl}.
+ 

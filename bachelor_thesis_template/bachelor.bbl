@@ -8,6 +8,12 @@ Proving that android’s, java’s and python’s sorting algorithm is broken
 algorithm-is-broken-and-how-to-fix-it/}.
 \newblock Accessed: 2015-7-27.
 
+\bibitem{BAGA94}
+Leo Bachmair and Harald Ganzinger.
+\newblock Rewrite-based equational theorem proving with selection and
+  simplification.
+\newblock {\em Journal of Logic and Computation}, 4(3):217--247, 1994.
+
 \bibitem{BAGA01}
 Leo Bachmair and Harald Ganzinger.
 \newblock Resolution theorem proving.
@@ -41,6 +47,11 @@ Koen Claessen and Niklas S{\"o}rensson.
 \newblock New techniques that improve mace-style finite model finding.
 \newblock In {\em Proceedings of the CADE-19 Workshop: Model
   Computation-Principles, Algorithms, Applications}, pages 11--27, 2003.
+
+\bibitem{IMPS}
+WilliamM. Farmer, JoshuaD. Guttman, and F.Javier Thayer.
+\newblock Imps: An interactive mathematical proof system.
+\newblock {\em Journal of Automated Reasoning}, 11(2):213--248, 1993.
 
 \bibitem{RES93}
 Christian Ferm{\"u}ller.
@@ -79,6 +90,11 @@ Konstantin Korovin.
 Laura Kov{\'a}cs and Andrei Voronkov.
 \newblock First-order theorem proving and vampire.
 \newblock In {\em Computer Aided Verification}, pages 1--35. Springer, 2013.
+
+\bibitem{ATP84}
+Donald~W Loveland.
+\newblock Automated theorem proving: a quarter century review.
+\newblock {\em Automated Theorem Proving: After}, 25:1--45, 1984.
 
 \bibitem{BGMC}
 Christopher Lynch.
