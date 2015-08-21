@@ -1,5 +1,5 @@
 \subsection{Original transformations}\label{sub:c3s1s1}
-	\paragraph{The original procedures} discussed in \cite{BMUG06} generally work for all sub-classes of \ac{fol}. Those procedures should be applied to a given set of axioms in a specific form called implication form, sometimes it is called a sequent as in here ---ref---, which is explained here -- , and here -- to know how to transform to that form. Moreover, those transformations are guranteed to terminate for any given problem set, which is a gain for us since some of the \ac{epr} problems were not terminating in the original configurations of E.  
+	\paragraph{The original procedures} discussed in \cite{BMUG06} generally work for all sub-classes of \ac{fol}. Those procedures should be applied to a given set of axioms in a specific form called implication form, sometimes it is called a sequent as in here ---ref---, which is explained here -- , and here -- to know how to transform to that form. Moreover, those transformations are guranteed to terminate for any given problem set, which is a gain for us since most of the \ac{epr} problems were not terminating in the original configurations of E.  
 %TODO :: to add a reference later
 
 	\subsubsection{What are the Transformations}
@@ -34,14 +34,14 @@
 		Moreover, There are three types of procedures in the transformations:	
 		\begin{itemize}
 			\item \textbf{Range restricting transformations}
-			 \hfill \\ are the first two transformations, and they are the most important type of them. All the rest were added to enhance and improve the range restricting ones. They are responsible for transforming the input clauses to the range restricted form and enumerating the universe/domain of the problem in a way or another. Only one of the two transformations should applied, since they perform the same functionality but in different ways. The two transformations are:
+			 \hfill \\ are the first two transformations, and they are the most important type of them. All the rest were added to enhance and improve the range restricting ones. They are responsible for transforming the input clauses to the range restricted form and enumerating the universe/domain of the problem in a way or another. Only one of the two transformations should be applied, since they perform the same functionality but in different ways. The two transformations are:
 			 	\begin{itemize}
 			 		\item \ac{crr}: it enumerates the Herbrand Universe in a naive simple way. 
 			 		\item \ac{rr}: it was introduced to improve the naive implementation of the \ac{crr}. So it only adds elements to the domain only when it is needed.
 			 	\end{itemize}
 			
 			\item \textbf{Shifting transformations}
-			 \hfill \\ are the second two transformations. They are optional to be used. They complement one another not replace each other. They were introduced mainly to prevent the non-termination of the transformations and to prevent generating and redundant and unpleasant clauses from the steps in \ac{rr} as well. And the two shifting transformations are:
+			 \hfill \\ are the second two transformations. They are optional to be used. They complement one another not replace each other. They were introduced mainly to prevent the non-termination of the transformations and to prevent generating redundant and unpleasant clauses from the steps in \ac{rr} as well. And the two shifting transformations are:
 			 	\begin{itemize}
 			 		\item \ac{bs}
 			 		\item \ac{pf}

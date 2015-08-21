@@ -1,40 +1,59 @@
 \BOOKMARK [0][-]{chapter*.1}{Acknowledgments}{}
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}
 \BOOKMARK [0][-]{chapter.2}{Background}{}
-\BOOKMARK [1][-]{section.2.1}{Background on first order logic topics}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.1.1}{Different forms of FOL}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.2}{The universe of FOL}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.3}{Skolemization}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.4}{EPR}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{TPTP Problem set}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{The theorem prover E}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{The main proof procedure}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.2}{Latest results}{section.2.3}
+\BOOKMARK [1][-]{section.2.1}{First order logic \(FOL\)}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.1.1}{FOL overview and Example on it}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.2}{Decidability of FOL}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.3}{Universe of FOL}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.4}{Equality}{section.2.1}
+\BOOKMARK [1][-]{section.2.2}{Effectively propositional calculus \(EPR\)}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{What is EPR}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Example on EPR}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{Decidability and Universe of EPR}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.4}{Equality in EPR}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{Problem Set}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{The theorem prover E}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{What is E}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.2}{What can E do}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.3}{The Code flow of E}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.4}{Latest results}{section.2.4}
 \BOOKMARK [0][-]{chapter.3}{Methodology and Implementation}{}
 \BOOKMARK [1][-]{section.3.1}{Transformations}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.1.1}{Original transformations}{section.3.1}
 \BOOKMARK [2][-]{subsection.3.1.2}{Simplified transformations}{section.3.1}
-\BOOKMARK [1][-]{section.3.2}{Code Flow}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{Testing and Validation}{}
-\BOOKMARK [1][-]{section.4.1}{Efficiency}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.1.1}{Memory Efficiency}{section.4.1}
-\BOOKMARK [1][-]{section.4.2}{Accuracy of the transformations}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{Results and Literature review}{}
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}
-\BOOKMARK [0][-]{chapter.7}{Future Work}{}
-\BOOKMARK [1][-]{section.7.1}{Implementational Future Work}{chapter.7}
-\BOOKMARK [2][-]{subsection.7.1.1}{Extension for Transformations}{section.7.1}
-\BOOKMARK [2][-]{subsection.7.1.2}{Adding Splitting Techniques}{section.7.1}
-\BOOKMARK [2][-]{subsection.7.1.3}{Implement Other Model Construction Techniques}{section.7.1}
-\BOOKMARK [2][-]{subsection.7.1.4}{More on Bachmair and Ganzinger Model Construction Technique}{section.7.1}
-\BOOKMARK [1][-]{section.7.2}{Testing and Evaluational Future Work}{chapter.7}
-\BOOKMARK [2][-]{subsection.7.2.1}{Testing on a Server}{section.7.2}
-\BOOKMARK [2][-]{subsection.7.2.2}{More Testing on the Transformations}{section.7.2}
-\BOOKMARK [2][-]{subsection.7.2.3}{More Testing on the Bachmair and Ganzinger Model Construction Technique}{section.7.2}
-\BOOKMARK [0][-]{section*.28}{Appendix}{}
+\BOOKMARK [1][-]{section.3.2}{Model Construction}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Code FLow}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Related Work}{}
+\BOOKMARK [1][-]{section.4.1}{Different theorem provers}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Model Construction Techniques}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{CASC competition}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{EPR reasoning Techniques}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Range Restricting Transformations}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Testing, Validation and Evaluation}{}
+\BOOKMARK [1][-]{section.5.1}{Simplified Transformations}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Evaluating Memory Efficiency}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{Accuracy of the transformations}{section.5.1}
+\BOOKMARK [1][-]{section.5.2}{Bachmair and Ganzinger Model Construction Technique}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Evaluating Memory Efficiency}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.2}{Accuracy of Implementation}{section.5.2}
+\BOOKMARK [0][-]{chapter.6}{Results}{}
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}
+\BOOKMARK [0][-]{chapter.8}{Future Work}{}
+\BOOKMARK [1][-]{section.8.1}{Implementational Future Work}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.1.1}{Extension for Transformations}{section.8.1}
+\BOOKMARK [2][-]{subsection.8.1.2}{Adding Splitting Techniques}{section.8.1}
+\BOOKMARK [2][-]{subsection.8.1.3}{Implement Other Model Construction Techniques}{section.8.1}
+\BOOKMARK [2][-]{subsection.8.1.4}{More on Bachmair and Ganzinger Model Construction Technique}{section.8.1}
+\BOOKMARK [1][-]{section.8.2}{Testing and Evaluational Future Work}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.2.1}{Testing on a Server}{section.8.2}
+\BOOKMARK [2][-]{subsection.8.2.2}{More Testing on the Transformations}{section.8.2}
+\BOOKMARK [2][-]{subsection.8.2.3}{More Testing on the Bachmair and Ganzinger Model Construction Technique}{section.8.2}
+\BOOKMARK [0][-]{section*.74}{Appendix}{}
 \BOOKMARK [0][-]{appendix.A}{Lists}{}
-\BOOKMARK [1][-]{section*.29}{List of Abbreviations}{appendix.A}
-\BOOKMARK [1][-]{appendix*.30}{List of Figures}{appendix.A}
-\BOOKMARK [0][-]{appendix.B}{Forms of first order logic formulas}{}
-\BOOKMARK [0][-]{appendix.C}{Algorithms}{}
-\BOOKMARK [0][-]{appendix*.31}{References}{}
+\BOOKMARK [1][-]{section*.75}{List of Abbreviations}{appendix.A}
+\BOOKMARK [1][-]{appendix*.76}{List of Figures}{appendix.A}
+\BOOKMARK [1][-]{appendix*.77}{List of Tables}{appendix.A}
+\BOOKMARK [1][-]{appendix*.78}{List of Examples}{appendix.A}
+\BOOKMARK [0][-]{appendix.B}{Syntax of FOL}{}
+\BOOKMARK [0][-]{appendix.C}{Implementation Details}{}
+\BOOKMARK [0][-]{appendix*.80}{References}{}

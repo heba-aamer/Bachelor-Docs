@@ -41,7 +41,7 @@ A very famous example on \ac{fol} is the following:
   (2) $Human(socrates)$
   (3) $Mortal(socrates)$
   
- Where $Human$ and $Mortal$ are predicates here since they represent property over the elements of the domain. While $socrates$ is a constant or in other words a function symbol with arity 0. 
+ Where $Human$ and $Mortal$ are predicates here since they represent properties over the elements of the domain. While $socrates$ is a function symbol with arity 0 or in other words a constant. 
 
 \end{lstlisting}
 
@@ -52,7 +52,7 @@ A very famous example on \ac{fol} is the following:
 The Problem of proving validity, or in other words unsatisfiability, of a formula in \acf{fol} had a lot of attention and experiments in the beginning. A lot of trials were made to prove that it is decidable as mentioned in \cite{SL_14}. But those trials were not successful. Later on, in the same year both \cite{DEC_TUR, DEC_CHURCH} proved that this problem in general is un-decidable.
 
 
-Some algorithms were developed such that if the formula is unsatisfiable it will give a refutation, or proof in simpler words, however if it was not unsatisfiable then the algorithm may halt/terminate and give the correct result and may not halt/terminate at all, so this problem is semi-decidable. An example for such procedure is resolution, with some refinements, in which its basic idea was first developed in \cite{RES_65}. So \acf{fol} is a semi-decidable logic.
+Some algorithms were developed such that if the formula is unsatisfiable it will give a refutation, or proof in simpler words, however if it was not unsatisfiable then the algorithm may halt/terminate and give the correct result or may not halt/terminate at all, so this problem is semi-decidable. An example for such procedure is resolution, with some refinements, in which its basic idea was first developed in \cite{RES_65}. So \acf{fol} is a semi-decidable logic.
 
 
 
@@ -62,7 +62,7 @@ Herbrand devised a procedure for generating the Universe of set of first order f
 
 
 \subsection{Equality}
-The Equality relation adds a lot of expressiveness and it is so intuitive to have it in logic. Adding equality to \ac{fol} is very beneficial such that it eases encoding problems to \ac{fol}, however it adds a burden for how it should be handled. So \ac{fol} with equality adds a distinguished predicate symbol $=$ or $\approx$ that represents equality to the set of predicate symbols. Moreover, it adds to the problem specification some axioms that helps in dealing with such as: reflexivity and symmetry.
+The Equality relation adds a lot of expressiveness and it is so intuitive to have it in logic. Adding equality to \ac{fol} is very beneficial such that it eases encoding problems to \ac{fol}, however it adds a burden for how it should be handled. So \ac{fol} with equality adds a distinguished predicate symbol $=$ or $\approx$ that represents equality to the set of predicate symbols. Moreover, it adds to the problem specification some axioms that helps in dealing with equality such as: reflexivity and symmetry.
 
 
 In general, Equations are of the form: $t1$ $\approx$ $t2$, Where each of the t1 and t2 is a term.
