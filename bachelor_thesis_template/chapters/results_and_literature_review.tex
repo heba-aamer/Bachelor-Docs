@@ -1,7 +1,7 @@
 \chapter{Results}\label{chap:res_and_lit}
 
 
-The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.0, and they were 267 problem. We had a bash script running the transformations first then the normal prover then the model extraction part, and printing the time taken by each step. Moreover, time limit of 3 minutes was given to the 2nd step.
+The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.0, and they were 267 problem. We had a bash script running the transformations in the beginning then the normal prover then the model extraction part. Also it prints the time taken by each step. Moreover, time limit of 3 minutes was given to the 2nd step which is the normal prover itself. Only 107 of the problems were able to terminate within the time limit. 
 
 
 The tests were done in a server having the following specification:
@@ -22,7 +22,7 @@ The below table ~\ref{table:sat_epr_results} is the results of running the scrip
 		\midrule
 GRP123-1.005.p & 0.17 & 0.003s & no & -- & -- \\
 GRP123-2.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP123-3.004.p & 0.17 & 0.008 & yes & 0.349s & 0.014s \\
+GRP123-3.004.p & 0.17 & 0.008s & yes & 0.349s & 0.014s \\
 GRP123-4.004.p & 0.17 & 0.004s & yes & 2.023s & 0.050s \\
 GRP123-6.005.p & 0.17 & 0.004s & no & -- & -- \\
 GRP123-7.005.p & 0.33 & 0.003s & no & -- & -- \\
@@ -295,3 +295,70 @@ SYO603-1.p & 1.00 & 1.192s & no & -- & -- \\
 %	\label{table:epr_casc_results}
 %\end{table}
 
+Another test were made but the time limit was 300 seconds instead of 180 seconds. And only two more problems were solved within that limit. The below table shows them:
+
+	\begin{longtable}{||c | c | c | c | c||} 
+ 		\toprule
+		\cellcolor[HTML]{CCCCCC} Problem & \cellcolor[HTML]{CCCCCC} rating & \cellcolor[HTML]{CCCCCC} transformations t. & \cellcolor[HTML]{CCCCCC} saturation t. & \cellcolor[HTML]{CCCCCC} model extraction t. \\ %[0.5ex] 
+		\midrule
+		\midrule
+GRP130-2.005.p & 0.17 & 0.007s & 3m21.354s & 0.009s \\
+PUZ079+2.p & 0.00 & 0.660s & 3m34.068s & 0.048s \\
+		\bottomrule
+		\caption{More Solved Sat EPR TPTP problems}
+		\label{table:sat_epr_results}
+	\end{longtable}
+
+
+\def\angle{0}
+\def\radius{3}
+\def\cyclelist{{"orange","blue","red","green"}}
+\newcount\cyclecount \cyclecount=-1
+\newcount\ind \ind=-1
+\begin{tikzpicture}[nodes = {font=\sffamily}]
+  \foreach \percent/\name in {
+      46.6/Chrome,
+      24.6/Internet Explorer,
+      20.4/Firefox,
+      5.1/Safari,
+      1.3/Opera,
+      2.0/Other
+    } {
+      \ifx\percent\empty\else               % If \percent is empty, do nothing
+        \global\advance\cyclecount by 1     % Advance cyclecount
+        \global\advance\ind by 1            % Advance list index
+        \ifnum3<\cyclecount                 % If cyclecount is larger than list
+          \global\cyclecount=0              %   reset cyclecount and
+          \global\ind=0                     %   reset list index
+        \fi
+        \pgfmathparse{\cyclelist[\the\ind]} % Get color from cycle list
+        \edef\color{\pgfmathresult}         %   and store as \color
+        % Draw angle and set labels
+        \draw[fill={\color!50},draw={\color}] (0,0) -- (\angle:\radius)
+          arc (\angle:\angle+\percent*3.6:\radius) -- cycle;
+        \node at (\angle+0.5*\percent*3.6:0.7*\radius) {\percent\,\%};
+        \node[pin=\angle+0.5*\percent*3.6:\name]
+          at (\angle+0.5*\percent*3.6:\radius) {};
+        \pgfmathparse{\angle+\percent*3.6}  % Advance angle
+        \xdef\angle{\pgfmathresult}         %   and store in \angle
+      \fi
+    };
+\end{tikzpicture}
+
+
+\begin{tikzpicture} 
+\begin{axis}[ 
+			x tick label style={ /pgf/number format/1000 sep=}, 
+			ylabel=Population, enlargelimits=0.15, 
+			legend style={at={(0.5,-0.15)}, 
+			anchor=north,legend columns=-1}, 
+			ybar=5pt,% configures `bar shift' 
+			bar width=9pt, nodes near coords, point meta=y *10^-7 % the displayed number 
+] 
+\addplot 
+	coordinates {(1930,50e6) (1940,33e6) (1950,40e6) (1960,50e6) (1970,70e6)}; 
+\addplot 
+	coordinates {(1930,38e6) (1940,42e6) (1950,43e6) (1960,45e6) (1970,65e6)}; 
+\legend{Far,Near} 
+\end{axis} 
+\end{tikzpicture}

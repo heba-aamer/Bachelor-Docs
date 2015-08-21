@@ -77,35 +77,35 @@
 \contentsline {subsection}{\numberline {5.2.1}Evaluating Memory Efficiency}{33}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Accuracy of Implementation}{33}{subsection.5.2.2}
 \contentsline {chapter}{\numberline {6}Results}{34}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion}{41}{chapter.7}
-\contentsline {chapter}{\numberline {8}Future Work}{42}{chapter.8}
-\contentsline {paragraph}{ }{42}{section*.63}
-\contentsline {section}{\numberline {8.1}Implementational Future Work}{42}{section.8.1}
-\contentsline {paragraph}{ }{42}{section*.64}
-\contentsline {subsection}{\numberline {8.1.1}Extension for Transformations}{42}{subsection.8.1.1}
-\contentsline {paragraph}{ }{42}{section*.65}
-\contentsline {subsection}{\numberline {8.1.2}Adding Splitting Techniques}{42}{subsection.8.1.2}
-\contentsline {paragraph}{ }{42}{section*.66}
-\contentsline {paragraph}{ }{43}{section*.67}
-\contentsline {subsection}{\numberline {8.1.3}Implement Other Model Construction Techniques}{43}{subsection.8.1.3}
-\contentsline {paragraph}{ }{43}{section*.68}
-\contentsline {subsection}{\numberline {8.1.4}More on Bachmair and Ganzinger Model Construction Technique}{43}{subsection.8.1.4}
-\contentsline {paragraph}{ }{43}{section*.69}
-\contentsline {section}{\numberline {8.2}Testing and Evaluational Future Work}{43}{section.8.2}
-\contentsline {paragraph}{ }{43}{section*.70}
-\contentsline {subsection}{\numberline {8.2.1}Testing on a Server}{43}{subsection.8.2.1}
-\contentsline {paragraph}{ }{43}{section*.71}
-\contentsline {subsection}{\numberline {8.2.2}More Testing on the Transformations}{43}{subsection.8.2.2}
-\contentsline {paragraph}{ }{43}{section*.72}
-\contentsline {subsection}{\numberline {8.2.3}More Testing on the Bachmair and Ganzinger Model Construction Technique}{44}{subsection.8.2.3}
-\contentsline {paragraph}{ }{44}{section*.73}
-\contentsline {chapter}{Appendix}{45}{section*.74}
-\contentsline {chapter}{\numberline {A}Lists}{46}{appendix.A}
-\contentsline {section}{List of Abbreviations}{46}{section*.75}
-\contentsline {section}{List of Figures}{47}{appendix*.76}
-\contentsline {section}{List of Tables}{48}{appendix*.77}
-\contentsline {section}{List of Examples}{49}{appendix*.78}
-\contentsline {chapter}{\numberline {B}Syntax of FOL}{50}{appendix.B}
-\contentsline {subsubsection}{Syntax of \ac {fol}}{50}{section*.79}
-\contentsline {chapter}{\numberline {C}Implementation Details}{52}{appendix.C}
-\contentsline {chapter}{References}{55}{appendix*.80}
+\contentsline {chapter}{\numberline {7}Conclusion}{42}{chapter.7}
+\contentsline {chapter}{\numberline {8}Future Work}{43}{chapter.8}
+\contentsline {paragraph}{ }{43}{section*.63}
+\contentsline {section}{\numberline {8.1}Implementational Future Work}{43}{section.8.1}
+\contentsline {paragraph}{ }{43}{section*.64}
+\contentsline {subsection}{\numberline {8.1.1}Extension for Transformations}{43}{subsection.8.1.1}
+\contentsline {paragraph}{ }{43}{section*.65}
+\contentsline {subsection}{\numberline {8.1.2}Adding Splitting Techniques}{43}{subsection.8.1.2}
+\contentsline {paragraph}{ }{43}{section*.66}
+\contentsline {paragraph}{ }{44}{section*.67}
+\contentsline {subsection}{\numberline {8.1.3}Implement Other Model Construction Techniques}{44}{subsection.8.1.3}
+\contentsline {paragraph}{ }{44}{section*.68}
+\contentsline {subsection}{\numberline {8.1.4}More on Bachmair and Ganzinger Model Construction Technique}{44}{subsection.8.1.4}
+\contentsline {paragraph}{ }{44}{section*.69}
+\contentsline {section}{\numberline {8.2}Testing and Evaluational Future Work}{44}{section.8.2}
+\contentsline {paragraph}{ }{44}{section*.70}
+\contentsline {subsection}{\numberline {8.2.1}Testing on a Server}{44}{subsection.8.2.1}
+\contentsline {paragraph}{ }{44}{section*.71}
+\contentsline {subsection}{\numberline {8.2.2}More Testing on the Transformations}{44}{subsection.8.2.2}
+\contentsline {paragraph}{ }{44}{section*.72}
+\contentsline {subsection}{\numberline {8.2.3}More Testing on the Bachmair and Ganzinger Model Construction Technique}{45}{subsection.8.2.3}
+\contentsline {paragraph}{ }{45}{section*.73}
+\contentsline {chapter}{Appendix}{46}{section*.74}
+\contentsline {chapter}{\numberline {A}Lists}{47}{appendix.A}
+\contentsline {section}{List of Abbreviations}{47}{section*.75}
+\contentsline {section}{List of Figures}{48}{appendix*.76}
+\contentsline {section}{List of Tables}{49}{appendix*.77}
+\contentsline {section}{List of Examples}{50}{appendix*.78}
+\contentsline {chapter}{\numberline {B}Syntax of FOL}{51}{appendix.B}
+\contentsline {subsubsection}{Syntax of \ac {fol}}{51}{section*.79}
+\contentsline {chapter}{\numberline {C}Implementation Details}{53}{appendix.C}
+\contentsline {chapter}{References}{56}{appendix*.80}
