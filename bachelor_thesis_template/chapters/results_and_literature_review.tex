@@ -37,7 +37,13 @@ The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.
 \caption{Distribution of terminated problems over different ratings\label{fig:res_dist}}
 \end{figure}
 
-Some random problems were chosen to be tested thoroughly. SYN867-1 was one of them that gave interesting and weird results. The normal problem specification given to the prover terminated in 0.046s, however, when the transformed set was given to the prover, it did not terminate till the 800 seconds passed. So this shows that transformations may add a burden over the prover itself. 
+
+
+Some random problems were chosen to be tested thoroughly. SYN867-1 was one of them that gave interesting and weird results. The normal problem specification given to the prover terminated in 0.046s, however, when the transformed set was given to the prover, it did not terminate till 1000 seconds passed. So this shows that transformations may add a burden over the prover itself, since the transformations add a lot of new clauses to original problem specification. In the case of SYN867-1 problem, the original specification composed of 58 clauses, however it increased tremendously after the transformations to be 722.
+
+
+\section{Effect of the transformations}
+
 
 
 

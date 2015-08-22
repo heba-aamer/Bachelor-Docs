@@ -75,9 +75,11 @@
 \contentsline {subsection}{\numberline {5.1.2}Accuracy of the transformations}{33}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2}Bachmair and Ganzinger Model Construction Technique}{33}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Evaluating Memory Efficiency}{33}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Accuracy of Implementation}{33}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Complexity of the algorithm}{33}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Accuracy of Implementation}{33}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {6}Results}{34}{chapter.6}
 \contentsline {section}{\numberline {6.1}Testing for termination}{34}{section.6.1}
+\contentsline {section}{\numberline {6.2}Effect of the transformations}{35}{section.6.2}
 \contentsline {chapter}{\numberline {7}Conclusion}{36}{chapter.7}
 \contentsline {chapter}{\numberline {8}Future Work}{37}{chapter.8}
 \contentsline {paragraph}{ }{37}{section*.64}
@@ -109,5 +111,7 @@
 \contentsline {chapter}{\numberline {B}Syntax of FOL}{45}{appendix.B}
 \contentsline {subsubsection}{Syntax of \ac {fol}}{45}{section*.80}
 \contentsline {chapter}{\numberline {C}Implementation Details}{47}{appendix.C}
-\contentsline {chapter}{\numberline {D}Results Details}{48}{appendix.D}
-\contentsline {chapter}{References}{57}{appendix*.81}
+\contentsline {section}{\numberline {C.1}Transformations}{47}{section.C.1}
+\contentsline {section}{\numberline {C.2}Bachmair and Ganzinger Model Construction}{47}{section.C.2}
+\contentsline {chapter}{\numberline {D}Detailed Results}{48}{appendix.D}
+\contentsline {chapter}{References}{58}{appendix*.82}

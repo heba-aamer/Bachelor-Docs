@@ -82,19 +82,47 @@ A Clause is a disjunction of Literals. A ground clause is a clause having no var
 
 \chapter{Implementation Details}\label{chap:appendix_imp}
 
+\section{Transformations}
+Transformations pseudo-code
 
-\chapter{Results Details}\label{chap:appendix_res}
+
+Add where equality is handled.
 
 
-Here in this chapter of the appendix, we give details for the results of the tests. For the tests, we had a bash script running the transformations in the beginning then the normal prover then the model extraction part. Also it prints the time taken by each step. Moreover, time limit of 3 minutes and memory limit of 1GB were given to the 2nd step which is the normal prover itself. Only 107 of the problems were able to terminate within the time limit. The tests were done on a server with 8 GB RAM and 8 CPUs.
+Another simplification were made to remove redundant clauses.
+
+
+\section{Bachmair and Ganzinger Model Construction}
+We made a great use of the shared terms implemented in E. Since each term is only represented once in a term bank. So we added an attribute for the term structure representing whether it is true or false.
+
+
+Comparison functions that takes the ordering into consideration were implemented. One is for sorting the literals in a given clause. The other is for sorting the clauses in the clause set. A pseudo-code for sorting a clause can be found here ---. And --- is the pseudo-code for sorting a clause set.
+
+
+Equality is handled in the following parts of the code -- .
+
+
+Adding visual output.
+
+
+
+\chapter{Detailed Results}\label{chap:appendix_res}
+
+
+Here in this chapter of the appendix, we give details for the results of the tests over all the 267 (counter) satisfiable \ac{epr} problems.
+
+
+For the tests, we had a bash script running the transformations in the beginning then the normal prover then the model extraction part. Also it prints the time taken by each step. Moreover, time limit of 3 minutes and memory limit of 1GB were given to the 2nd step which is the normal prover itself. Only 107 of the problems were able to terminate within the time limit. The tests were done on a server with 8 GB RAM and 8 CPUs.
 
 
 The below table ~\ref{table:sat_epr_results} gives the details of running the script over all the (counter) satisfiable \ac{epr} problems:
 	\begin{center}
 		\begin{longtable}{||c | c | c | c | c | c||} 
  		\toprule
-		Problem & rating & transformations t. & terminated
-		& saturation t. & model extraction t. \\ %[0.5ex] 
+		Problem & rating & transformations & terminated
+		& saturation & model \\ %[0.5ex]
+		
+		 &  & time &  & time & extraction time \\ %[0.5ex] 
 		\midrule
 GRP123-1.005.p & 0.17 & 0.003s & no & -- & -- \\
 GRP123-2.005.p & 0.17 & 0.003s & no & -- & -- \\
@@ -371,7 +399,9 @@ SYO603-1.p & 1.00 & 1.192s & no & -- & -- \\
 
 Another test were made but the time limit was 300 seconds instead of 180 seconds and 2GB memory limit. Only two more problems were solved within that limit. The below table ~\ref{table:more_sat_epr_results} shows them:
 
-	\begin{longtable}{||c | c | c | c | c||} 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c | c | c | c | c||} 
  		\toprule
 		\cellcolor[HTML]{CCCCCC} Problem & \cellcolor[HTML]{CCCCCC} rating & \cellcolor[HTML]{CCCCCC} transformations t. & \cellcolor[HTML]{CCCCCC} saturation t. & \cellcolor[HTML]{CCCCCC} model extraction t. \\ %[0.5ex] 
 		\midrule
@@ -379,9 +409,10 @@ Another test were made but the time limit was 300 seconds instead of 180 seconds
 GRP130-2.005.p & 0.17 & 0.007s & 3m21.354s & 0.009s \\
 PUZ079+2.p & 0.00 & 0.660s & 3m34.068s & 0.048s \\
 		\bottomrule
-		\caption{More Solved Sat EPR TPTP problems}
-		\label{table:more_sat_epr_results}
-	\end{longtable}
+	\end{tabular}
+	\caption{More Solved Sat EPR TPTP problems}
+	\label{table:more_sat_epr_results}
+\end{table}
 
 
 
