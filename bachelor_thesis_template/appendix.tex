@@ -33,6 +33,9 @@
 \lstlistoflistings
 \addcontentsline{toc}{section}{List of Examples}
 
+\listofalgorithms
+\addcontentsline{toc}{section}{List of Algorithms}
+
 
 \chapter{Syntax of FOL}\label{chap:appendix_fol}
 \subsubsection{Syntax of \ac{fol}}
@@ -93,10 +96,25 @@ Another simplification were made to remove redundant clauses.
 
 
 \section{Bachmair and Ganzinger Model Construction}
-We made a great use of the shared terms implemented in E. Since each term is only represented once in a term bank. So we added an attribute for the term structure representing whether it is true or false.
+We made a great use of the shared terms implemented in E. Since each term is only represented once in a term bank. So we added an attribute for the term structure representing whether it is evaluated to true or false.
 
 
-Comparison functions that takes the ordering into consideration were implemented. One is for sorting the literals in a given clause. The other is for sorting the clauses in the clause set. A pseudo-code for sorting a clause can be found here ---. And --- is the pseudo-code for sorting a clause set.
+Comparison functions that takes the ordering into consideration were implemented. One is used for sorting the literals in a given clause. The other is for sorting the clauses in the clause set. A pseudo-code for sorting a clause can be found here \ref{alg:lit_comp_fun}. And --- is the pseudo-code for sorting a clause set.
+
+\begin{algorithm}
+	\caption{Literal Comparison Function}
+	\label{alg:lit_comp_fun}
+	\begin{algorithmic}[1]
+	\Procedure{CH\textendash Election}{}
+		\For{each node $i$ \Pisymbol{psy}{206} $N$ }
+			\State Broadcast HELLO message to its neighbor
+			\State let $k$ \Pisymbol{psy}{206} $N1$ ($i$) U {$i$} be s.t
+			\State QOS($k$) = max {QOS($j$) \textbar $j$ \Pisymbol{psy}{206} $N1$($i$)  U $i$}
+			\State MPRSet($i$) = $k$
+		\EndFor
+	\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
 
 
 Equality is handled in the following parts of the code -- .

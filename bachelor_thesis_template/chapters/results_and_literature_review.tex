@@ -6,7 +6,7 @@
 The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.0, and they were 267 problem. Only 109 were terminated within 5 minutes time limit. Tables ~\ref{table:sat_epr_results} and ~\ref{table:more_sat_epr_results} show detailed results of running all the 267 problem with the time needed to terminate the problem.
 
 
-~\ref{fig:res_dist} pie chart shows the distribution of the terminated 109 problems with respect of rating of the problem. 
+Figure ~\ref{fig:res_dist} is a pie chart that shows the distribution of the terminated 109 problems with respect of rating of the problem. 
 
 
 \begin{figure}[H]
@@ -42,7 +42,31 @@ The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.
 Some random problems were chosen to be tested thoroughly. SYN867-1 was one of them that gave interesting and weird results. The normal problem specification given to the prover terminated in 0.046s, however, when the transformed set was given to the prover, it did not terminate till 1000 seconds passed. So this shows that transformations may add a burden over the prover itself, since the transformations add a lot of new clauses to original problem specification. In the case of SYN867-1 problem, the original specification composed of 58 clauses, however it increased tremendously after the transformations to be 722.
 
 
-\section{Effect of the transformations}
+
+\section{Testing for Model}
+
+12 problems were chosen to test their explicit model; one time with applying the transformations, another time without applying them. The models in the 2 cases were exactly the same, the only difference was that the models with the transformations included extra elements for the domain predict introduced in the transformations. Also it is notable that the all 12 problems were almost range restricted from the beginning.
+
+Those problems with their rating are listed in the below table:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|| c | c || c | c ||}
+		\toprule
+		Problem & Rating & Problem & Rating \\
+		\midrule
+		PUZ001-3.p      &  0.00  &  PUZ080+2.p      &  0.00 \\		
+		PUZ028-1.p      &  0.00  &  PUZ028-2.p      &  0.00 \\
+		PUZ028-3.p      &  0.00  &  PUZ028-4.p      &  0.00 \\
+		PUZ068+2.p      &  0.00  &  PUZ069+2.p      &  0.00 \\
+		HWC004-1.p      &  0.00  &  GRP123-8.004.p  &  0.17 \\
+		GRP125-4.004.p  &  0.17  &  GRP128-4.004.p  &  0.17 \\		
+		\bottomrule
+	\end{tabular}
+	\caption{Problems used to test the Model}
+	\label{table:mode_with_&_without}
+\end{table}
+
 
 
 

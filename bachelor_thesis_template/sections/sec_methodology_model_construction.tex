@@ -31,7 +31,12 @@ A Model Construction Technique had to be applied to the saturated set of clauses
 			\end{enumerate}
 		
 		\textbf{A pseudo-code} for the implemented version of the algorithm is given below:
-		
+
+
+
+%%%%%% commented old version of code %%%%%%
+
+\begin{comment}
 			\begin{minipage}{\textwidth}		
 			\begin{lstlisting}[caption=Ground Positive Case for Bachmair and Ganzinger Model Construction,frame=single]
 Input: clauses_set % saturated set of clauses
@@ -64,6 +69,87 @@ Input: clauses_set % saturated set of clauses
 Output: model
 			\end{lstlisting}
 			\end{minipage}		
+\end{comment}
+
+%			\begin{minipage}{\textwidth}		
+			\begin{algorithm}[H]
+			\caption{Ground Positive Case for Bachmair and Ganzinger Model Construction}
+			\label{alg:bach_ganz_code}
+				\begin{algorithmic}[1]
+					\Procedure{extract\char`_model}{$clauses\char`_set, ordering$}
+					
+					\Comment {\parbox[t]{.7\linewidth}{$clauses\char`_set$ is the saturated set of clauses}}
+				
+					\Comment {\parbox[t]{.7\linewidth}{$ordering$ is the used ordering in the saturation}}
+		
+
+					\State let $model$ $\leftarrow$ $\lbrace \rbrace$
+
+					\Comment {\parbox[t]{.7\linewidth} {$model$ is the set of positive literals in the constructed model at the beginning it is an empty set}} 
+					
+
+					\State $sort\char`_literals(clauses\char`_set, ordering)$	
+
+					\Comment {\parbox[t]{.7\linewidth}{$sort\char`_literals$ sorts the literals in each clause descendingly}}	
+					
+
+					\State $sort\char`_clauses(clauses\char`_set, ordering)$
+
+					\Comment {\parbox[t]{.7\linewidth}{$sort\char`_clauses$ sorts the clauses ascendingly in the clause set}}
+					
+					\For{each clause $c$ \Pisymbol{psy}{206} $clauses\char`_set$ }
+
+						\If{$is\char`_true\char`_by\char`_model(c) \not= true$}
+						
+						\Comment {\parbox[t]{.7\linewidth}{$is\char`_true\char`_by\char`_model$ checks whether the current clause is true by the partial model we have or not}}
+						
+
+						\State set $model$ $\leftarrow$ $model$ + $get\char`_maximal\char`_literal(c)$
+						
+						\Comment {\parbox[t]{.7\linewidth}{$get\char`_maximal\char`_literal$ if not true yet the it gets the maximal literal, which is the first one since it is sorted, and adds it to model}}
+
+						\EndIf
+
+					\EndFor
+					
+					
+\Return $model$
+
+					\EndProcedure
+	\begin{comment}
+Input: clauses_set % saturated set of clauses
+	, ordering % ordering used in the saturation
+{	
+	% model is the set of positive literals in the 
+	% constructed model, at the beginning it is
+	% an empty set of literals 
+	model = {}			
+				
+	% this sorts the set of clauses ascendingly
+	sort_clauses(clauses_set, ordering)  
+	% it marks the maximal literal in each clause			\usepackage[T1]{fontenc}
+	mark_maximal_literals(clauses_set, ordering)
+		
+	for clause:clause_set do:
+	{
+	  % here it checks whether the current clause
+	  % is true by the partial model we have or not
+	  if not is_clause_true_by_model(clause, model) then:
+	  {
+		% if not true yet the it gets the marked
+		% maximal literal and adds it to model											
+		model = model + get_maximal_literal(clause)				
+	  }
+	  end_if
+	}
+	end_for						
+}
+Output: model
+\end{comment}
+				\end{algorithmic}
+			\end{algorithm}
+%			\end{minipage}	
+
 		
 		
 		\paragraph{}
@@ -88,15 +174,15 @@ Output: model
 	% ordered clauses is the maximal
 	(* \begin{table}[H]
 		\centering
-		\begin{tabular}{||c c c c||}
- 		Order & Ordered Clause & Partial Model & Change in Model \\ [0.5ex] 
+		\begin{tabular}{||c | c | c | c||}
+		Order & Ordered Clause & Partial Model & Change in Model \\ [0.5ex] 
  		(1) & P(a) 			& {} 				& P(a) \\ 
  		(2) & Q(b) $\vert$ P(a)  	& {P(a)} 			& --- \\
  		(3) & R(a, b) $\vert$ Q(b)	& {P(a)}		 		& R(a, b) \\
  		(4) & R(b, b) 		& {P(a), R(a, b)} 	& R(b, b) \\ [1ex]
 		\end{tabular}
-		\caption{Table to test captions and labels}
-		\label{table:1}
+		\caption{Applying Model Construction Technique}
+		\label{table:app_model}
 	\end{table} *)
 		
 	Then the explicit Model:
