@@ -6,7 +6,7 @@
 \BOOKMARK [2][-]{subsection.2.1.2}{Decidability of FOL}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.3}{Universe of FOL}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.4}{Equality}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{Effectively propositional calculus \(EPR\)}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Effectively propositional \(EPR\)}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{What is EPR}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{Example on EPR}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.3}{Decidability and Universe of EPR}{section.2.2}
@@ -51,16 +51,16 @@
 \BOOKMARK [2][-]{subsection.8.2.1}{Testing on a Server}{section.8.2}
 \BOOKMARK [2][-]{subsection.8.2.2}{More Testing on the Transformations}{section.8.2}
 \BOOKMARK [2][-]{subsection.8.2.3}{More Testing on the Bachmair and Ganzinger Model Construction Technique}{section.8.2}
-\BOOKMARK [0][-]{section*.76}{Appendix}{}
+\BOOKMARK [0][-]{section*.85}{Appendix}{}
 \BOOKMARK [0][-]{appendix.A}{Lists}{}
-\BOOKMARK [1][-]{section*.77}{List of Abbreviations}{appendix.A}
-\BOOKMARK [1][-]{appendix*.78}{List of Figures}{appendix.A}
-\BOOKMARK [1][-]{appendix*.79}{List of Tables}{appendix.A}
-\BOOKMARK [1][-]{appendix*.80}{List of Examples}{appendix.A}
-\BOOKMARK [1][-]{appendix*.81}{List of Algorithms}{appendix.A}
+\BOOKMARK [1][-]{section*.86}{List of Abbreviations}{appendix.A}
+\BOOKMARK [1][-]{appendix*.87}{List of Figures}{appendix.A}
+\BOOKMARK [1][-]{appendix*.88}{List of Tables}{appendix.A}
+\BOOKMARK [1][-]{appendix*.89}{List of Examples}{appendix.A}
+\BOOKMARK [1][-]{appendix*.90}{List of Algorithms}{appendix.A}
 \BOOKMARK [0][-]{appendix.B}{Syntax of FOL}{}
 \BOOKMARK [0][-]{appendix.C}{Implementation Details}{}
 \BOOKMARK [1][-]{section.C.1}{Transformations}{appendix.C}
 \BOOKMARK [1][-]{section.C.2}{Bachmair and Ganzinger Model Construction}{appendix.C}
 \BOOKMARK [0][-]{appendix.D}{Detailed Results}{}
-\BOOKMARK [0][-]{appendix*.84}{References}{}
+\BOOKMARK [0][-]{appendix*.93}{References}{}

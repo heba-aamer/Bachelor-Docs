@@ -156,7 +156,7 @@ Output: model
 		\textbf{An Example} for applying the Bachmair and Ganzinger Model Construction Technique is given below:
 
 			\begin{minipage}{\textwidth}
-			\begin{lstlisting}[caption=Example for applying Bachmair and Ganzinger Model Construction Technique,mathescape,escapeinside={(*}{*)}]
+			\begin{lstlisting}[caption=Example for applying Bachmair and Ganzinger Model Construction Technique (SETUP),frame=single,mathescape]
 	Let the unordered saturated set of clauses be:
 	{
 		$R(a, b) | Q(b)$,
@@ -172,19 +172,26 @@ Output: model
 
 	% the left most literal in each of the
 	% ordered clauses is the maximal
-	(* \begin{table}[H]
+		\end{lstlisting}	
+	
+\begin{table}[H]
 		\centering
 		\begin{tabular}{||c | c | c | c||}
+		\toprule		
 		Order & Ordered Clause & Partial Model & Change in Model \\ [0.5ex] 
+		\midrule
  		(1) & P(a) 			& {} 				& P(a) \\ 
  		(2) & Q(b) $\vert$ P(a)  	& {P(a)} 			& --- \\
  		(3) & R(a, b) $\vert$ Q(b)	& {P(a)}		 		& R(a, b) \\
  		(4) & R(b, b) 		& {P(a), R(a, b)} 	& R(b, b) \\ [1ex]
+		\bottomrule		
 		\end{tabular}
 		\caption{Applying Model Construction Technique}
 		\label{table:app_model}
-	\end{table} *)
+\end{table}
+
 		
+			\begin{lstlisting}[caption=Example for applying Bachmair and Ganzinger Model Construction Technique (OUTPUT),frame=single,mathescape]
 	Then the explicit Model:
 	{
 		$P(a)$,

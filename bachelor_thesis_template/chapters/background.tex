@@ -3,10 +3,10 @@
 
 This chapter is devoted for introducing and familiarizing the reader to the theoretical concepts behind this project, and give the reader a background on the theorem prover E as well. So it will include the following sections:
 	\begin{itemize}
-		\item A background on \acf{fol} in section %TODO add a reference
-		\item A background on \acf{epr} in section %TODO add a reference
-		\item A background on E in section %TODO add a reference
-		\item A background on Problem set in section %TODO add a reference
+		\item A background on \acf{fol} in section \ref{sec:c2s1} %TODO add a reference
+		\item A background on \acf{epr} in section \ref{sec:c2s2} %TODO add a reference
+		\item A background on Problem set in section \ref{sec:c2s3} %TODO add a reference
+		\item A background on E in section \ref{sec:c2s4} %TODO add a reference
 	\end{itemize}
 
 
@@ -14,13 +14,18 @@ This chapter is devoted for introducing and familiarizing the reader to the theo
 
 
 
-\section{Problem Set}
-TPTP problems are first order problems, that are considered benchmarks to measure the performance of the different automated theorem provers. A description for TPTP could be found in \cite{TPTP09}, and the problem set could be downloaded from \url{http://www.cs.miami.edu/~tptp/}. TPTP problem set consists of different categories of problems, or divisions in other words, such as : PUZ, NLP, GRP. Those categories cames from the scientific meaning of the problems, e.g., NLP represents Natural language processing problems.
+\section{Problem Set}\label{sec:c2s3}
 
+\paragraph{}
+TPTP problems are first order problems, that are considered benchmarks to measure the performance of the different automated theorem provers. A description for TPTP could be found in \cite{TPTP09}, and the problem set could be downloaded from \url{http://www.cs.miami.edu/~tptp/}. TPTP problem set consists of different categories of problems, or divisions in other words, such as : PUZ, NLP, and GRP. Those categories came from the scientific meaning of the different problems, e.g., NLP represents natural language processing problems.
 
+\paragraph{}
 TPTP has its own language; TPTP for problems and TSTP for solutions. TPTP language could be written in two formats. The first of them is FOF, which is first order form. While the second form is CNF, which is clause normal form. Having a unified language for problems and solutions had a great impact on the field of \ac{atp}. And this allows the integration of different \ac{atp} systems ,i.e., Automated theorem provers, since they have a specific language that could communicate in.  
 
+\paragraph{}
+The theorem prover iProver is clear example on the integration between the different automated theorem provers . According to \cite{korovin2013inst}, iProver does not do the step of clausification by itself. It uses other theorem provers to have this step done. It uses Vampire for having the problem in CNF format, and it can use E as well to do so. 
 
+\paragraph{}
 An example for a problem, i.e., GRP004-1 problem, from the TPTP problem set is given below in CNF format:
 
 	\begin{minipage}{\textwidth}

@@ -32,6 +32,8 @@ Tools to check this:
 \subsection{Accuracy of the transformations}
 In all tested problems, The results of the Transformations were the same as an implemented program called Yarralumla \url{http://users.cecs.anu.edu.au/~baumgart/systems/yarralumla/}, implemented by Peter Baumgartner, one of the authors of \cite{BMUG06}. So we believe it is correct.
 
+In order to check the correctness of the transformations, we implemented a c program "tptp2tme" that takes a tptp problem and then transform it to tme syntax, which is extended prolog language and the one used in the yarralumla program. Then we applied yarralumla to the outputed problem and Our transformations to the original tptp problem. Afterwards, we compared the output of both implementations. In all tested problems they were exactly the same. So we believe in this case our implementation is correct.
+
 
 \section{Bachmair and Ganzinger Model Construction Technique}
 \subsection{Evaluating Memory Efficiency}
