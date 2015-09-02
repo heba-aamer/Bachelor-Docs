@@ -1,10 +1,31 @@
 \chapter{Conclusion}\label{chap:concl}
+\paragraph{}
+Here in this chapter we discuss what can we can conclude from that, However it gives back a lot of open questions at the same time.
 
+\paragraph{}
+With 37.8\% termination from all satisfiable \ac{epr} problems, it showed that the range restricting transformations did not have a significant effect on the (counter) satisfiable \ac{epr} problems. It worth mentioning that most of the solved problems, that we checked, were almost range restricted problems from the beginning. So no clear benefit from the transformations were gained in range restricted problems.
 
-So we can conclude from the results of testing that the saturated output did not have a significant difference after applying the range restricting transformations for the problem specification. Most of the solved problems were almost range restricted problems from the beginning. So no clear benefit from the transformations were gained.
+\paragraph{}
+One reason for that is that the theorem prover E has no backtracking splitting techniques as what implemented in MSPASS and KRHyper that the transformations showed promising performance when tried to them. However, it worth mentioning that splitting techniques is not obligatory to be used unless blocking is used, and in our case blocking is not used. So this seems to be not accurate enough when tried in E. Another reason is that transformations generate too many clauses which puts a heavy burden on the prover not if the normal specification were given to the prover right away. 
 
+\paragraph{}
+By the use of Bachmair and Ganzinger model construction technique. We were finally able to extract the explicit minimal model from the saturated set. The current explicit model is the set of positive atoms that are true in the constructed model. 
 
-However, Something that was not tested thoroughly was the effect of termination in general for \ac{epr} problems since in testing a time limit of three minutes were given to halt if it did not achieve results before it. As it was mentioned before that resolution based reasoning systems do not guarantee termination. However, The transformations guarantee termination for \ac{epr}. So this needs to be checked out without a time limit.
+\paragraph{}
+A gain from the project is that the transformations are implemented as a standalone program. So other theorem provers can try their output, which can help in having a good judgement on the effect of the transformations. Another gain is having now a TPTP to tme snytax converter that could be used in a very simple and easy way.  
 
+\paragraph{}
+To sum up, the theorem prover E now has a mechanism to give back an explicit model when the given specification is a (counter) satisfiable one. But many future work could be done and this will be discussed in the next chapter \ref{chap:todo}.
 
-At the end, Minimal explicit model was given after applying the Bachmair and Ganzinger Model Construction Technique for the saturated set. Another addition was the extension of Bachmair and Ganzinger Model Construction Technique to handle equality in \ac{epr} formulae.
+\begin{comment}
+\paragraph{}
+However, Something that was not tested thoroughly was the effect of termination in general for unsatisfiable \ac{epr} problems since in testing a time limit of three minutes were given to halt if it did not achieve results before it. As it was mentioned before that resolution based reasoning systems do not guarantee termination. However, The transformations guarantee termination for \ac{epr}. So this needs to be checked out without a time limit.
+
+\paragraph{}
+At the end, Minimal explicit model was given after applying the Bachmair and Ganzinger Model Construction Technique for the saturated set.
+
+Another addition was the extension of Bachmair and Ganzinger Model Construction Technique to handle equality in \ac{epr} formulae.
+\end{comment}
+
+\paragraph{}
+At the end, we were able to add an explicit model construction in E with the help of range restricting transformations and Bachmair and Ganzinger model construction technique.   

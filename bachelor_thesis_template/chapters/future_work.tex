@@ -3,47 +3,59 @@
 	This project has a fertile environment were many aspects could be added and extended in a simple way.
 And those points will be discussed in the sections of this chapter in details. Moreover, those points could be viewed in two different categories, the first of them is implementation view and it will be discussed further in section \ref{sec:c7s1}, while the other is a testing and evaluational view and this will be presented in section \ref{sec:c7s2}. 
 
-	\section{Implementational Future Work}\label{sec:c7s1}
+	\section{Implementational future work}\label{sec:c7s1}
 		\paragraph{ }
 		This section is devoted to discuss the related enhancements and implementations that could be added in E to achieve the goal of model construction. Most of those points will also help in evaluating the implemented technique in a way or another.
 \\
-Some Points include modifications for the implemented part such as sub-section \ref{sub:c7s1s1}, while others will need a whole new implementation as in sub-section \ref{sub:c7s1s4}.    
+Some points include modifications for the implemented part such as sub-section \ref{sub:c7s1s1}, while others will need a whole new implementation as in sub-section \ref{sub:c7s1s4}.    
 
-		\subsection{Extension for Transformations}\label{sub:c7s1s1}
+		\subsection{Extension for transformations}\label{sub:c7s1s1}
 			\paragraph{ }
-			As discussed before the original transformations mentioned were simplified because it was only intended for \ac{epr} sub-class in \ac{fol}. So a great extension that could be done is to extend the transformations to all sub-classes of \ac{fol} instead of only \ac{epr} by adding the simplified steps in the implemented crr and rr procedures on one hand, and by adding the shifting and blocking transformations on the other hand.
+			As discussed before the original transformations mentioned were simplified because it was only intended for \ac{epr} sub-class in \ac{fol}. So a great extension that could be done is to extend the transformations to all sub-classes of \ac{fol} instead of only \ac{epr} by adding the simplified steps in the implemented \ac{crr} and \ac{rr} procedures on one hand, and by adding the shifting and blocking transformations on the other hand.
+			
+			\paragraph{}
+			This could functionality could be added as a standalone part. In this case it would be helpful to have the transformations implemented so that other theorem provers could use it also to evaluate the effect of the transformations.
 
-		\subsection{Adding Splitting Techniques}\label{sub:c7s1s2}
+		\subsection{Adding splitting techniques}\label{sub:c7s1s2}
 			\paragraph{ }
-			Another addition for that project that could be added is implementing splitting techniques. Since it was one of the limitations that did not make the implemented Transformations work on their own and needed further handling by augmenting it with the Bachmair and Ganzinger Model construction Technique.
+			Another addition for that project that could be added is implementing splitting techniques. Since it was one of the limitations that did not make the implemented transformations work on their own and needed further handling by augmenting it with the Bachmair and Ganzinger model construction technique.
+			
 			\paragraph{ }
-			So this could be done by adding a suitable splitting technique with backtracking, and in this case the Bachmair and Ganzinger Model Construction Technique won't be enabled, however another part for further handling would be needed to extract the explicit model from the saturated splitted set of clauses.  
+			So this could be done by adding a suitable splitting technique with backtracking, and in this case the Bachmair and Ganzinger model construction technique won't be enabled, however another part for further handling would be needed to extract the explicit model from the saturated splitted set of clauses.  
 
-		\subsection{Implement Other Model Construction Techniques}\label{sub:c7s1s3}
+		\subsection{Implement other model construction techniques}\label{sub:c7s1s3}
 			\paragraph{ }
-			Augmenting E with other Model Construction Techniques would add a value for it. As well as, it will make us have a good evaluation on the implemented Bachmair and Ganzinger Model Construction Technique since we will have a meaningful comparison on the performance and the effect of each of the different techniques.
+			Augmenting E with other model construction techniques would add a value for it. As well as, it will make us have a good evaluation on the implemented Bachmair and Ganzinger model construction technique since we will have a meaningful comparison on the performance and the effect of each of the different techniques.
 		
-		\subsection{More on Bachmair and Ganzinger Model Construction Technique}\label{sub:c7s1s4}
+		\subsection{More on Bachmair and Ganzinger model construction technique}\label{sub:c7s1s4}
 			\paragraph{ }
-			Adding the General case for Bachmair and Ganzinger Model Construction Technique that deals with the non ground %TODO :: may be also positive
-		case for the saturated set of clauses, as explained here in \cite{BGMC}, may have a good output since the transformations will not be used in this case and it will act directly on the saturated set without having them acting. And this will be a good research point to compare the effect of the transformations as a Model Construction Technique.
+			Adding the general case for Bachmair and Ganzinger model construction technique that deals with the non ground %TODO :: may be also positive
+		case for the saturated set of clauses, as explained here in \cite{BGMC}, may have a good output since the transformations will not be used in this case and it will act directly on the saturated set without having them acting. And this will be a good research point to compare the effect of the transformations with the model construction technique.
 		
 		
-	\section{Testing and Evaluational Future Work}\label{sec:c7s2}
+	\section{Testing and evaluational future work}\label{sec:c7s2}
 		\paragraph{ }
-		Testing is very important to be able to evaluate any project. So the coming points are of a great importance to have a fair judgement on the implemented techniques and to discover the limitations of applying them in saturation-based theorem provers.
+		Testing is very important to be able to evaluate any project. So the coming points are of a great importance to have a fair judgement on the implemented techniques and to discover the limitations of applying them in resolution-based theorem provers.
 		
-		\subsection{Testing on a Server}\label{sub:c7s2s1}
+		\begin{comment}
+		\subsection{Testing validation of transformations on a server}\label{sub:c7s2s1}
 			\paragraph{ }
-			Testing medium sized and large sized problems on a large server would be of a great importance. Since only a personal computer of 4 GB RAM were used in the testing so only small sized problems were able to run on it without crashing. And the results of these problems is important to have a full overview on the performance and the impact of the project specially on those problems in the \ac{epr} set that were not terminating in the original configurations. Only after that we could have a fair evaluation on the project.  
+			Running the script of validation of the transformations over medium sized and large sized problems on a large server would be of a great importance. Since only a personal computer of 4 GB RAM were used in the testing so only small sized problems were able to run on it without crashing. And the results of these validations is important to have a full overview on the performance and the impact of the project specially on those problems in the \ac{epr} set that were not terminating in the original configurations. Only after that we could have a fair evaluation on the project.  
+		\end{comment}		
 		
-		\subsection{More Testing on the Transformations}\label{sub:c7s2s2}
+		\subsection{More testing on the transformations}\label{sub:c7s2s2}
 			\paragraph{ }
-			More Testing on the Transformations is needed with consideration of the prover itself to know why the transformations alone did not perform what it was supposed to do. Then after knowing the reason that could be enhanced accordingly.
+			More testing on the transformations is needed with consideration of the prover itself to know why the transformations alone did not perform what it was supposed to do. Then after knowing the reason that could be enhanced accordingly.			
+			
+			\paragraph{}
+			Also testing the transformations on the \ac{epr} problem set, the satisfiable and unsatisfiable problems, should be considered. In order to have a better overview of the termination problem on \ac{epr} set in resolution based theorem provers. 			
+			
+			\paragraph{}
+			On the other hand, other automated theorem provers could use the implemented transformations and apply them. And see what are similarities and differences between the different automated theorem provers.
 		
-		\subsection{More Testing on the Bachmair and Ganzinger Model Construction Technique}\label{sub:c7s2s3}
+		\subsection{More testing on the Bachmair and Ganzinger model construction technique}\label{sub:c7s2s3}
 			\paragraph{ }
-			Also More Testing on the implemented Bachmair and Ganzinger Model Construction Technique is of major importance at least to know the limitations of applying it in saturation-based theorem provers. 		
+			Also more testing on the implemented Bachmair and Ganzinger model construction technique is of major importance at least to know the limitations of applying it in saturation-based theorem provers. 		
 		
 		
 		

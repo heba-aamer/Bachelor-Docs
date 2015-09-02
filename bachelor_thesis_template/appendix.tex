@@ -1,11 +1,27 @@
 \appendix
 \renewcommand{\appendixtocname}{Appendix}
+%\addtocontents{lof}{\protect\noaddvspace}
+%\renewcommand{\insertchapterspace}{}\renewcommand{\appendixtocname}{Appendix}
 \renewcommand{\appendixpagename}{\appendixtocname}
+\renewcommand{\lstlistlistingname}{List of Examples}
 \addappheadtotoc
 \setboolean{@twoside}{false}
+%% List of figures formatting
+%\renewcommand{\cftloftitlefont}{\normalfont\hfill}
+%\renewcommand{\cftafterloftitle}{\hfill}
+%\setlength{\cftbeforeloftitleskip}{0in}
+%\setlength\cftbeforefigskip{\cftbeforechapskip} % for spacing after each entry
+%
+%% List of tables formatting
+%\renewcommand{\cftlottitlefont}{\normalfont\hfill}
+%\renewcommand{\cftafterlottitle}{\hfill}
+%\setlength{\cftbeforelottitleskip}{0in}
+%\setlength\cftbeforetabskip{\cftbeforechapskip} % for spacing after each entry
 \appendixpage
 
 \chapter{Lists}
+
+
 \addcontentsline{toc}{section}{List of Abbreviations}
 \begin{acronym}[\hspace{3cm}]
 %  \acro{ac}[AC]{Acronym Without Citation}
@@ -23,6 +39,7 @@
   \acro{bl}[BL]{Blocking Transformation}
 \end{acronym}
 \clearpage
+
 
 \listoffigures
 \addcontentsline{toc}{section}{List of Figures}
@@ -82,7 +99,7 @@ Compound formulas are formed by:
 
 A Clause is a disjunction of Literals. A ground clause is a clause having no variables. A positive clause is a clause who has no negated atoms. While a negative clause is a clause who contains only negated atoms. A mixed clause is a clause who consists of both atoms and negated atoms. A unit clause is a clause containing one Literal.
 
-
+\begin{comment}
 \chapter{Implementation Details}\label{chap:appendix_imp}
 
 \section{Transformations}
@@ -121,18 +138,59 @@ Equality is handled in the following parts of the code -- .
 
 
 Adding visual output.
+\end{comment}
+
+\chapter{Validation Details}\label{chap:appendix_valid}
+\paragraph{}
+Here in this chapter of the appendix, we give details for the validation checks that ware made for our implemented transformations.
+
+\paragraph{}
+In order to check the correctness of the transformations, we implemented a C program $tptp2tme.c$ that takes a TPTP problem and then transform it to tme syntax, which is extended prolog language and the one used in the yarralumla program. We then implemented a Python script $compare\char`_transformations.py$ that takes the path of a folder as an input. It takes each one of the TPTP problems in the folder and then transform the problem into tme syntax. Then we applied Yarralumla to the tme version of problem and our transformations to the original TPTP problem. 
+
+\paragraph{}
+Afterwards, we used some scripts implemented in the theorem prover SPASS and Yarralumla to change the output of both implementations of the transformations to TPTP syntax. Then we compared the two TPTP outputs with some C program $tptp\char`_tme\char`_compare.c$ that we also implemented. This C program gives two outputs either True or False and the clause that were found in only one of the two transformations. In most of the problems $tptp\char`_tme\char`_compare.c$ was sufficient to prove that they are the same. However, for some minor cases that needs further complicated handling it gives a False result. But in those cases, the results were checked manually and proved that the two transformations gave similar output.
+
+\paragraph{}
+Below table \ref{table:trans_valid_results} summarizes the results over the 203 problem. It gives how many problem the transformations ran correctly over it and the remaining was not checked because CPU limitations.
+
+\begin{minipage}{\textwidth}
+
+\begin{center}
+		\begin{longtable}{||c | c | c||} 
+ 		\toprule
+		Category & Number of problems & Count of correctly transformed \\ %[0.5ex]
+		\midrule
+		GRP & 50 & 50 \\
+		HWV & 24 & 8 \\
+		MGT & 2 & 2 \\
+		NLP & 22 & 22 \\
+		PUZ & 13 & 8 \\
+		SYN & 114 & 89 \\
+		KRS & 24 & 20 \\
+		MSC & 1 & 1 \\
+		PLA & 4 & 0 \\
+		SWB & 3 & 3 \\
+		SYO & 9 & 0 \\
+		\midrule
+		Sum & 266 & 203 \\ %[0.5ex]
+		\bottomrule
+		\caption{Transformations comparison Sat EPR TPTP problems}
+		\label{table:trans_valid_results}
+		\end{longtable}
+	\end{center}
+\end{minipage}
 
 
 
 \chapter{Detailed Results}\label{chap:appendix_res}
 
-
+\paragraph{}
 Here in this chapter of the appendix, we give details for the results of the tests over all the 267 (counter) satisfiable \ac{epr} problems.
 
+\paragraph{}
+For the tests, we had a bash script running the transformations in the beginning then the normal prover then the model extraction part. Also it prints the time taken by each step. Moreover, time limit of 3 minutes and memory limit of 1GB were given to the 2nd step which is the normal prover itself. Only 101 of the problems were able to terminate within the time limit. The tests were done on a server with 8 GB RAM and 8 CPUs.
 
-For the tests, we had a bash script running the transformations in the beginning then the normal prover then the model extraction part. Also it prints the time taken by each step. Moreover, time limit of 3 minutes and memory limit of 1GB were given to the 2nd step which is the normal prover itself. Only 107 of the problems were able to terminate within the time limit. The tests were done on a server with 8 GB RAM and 8 CPUs.
-
-
+\paragraph{}
 The below table ~\ref{table:sat_epr_results} gives the details of running the script over all the (counter) satisfiable \ac{epr} problems:
 	\begin{center}
 		\begin{longtable}{||c | c | c | c | c | c||} 
@@ -144,277 +202,279 @@ The below table ~\ref{table:sat_epr_results} gives the details of running the sc
 		\midrule
 GRP123-1.005.p & 0.17 & 0.003s & no & -- & -- \\
 GRP123-2.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP123-3.004.p & 0.17 & 0.008s & yes & 0.349s & 0.014s \\
-GRP123-4.004.p & 0.17 & 0.004s & yes & 2.023s & 0.050s \\
-GRP123-6.005.p & 0.17 & 0.004s & no & -- & -- \\
-GRP123-7.005.p & 0.33 & 0.003s & no & -- & -- \\
+GRP123-3.004.p & 0.17 & 0.003s & yes & 0.335s & 0.016s \\
+GRP123-4.004.p & 0.17 & 0.003s & yes & 2.060s & 0.046s \\
+GRP123-6.005.p & 0.17 & 0.005s & no & -- & -- \\
+GRP123-7.005.p & 0.33 & 0.002s & no & -- & -- \\
 GRP123-8.004.p & 0.17 & 0.003s & yes & 0.871s & 0.029s \\
 GRP123-9.004.p & 0.17 & 0.003s & yes & 0.506s & 0.031s \\
-GRP124-1.005.p & 0.17 & 0.006s & no & -- & -- \\
+GRP124-1.005.p & 0.17 & 0.003s & no & -- & -- \\
 GRP124-2.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP124-3.005.p & 0.17 & 0.004s & no & -- & -- \\
+GRP124-3.005.p & 0.17 & 0.005s & no & -- & -- \\
 GRP124-4.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP124-6.005.p & 0.17 & 0.007s & no & -- & -- \\
-GRP124-7.005.p & 0.33 & 0.003s & no & -- & -- \\
+GRP124-6.005.p & 0.17 & 0.003s & no & -- & -- \\
+GRP124-7.005.p & 0.33 & 0.004s & no & -- & -- \\
 GRP124-8.005.p & 0.33 & 0.003s & no & -- & -- \\
-GRP124-9.005.p & 0.33 & 0.004s & no & -- & -- \\
-GRP125-1.004.p & 0.17 & 0.003s & yes & 0.424s & 0.014s \\
-GRP125-2.004.p & 0.17 & 0.003s & yes & 0.081s & 0.004s \\
-GRP125-3.004.p & 0.17 & 0.005s & yes & 0.486s & 0.007s \\
-GRP125-4.004.p & 0.17 & 0.002s & yes & 2.288s & 0.030s \\
-GRP126-1.005.p & 0.17 & 0.004s & no & -- & -- \\
-GRP126-2.005.p & 0.17 & 0.007s & no & -- & -- \\
+GRP124-9.005.p & 0.33 & 0.003s & no & -- & -- \\
+GRP125-1.004.p & 0.17 & 0.003s & yes & 0.417s & 0.016s \\
+GRP125-2.004.p & 0.17 & 0.006s & yes & 0.069s & 0.003s \\
+GRP125-3.004.p & 0.17 & 0.007s & yes & 0.592s & 0.007s \\
+GRP125-4.004.p & 0.17 & 0.003s & yes & 2.338s & 0.032s \\
+GRP126-1.005.p & 0.17 & 0.003s & no & -- & -- \\
+GRP126-2.005.p & 0.17 & 0.003s & no & -- & -- \\
 GRP126-3.005.p & 0.17 & 0.003s & no & -- & -- \\
 GRP126-4.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP127-1.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP127-2.005.p & 0.17 & 0.004s & yes & 0.431s & 0.004s \\
-GRP127-3.005.p & 0.17 & 0.009s & no & -- & -- \\
-GRP127-4.005.p & 0.17 & 0.008s & no & -- & -- \\
-GRP128-1.004.p & 0.17 & 0.003s & yes & 2.084s & 0.032s \\
-GRP128-2.004.p & 0.17 & 0.002s & yes & 0.337s & 0.004s \\
-GRP128-3.004.p & 0.17 & 0.003s & yes & 0.806s & 0.014s \\
-GRP128-4.004.p & 0.17 & 0.003s & yes & 59.517s & 0.096s \\
-GRP129-1.005.p & 0.17 & 0.002s & no & -- & -- \\
-GRP129-2.005.p & 0.17 & 0.008s & no & -- & -- \\
-GRP129-3.005.p & 0.33 & 0.004s & no & -- & -- \\
+GRP127-1.005.p & 0.17 & 0.004s & no & -- & -- \\
+GRP127-2.005.p & 0.17 & 0.003s & yes & 0.4411s & 0.004s \\
+GRP127-3.005.p & 0.17 & 0.004s & no & -- & -- \\
+GRP127-4.005.p & 0.17 & 0.003s & no & -- & -- \\
+GRP128-1.004.p & 0.17 & 0.007s & yes & 2.049s & 0.033s \\
+GRP128-2.004.p & 0.17 & 0.007s & yes & 0.316s & 0.005s \\
+GRP128-3.004.p & 0.17 & 0.003s & yes & 0.775s & 0.007s \\
+GRP128-4.004.p & 0.17 & 0.005s & yes & 58.915s & 0.103s \\
+GRP129-1.005.p & 0.17 & 0.003s & no & -- & -- \\
+GRP129-2.005.p & 0.17 & 0.004s & no & -- & -- \\
+GRP129-3.005.p & 0.33 & 0.003s & no & -- & -- \\
 GRP129-4.005.p & 0.17 & 0.002s & no & -- & -- \\
-GRP130-1.005.p & 0.17 & 0.002s & no & -- & -- \\
-GRP130-2.005.p & 0.17 & 0.004s & no & -- & -- \\
-GRP130-3.004.p & 0.17 & 0.006s & yes & 2.495s & 0.006s \\
-GRP130-4.004.p & 0.17 & 0.005s & yes & 1m8.226s & 0.104s \\
-GRP131-1.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP131-2.005.p & 0.17 & 0.005s & no & -- & -- \\
-GRP132-1.005.p & 0.17 & 0.006s & no & -- & -- \\
-GRP132-2.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP133-1.004.p & 0.17 & 0.004s & no & -- & -- \\
-GRP133-2.004.p & 0.17 & 0.009s & no & -- & -- \\
+GRP130-1.005.p & 0.17 & 0.007s & no & -- & -- \\
+GRP130-2.005.p & 0.17 & 0.003s & no & -- & -- \\
+GRP130-3.004.p & 0.17 & 0.007s & yes & 2.526s & 0.007s \\
+GRP130-4.004.p & 0.17 & 0.005s & yes & 1m7.036s & 0.112s \\
+GRP131-1.005.p & 0.17 & 0.005s & no & -- & -- \\
+GRP131-2.005.p & 0.17 & 0.003s & no & -- & -- \\
+GRP132-1.005.p & 0.17 & 0.007s & no & -- & -- \\
+GRP132-2.005.p & 0.17 & 0.007s & no & -- & -- \\
+GRP133-1.004.p & 0.17 & 0.008s & no & -- & -- \\
+GRP133-2.004.p & 0.17 & 0.003s & no & -- & -- \\
 GRP134-1.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP134-2.005.p & 0.17 & 0.004s & no & -- & -- \\
+GRP134-2.005.p & 0.17 & 0.007s & no & -- & -- \\
 GRP135-1.005.p & 0.17 & 0.003s & no & -- & -- \\
-GRP135-2.005.p & 0.17 & 0.006s & no & -- & -- \\
-HWC004-1.p & 0.00 & 0.004s & yes & 0.017s & 0.002s \\
-HWV042-1.p & 0.50 & 0.017s & no & -- & -- \\
-HWV042-2.p & 0.67 & 0.013s & no & -- & -- \\
+GRP135-2.005.p & 0.17 & 0.003s & no & -- & -- \\
+HWC004-1.p & 0.00 & 0.006s & yes & 0.017s & 0.002s \\
+HWV042-1.p & 0.50 & 0.010s & no & -- & -- \\
+HWV042-2.p & 0.67 & 0.012s & no & -- & -- \\
 HWV048-1.p & 0.50 & 0.012s & no & -- & -- \\
-HWV048-2.p & 0.83 & 0.017s & no & -- & -- \\
-HWV049-1.p & 0.67 & 0.019s & no & -- & -- \\
-HWV049-2.p & 0.67 & 0.020s & no & -- & -- \\
-HWV053-1.p & 0.67 & 2.403s & no & -- & -- \\
-HWV054-1.p & 1.00 & 0.918s & no & -- & -- \\
-HWV062-1.p & 0.50 & 1.668s & no & -- & -- \\
-HWV063-1.p & 0.88 & 3.864s & no & -- & -- \\
-HWV066-1.p & 0.50 & 0.398s & no & -- & -- \\
-HWV067-1.p & 1.00 & 4.444s & no & -- & -- \\
-HWV070-1.p & 1.00 & 2.345s & no & -- & -- \\
-HWV071-1.p & 0.67 & 0.048s & no & -- & -- \\
-HWV074-1.p & 0.83 & 1.075s & no & -- & -- \\
-HWV075-1.p & 1.00 & 2.319s & no & -- & -- \\
-HWV076-1.p & 0.50 & 0.052s & no & -- & -- \\
-HWV077-1.p & 1.00 & 0.143s & no & -- & -- \\
-HWV079-1.p & 0.50 & 0.028s & no & -- & -- \\
-HWV080-1.p & 1.00 & 0.428s & no & -- & -- \\
-HWV081-1.p & 1.00 & 0.132s & no & -- & -- \\
-HWV082-1.p & 0.83 & 1.379s & no & -- & -- \\
-HWV085-1.p & 0.83 & 0.837s & no & -- & -- \\
-HWV086-1.p & 1.00 & 13.424s & no & -- & -- \\
-KRS021+1.p & 0.00 & 0.080s & yes & 0.027s & 0.002s \\
-KRS022+1.p & 0.00 & 0.007s & yes & 0.017s & 0.007s \\
-KRS023+1.p & 0.00 & 0.005s & yes & 0.016s & 0.004s \\
-KRS024+1.p & 0.00 & 0.003s & yes & 0.018s & 0.003s \\
-KRS025+1.p & 0.00 & 0.004s & yes & 0.021s & 0.002s \\
+HWV048-2.p & 0.83 & 0.020s & no & -- & -- \\
+HWV049-1.p & 0.67 & 0.020s & no & -- & -- \\
+HWV049-2.p & 0.67 & 0.016s & no & -- & -- \\
+HWV053-1.p & 0.67 & 2.449s & no & -- & -- \\
+HWV054-1.p & 1.00 & 0.622s & no & -- & -- \\
+HWV062-1.p & 0.50 & 1.412s & no & -- & -- \\
+HWV063-1.p & 0.88 & 2.795s & no & -- & -- \\
+HWV066-1.p & 0.50 & 0.346s & no & -- & -- \\
+HWV067-1.p & 1.00 & 3.688s & no & -- & -- \\
+HWV070-1.p & 1.00 & 1.976s & no & -- & -- \\
+HWV071-1.p & 0.67 & 0.038s & no & -- & -- \\
+HWV074-1.p & 0.83 & 0.910s & no & -- & -- \\
+HWV075-1.p & 1.00 & 2.064s & no & -- & -- \\
+HWV076-1.p & 0.50 & 0.050s & no & -- & -- \\
+HWV077-1.p & 1.00 & 0.123s & no & -- & -- \\
+HWV079-1.p & 0.50 & 0.020s & no & -- & -- \\
+HWV080-1.p & 1.00 & 0.364s & no & -- & -- \\
+HWV081-1.p & 1.00 & 0.128s & no & -- & -- \\
+HWV082-1.p & 0.83 & 1.309s & no & -- & -- \\
+HWV085-1.p & 0.83 & 0.689s & no & -- & -- \\
+HWV086-1.p & 1.00 & 11.613s & no & -- & -- \\
+KRS021+1.p & 0.00 & 0.073s & yes & 0.017s & 0.003s \\
+KRS022+1.p & 0.00 & 0.006s & yes & 0.020s & 0.005s \\
+KRS023+1.p & 0.00 & 0.003s & yes & 0.016s & 0.002s \\
+KRS024+1.p & 0.00 & 0.008s & yes & 0.013s & 0.004s \\
+KRS025+1.p & 0.00 & 0.004s & yes & 0.021s & 0.003s \\
 KRS026+1.p & 0.00 & 0.005s & yes & 0.021s & 0.002s \\
-KRS027+1.p & 0.00 & 0.004s & yes & 0.012s & 0.009s \\
-KRS040+1.p & 0.00 & 0.006s & no & -- & -- \\
-KRS041+1.p & 0.00 & 0.011s & yes & 0.037s & 0.003s \\
-KRS053+1.p & 0.00 & 0.010s & yes & 0.017s & 0.002s \\
-KRS054+1.p & 0.00 & 0.005s & yes & 0.023s & 0.003s \\
-KRS055+1.p & 0.00 & 0.004s & yes & 0.021s & 0.007s \\
-KRS056+1.p & 0.00 & 0.004s & yes & 0.014s & 0.007s \\
-KRS057+1.p & 0.00 & 0.009s & yes & 0.022s & 0.002s \\
-KRS058+1.p & 0.00 & 0.006s & yes & 0.016s & 0.008s \\
-KRS059+1.p & 0.00 & 0.004s & yes & 0.017s & 0.002s \\
-KRS060+1.p & 0.00 & 0.008s & yes & 0.017s & 0.003s \\
-KRS061+1.p & 0.00 & 0.003s & yes & 0.014s & 0.002s \\
-KRS062+1.p & 0.00 & 0.003s & yes & 0.019s & 0.002s \\
-KRS279-1.p & 1.00 & 0.612s & no & -- & -- \\
-KRS282-1.p & 1.00 & 4.375s & no & -- & -- \\
-KRS285-1.p & 1.00 & 8.546s & no & -- & -- \\
-KRS288-1.p & 1.00 & 18.563s & no & -- & -- \\
-KRS290-1.p & 1.00 & 13.893s & no & -- & -- \\
-MGT066-1.p & 0.17 & 0.006s & no & -- & -- \\
+KRS027+1.p & 0.00 & 0.003s & yes & 0.015s & 0.004s \\
+KRS040+1.p & 0.00 & 0.009s & yes & 33.127s & 0.007s \\
+KRS041+1.p & 0.00 & 0.012s & yes & 0.034s & 0.003s \\
+KRS053+1.p & 0.00 & 0.004s & yes & 0.025s & 0.002s \\
+KRS054+1.p & 0.00 & 0.008s & yes & 0.022s & 0.003s \\
+KRS055+1.p & 0.00 & 0.008s & yes & 0.013s & 0.005s \\
+KRS056+1.p & 0.00 & 0.004s & yes & 0.018s & 0.004s \\
+KRS057+1.p & 0.00 & 0.009s & yes & 0.016s & 0.006s \\
+KRS058+1.p & 0.00 & 0.007s & yes & 0.016s & 0.002s \\
+KRS059+1.p & 0.00 & 0.004s & yes & 0.015s & 0.004s \\
+KRS060+1.p & 0.00 & 0.003s & yes & 0.016s & 0.003s \\
+KRS061+1.p & 0.00 & 0.003s & yes & 0.015s & 0.002s \\
+KRS062+1.p & 0.00 & 0.008s & yes & 0.016s & 0.002s \\
+KRS279-1.p & 1.00 & 0.545s & no & -- & -- \\
+KRS282-1.p & 1.00 & 3.913s & no & -- & -- \\
+KRS285-1.p & 1.00 & 7.515s & no & -- & -- \\
+KRS288-1.p & 1.00 & 17.552s & no & -- & -- \\
+KRS290-1.p & 1.00 & 12.633s & no & -- & -- \\
+MGT066-1.p & 0.17 & 0.079s & no & -- & -- \\
 MGT066+1.p & 0.00 & 0.005s & no & -- & -- \\
-MSC008-1.010.p & 1.00 & 0.003s & no & -- & -- \\
-NLP005-1.p & 0.00 & 0.007s & yes & 0.033s & 0.007s \\
-NLP006-1.p & 0.00 & 0.003s & yes & 0.025s & 0.008s \\
-NLP008-1.p & 0.00 & 0.004s & yes & 0.030s & 0.008s \\
-NLP012-1.p & 0.00 & 0.003s & yes & 0.033s & 0.004s \\
-NLP013-1.p & 0.00 & 0.003s & yes & 0.025s & 0.010s \\
-NLP023-1.p & 0.00 & 0.004s & yes & 0.033s & 0.009s \\
-NLP024-1.p & 0.00 & 0.003s & yes & 0.036s & 0.006s \\
-NLP042-1.p & 0.00 & 0.003s & yes & 0.027s & 0.005s \\
-NLP114-1.p & 0.00 & 0.002s & yes & 0.021s & 0.003s \\
-NLP115-1.p & 0.00 & 0.003s & yes & 0.021s & 0.004s \\
-NLP116-1.p & 0.00 & 0.005s & yes & 0.018s & 0.004s \\
-NLP118-1.p & 0.00 & 0.003s & yes & 0.026s & 0.004s \\
-NLP119-1.p & 0.00 & 0.002s & yes & 0.021s & 0.005s \\
-NLP120-1.p & 0.00 & 0.008s & yes & 0.025s & 0.003s \\
-NLP121-1.p & 0.00 & 0.004s & yes & 0.019s & 0.006s \\
-NLP123-1.p & 0.00 & 0.006s & yes & 0.026s & 0.003s \\
-NLP124-1.p & 0.00 & 0.004s & yes & 0.022s & 0.004s \\
-NLP125-1.p & 0.00 & 0.003s & yes & 0.028s & 0.006s \\
-NLP126-1.p & 0.00 & 0.008s & yes & 0.027s & 0.004s \\
-NLP127-1.p & 0.00 & 0.003s & yes & 0.023s & 0.006s \\
-NLP128-1.p & 0.00 & 0.003s & yes & 0.022s & 0.003s \\
-NLP129-1.p & 0.00 & 0.003s & yes & 0.025s & 0.004s \\
-PLA038-1.p & 0.83 & 0.244s & no & -- & -- \\
-PLA040-1.p & 0.83 & 0.361s & no & -- & -- \\
-PLA041-1.p & 1.00 & 1.398s & no & -- & -- \\
-PLA043-1.p & 0.50 & 0.233s & no & -- & -- \\
-PUZ001-3.p & 0.00 & 0.003s & yes & 0.016s & 0.003s \\
-PUZ018-2.p & 0.17 & 0.002s & no & -- & -- \\
-PUZ028-1.p & 0.00 & 0.006s & yes & 0.020s & 0.008s \\
-PUZ028-2.p & 0.00 & 0.002s & yes & 0.037s & 0.010s \\
-PUZ028-3.p & 0.00 & 0.022s & yes & 0.094s & 0.013s \\
-PUZ028-4.p & 0.00 & 0.010s & yes & 0.068s & 0.004s \\
-PUZ052-1.p & 1.00 & 0.006s & no & -- & -- \\
-PUZ053-1.p & 1.00 & 0.009s & no & -- & -- \\
-PUZ068+2.p & 0.00 & 0.650s & yes & 7.995s & 0.043s \\
-PUZ069+2.p & 0.00 & 0.670s & yes & 50.385s & 0.048s \\
-PUZ079+2.p & 0.00 & 0.661s & no & -- & -- \\
-PUZ080+2.p & 0.00 & 0.694s & yes & 26.743s & 0.048s \\
-PUZ138+2.p & 0.00 & 0.653s & no & -- & -- \\
-SWB011+4.p & 0.00 & 0.011s & yes & 0.035s & 0.008s \\
-SWB031+4.p & 0.00 & 0.009s & yes & 0.077s & 0.005s \\
-SWB035+1.p & 0.00 & 0.006s & yes & 0.033s & 0.006s \\
-SYN056-1.p & 0.00 & 0.003s & yes & 0.016s & 0.002s \\
-SYN059-1.p & 0.00 & 0.013s & yes & 0.024s & 0.004s \\
-SYN307-1.p & 0.17 & 0.002s & no & -- & -- \\
-SYN317-1.p & 0.00 & 0.006s & yes & 0.016s & 0.002s \\
-SYN322-1.p & 0.00 & 0.007s & yes & 0.013s & 0.006s \\
-SYN418-1.p & 0.17 & 0.015s & no & -- & -- \\
-SYN419-1.p & 0.17 & 0.015s & no & -- & -- \\
-SYN420-1.p & 0.33 & 0.016s & yes & 1m6.536s & 0.502s \\
-SYN421-1.p & 0.17 & 0.018s & no & -- & -- \\
-SYN422-1.p & 0.17 & 0.016s & no & -- & -- \\
-SYN423-1.p & 0.33 & 0.019s & no & -- & -- \\
-SYN424-1.p & 0.33 & 0.019s & no & -- & -- \\
-SYN425-1.p & 0.17 & 0.016s & no & -- & -- \\
-SYN426-1.p & 0.33 & 0.025s & no & -- & -- \\
-SYN427-1.p & 0.33 & 0.020s & no & -- & -- \\
-SYN428-1.p & 0.33 & 0.022s & no & -- & -- \\
-SYN429-1.p & 0.33 & 0.021s & no & -- & -- \\
-SYN430-1.p & 0.00 & 0.004s & yes & 34.426s & 0.088s \\
-SYN431-1.p & 0.17 & 0.007s & yes & 0.636s & 0.015s \\
-SYN432-1.p & 0.00 & 0.006s & yes & 22.149s & 0.058s \\
-SYN433-1.p & 0.00 & 0.010s & no & -- & -- \\
-SYN434-1.p & 0.33 & 0.004s & no & -- & -- \\
-SYN435-1.p & 0.33 & 0.004s & no & -- & -- \\
-SYN437-1.p & 0.33 & 0.009s & no & -- & -- \\
-SYN438-1.p & 0.17 & 0.004s & no & -- & -- \\
-SYN441-1.p & 0.33 & 0.006s & no & -- & -- \\
-SYN446-1.p & 0.17 & 0.007s & no & -- & -- \\
-SYN449-1.p & 0.33 & 0.010s & no & -- & -- \\
-SYN453-1.p & 0.33 & 0.006s & no & -- & -- \\
+MSC008-1.010.p & 1.00 & 0.004s & no & -- & -- \\
+NLP005-1.p & 0.00 & 0.005s & yes & 0.035s & 0.004s \\
+NLP006-1.p & 0.00 & 0.004s & yes & 0.021s & 0.005s \\
+NLP008-1.p & 0.00 & 0.003s & yes & 0.035s & 0.004s \\
+NLP012-1.p & 0.00 & 0.003s & yes & 0.028s & 0.008s \\
+NLP013-1.p & 0.00 & 0.004s & yes & 0.033s & 0.004s \\
+NLP023-1.p & 0.00 & 0.006s & yes & 0.029s & 0.005s \\
+NLP024-1.p & 0.00 & 0.003s & yes & 0.033s & 0.005s \\
+NLP042-1.p & 0.00 & 0.003s & yes & 0.024s & 0.003s \\
+NLP114-1.p & 0.00 & 0.004s & yes & 0.022s & 0.007s \\
+NLP115-1.p & 0.00 & 0.003s & yes & 0.025s & 0.004s \\
+NLP116-1.p & 0.00 & 0.006s & yes & 0.018s & 0.006s \\
+NLP118-1.p & 0.00 & 0.002s & yes & 0.025s & 0.004s \\
+NLP119-1.p & 0.00 & 0.002s & yes & 0.018s & 0.009s \\
+NLP120-1.p & 0.00 & 0.002s & yes & 0.026s & 0.003s \\
+NLP121-1.p & 0.00 & 0.005s & yes & 0.019s & 0.006s \\
+NLP123-1.p & 0.00 & 0.002s & yes & 0.028s & 0.003s \\
+NLP124-1.p & 0.00 & 0.004s & yes & 0.023s & 0.004s \\
+NLP125-1.p & 0.00 & 0.009s & yes & 0.018s & 0.005s \\
+NLP126-1.p & 0.00 & 0.003s & yes & 0.027s & 0.005s \\
+NLP127-1.p & 0.00 & 0.004s & yes & 0.024s & 0.004s \\
+NLP128-1.p & 0.00 & 0.003s & yes & 0.021s & 0.003s \\
+NLP129-1.p & 0.00 & 0.007s & yes & 0.019s & 0.003s \\
+PLA038-1.p & 0.83 & 0.163s & no & -- & -- \\
+PLA040-1.p & 0.83 & 0.285s & no & -- & -- \\
+PLA041-1.p & 1.00 & 1.040s & no & -- & -- \\
+PLA043-1.p & 0.50 & 0.209s & no & -- & -- \\
+PUZ001-3.p & 0.00 & 0.003s & yes & 0.017s & 0.005s \\
+PUZ018-2.p & 0.17 & 0.002s & yes & 3.702s & 0.278s \\
+PUZ028-1.p & 0.00 & 0.007s & yes & 0.018s & 0.004s \\
+PUZ028-2.p & 0.00 & 0.004s & yes & 0.044s & 0.009s \\
+PUZ028-3.p & 0.00 & 0.018s & yes & 0.093s & 0.007s \\
+PUZ028-4.p & 0.00 & 0.013s & yes & 0.067s & 0.009s \\
+PUZ052-1.p & 1.00 & 0.005s & no & -- & -- \\
+PUZ053-1.p & 1.00 & 0.010s & no & -- & -- \\
+PUZ068+2.p & 0.00 & 0.630s & yes & 7.895s & 0.051s \\
+PUZ069+2.p & 0.00 & 0.610s & yes & 50.541s & 0.046s \\
+PUZ079+2.p & 0.00 & 0.609s & no & -- & -- \\
+PUZ080+2.p & 0.00 & 0.640s & yes & 27.216s & 0.045s \\
+PUZ138+2.p & 0.00 & 0.614s & no & -- & -- \\
+SWB011+4.p & 0.00 & 0.009s & yes & 0.043s & 0.016s \\
+SWB031+4.p & 0.00 & 0.010s & yes & 0.037s & 0.016s \\
+SWB035+1.p & 0.00 & 0.006s & yes & 0.039s & 0.007s \\
+SYN056-1.p & 0.00 & 0.004s & yes & 0.017s & 0.006s \\
+SYN059-1.p & 0.00 & 0.006s & yes & 0.026s & 0.002s \\
+SYN307-1.p & 0.17 & 0.002s & yes & 0.020s & 0.004s \\
+SYN317-1.p & 0.00 & 0.007s & yes & 0.015s & 0.003s \\
+SYN322-1.p & 0.00 & 0.002s & yes & 0.019s & 0.002s \\
+SYN418-1.p & 0.17 & 0.010s & no & -- & -- \\
+SYN419-1.p & 0.17 & 0.013s & no & -- & -- \\
+SYN420-1.p & 0.33 & 0.019s & no & -- & -- \\
+SYN421-1.p & 0.17 & 0.014s & no & -- & -- \\
+SYN422-1.p & 0.17 & 0.019s & no & -- & -- \\
+SYN423-1.p & 0.33 & 0.014s & no & -- & -- \\
+SYN424-1.p & 0.33 & 0.018s & no & -- & -- \\
+SYN425-1.p & 0.17 & 0.015s & no & -- & -- \\
+SYN426-1.p & 0.33 & 0.019s & no & -- & -- \\
+SYN427-1.p & 0.33 & 0.022s & no & -- & -- \\
+SYN428-1.p & 0.33 & 0.020s & no & -- & -- \\
+SYN429-1.p & 0.33 & 0.027s & no & -- & -- \\
+SYN430-1.p & 0.00 & 0.009s & yes & 33.533s & 0.082s \\
+SYN431-1.p & 0.17 & 0.010s & yes & 0.621s & 0.015s \\
+SYN432-1.p & 0.00 & 0.003s & yes & 21.682s & 0.059s \\
+SYN433-1.p & 0.00 & 0.005s & no & -- & -- \\
+SYN434-1.p & 0.33 & 0.006s & no & -- & -- \\
+SYN435-1.p & 0.33 & 0.005s & no & -- & -- \\
+SYN437-1.p & 0.33 & 0.010s & no & -- & -- \\
+SYN438-1.p & 0.17 & 0.010s & no & -- & -- \\
+SYN441-1.p & 0.33 & 0.012s & no & -- & -- \\
+SYN446-1.p & 0.17 & 0.010s & no & -- & -- \\
+SYN449-1.p & 0.33 & 0.004s & no & -- & -- \\
+SYN453-1.p & 0.33 & 0.011s & no & -- & -- \\
 SYN456-1.p & 0.33 & 0.005s & no & -- & -- \\
-SYN463-1.p & 0.33 & 0.007s & no & -- & -- \\
-SYN464-1.p & 0.33 & 0.008s & no & -- & -- \\
-SYN490-1.p & 0.00 & 0.003s & yes & 0.265s & 0.021s \\
-SYN491-1.p & 0.00 & 0.002s & yes & 0.049s & 0.005s \\
-SYN492-1.p & 0.00 & 0.003s & yes & 0.025s & 0.004s \\
-SYN493-1.p & 0.00 & 0.008s & yes & 0.021s & 0.003s \\
-SYN494-1.p & 0.00 & 0.002s & yes & 0.057s & 0.010s \\
-SYN495-1.p & 0.00 & 0.005s & yes & 1.313s & 0.037s \\
-SYN496-1.p & 0.00 & 0.009s & yes & 0.020s & 0.004s \\
-SYN497-1.p & 0.00 & 0.007s & yes & 0.024s & 0.005s \\
-SYN513-1.p & 0.33 & 0.017s & no & -- & -- \\
-SYN514-1.p & 0.33 & 0.007s & no & -- & -- \\
-SYN515-1.p & 0.00 & 0.004s & yes & 0.035s & 0.004s \\
-SYN516-1.p & 0.00 & 0.004s & yes & 0.808s & 0.030s \\
-SYN517-1.p & 0.00 & 0.003s & yes & 5.543s & 0.120s \\
-SYN518-1.p & 0.33 & 0.014s & no & -- & -- \\
+SYN463-1.p & 0.33 & 0.006s & no & -- & -- \\
+SYN464-1.p & 0.33 & 0.010s & no & -- & -- \\
+SYN490-1.p & 0.00 & 0.003s & yes & 0.263s & 0.018s \\
+SYN491-1.p & 0.00 & 0.005s & yes & 0.043s & 0.005s \\
+SYN492-1.p & 0.00 & 0.007s & yes & 0.025s & 0.003s \\
+SYN493-1.p & 0.00 & 0.005s & yes & 0.024s & 0.003s \\
+SYN494-1.p & 0.00 & 0.002s & yes & 0.064s & 0.006s \\
+SYN495-1.p & 0.00 & 0.004s & yes & 1.272s & 0.038s \\
+SYN496-1.p & 0.00 & 0.003s & yes & 0.026s & 0.003s \\
+SYN497-1.p & 0.00 & 0.004s & yes & 0.024s & 0.004s \\
+SYN513-1.p & 0.33 & 0.013s & no & -- & -- \\
+SYN514-1.p & 0.33 & 0.010s & no & -- & -- \\
+SYN515-1.p & 0.00 & 0.006s & no & -- & -- \\
+SYN516-1.p & 0.00 & 0.006s & yes & 0.809s & 0.029s \\
+SYN517-1.p & 0.00 & 0.004s & yes & 5.968s & 0.120s \\
+SYN518-1.p & 0.33 & 0.013s & no & -- & -- \\
 SYN519-1.p & 0.33 & 0.018s & no & -- & -- \\
-SYN520-1.p & 0.33 & 0.012s & no & -- & -- \\
-SYN521-1.p & 0.00 & 0.004s & yes & 0.030s & 0.005s \\
-SYN522-1.p & 0.00 & 0.004s & yes & 0.031s & 0.004s \\
-SYN523-1.p & 0.00 & 0.003s & yes & 0.025s & 0.002s \\
-SYN524-1.p & 0.00 & 0.004s & yes & 0.027s & 0.004s \\
-SYN525-1.p & 0.00 & 0.005s & yes & 0.033s & 0.004s \\
-SYN526-1.p & 0.00 & 0.005s & yes & 0.036s & 0.005s \\
-SYN527-1.p & 0.00 & 0.010s & yes & 0.027s & 0.008s \\
-SYN528-1.p & 0.00 & 0.004s & yes & 0.037s & 0.005s \\
-SYN529-1.p & 0.00 & 0.006s & no & -- & -- \\ 
-SYN530-1.p & 0.00 & 0.005s & yes & 0.035s & 0.007s \\
-SYN531-1.p & 0.00 & 0.003s & yes & 0.056s & 0.005s \\
-SYN532-1.p & 0.00 & 0.003s & yes & 0.033s & 0.009s \\
-SYN533-1.p & 0.00 & 0.004s & yes & 0.029s & 0.009s \\
-SYN534-1.p & 0.00 & 0.004s & yes & 0.027s & 0.006s \\
-SYN535-1.p & 0.00 & 0.005s & yes & 1.356s & 0.064s \\
-SYN536-1.p & 0.00 & 0.003s & no & -- & -- \\
-SYN537-1.p & 0.00 & 0.015s & yes & 0.030s & 0.009s \\
-SYN538-1.p & 0.00 & 0.005s & yes & 0.483s & 0.021s \\
-SYN539-1.p & 0.00 & 0.005s & yes & 0.154s & 0.016s \\
-SYN540-1.p & 0.17 & 0.005s & yes & 0.046s & 0.010s \\
-SYN541-1.p & 0.00 & 0.005s & yes & 0.057s & 0.009s \\
-SYN542-1.p & 0.33 & 0.006s & no & -- & -- \\
-SYN543-1.p & 0.17 & 0.008s & no & -- & -- \\
+SYN520-1.p & 0.33 & 0.018s & no & -- & -- \\
+SYN521-1.p & 0.00 & 0.006s & yes & 0.239s & 0.013s \\
+SYN522-1.p & 0.00 & 0.007s & no & -- & -- \\
+SYN523-1.p & 0.00 & 0.007s & yes & 0.353s & 0.018s \\
+SYN524-1.p & 0.00 & 0.011s & yes & 0.602s & 0.024s \\
+SYN525-1.p & 0.00 & 0.005s & no & -- & -- \\
+SYN526-1.p & 0.00 & 0.006s & yes & 3.691s & 0.076s \\
+SYN527-1.p & 0.00 & 0.003s & yes & 3.749s & 0.075s \\
+SYN528-1.p & 0.00 & 0.004s & yes & 2m10.319s & 0.336s \\
+SYN529-1.p & 0.00 & 0.007s & no & -- & -- \\ 
+SYN530-1.p & 0.00 & 0.011s & yes & 2m19.609s & 0.329s \\
+SYN531-1.p & 0.00 & 0.003s & yes & 16.203s & 0.189s \\
+SYN532-1.p & 0.00 & 0.003s & yes & 1.260s & 0.062s \\
+SYN533-1.p & 0.00 & 0.009s & no & -- & -- \\
+SYN534-1.p & 0.00 & 0.004s & yes & 0.733s & 0.029s \\
+SYN535-1.p & 0.00 & 0.007s & yes & 1.347s & 0.062s \\
+SYN536-1.p & 0.00 & 0.006s & no & -- & -- \\
+SYN537-1.p & 0.00 & 0.008s & no & -- & -- \\
+SYN538-1.p & 0.00 & 0.006s & no & -- & -- \\
+SYN539-1.p & 0.00 & 0.012s & no & -- & -- \\
+SYN540-1.p & 0.17 & 0.005s & yes & 26.690s & 0.127s \\
+SYN541-1.p & 0.00 & 0.005s & yes & 8.123s & 0.101s \\
+SYN542-1.p & 0.33 & 0.008s & no & -- & -- \\
+SYN543-1.p & 0.17 & 0.005s & no & -- & -- \\
 SYN544-1.p & 0.17 & 0.016s & no & -- & -- \\
-SYN545-1.p & 0.33 & 0.012s & no & -- & -- \\
-SYN546-1.p & 0.33 & 0.020s & no & -- & -- \\
-SYN547-1.p & 0.33 & 0.022s & yes & 6.409s & 0.120s \\
-SYN720-1.p & 0.00 & 0.008s & yes & 0.119s & 0.014s \\
-SYN811-1.p & 0.33 & 0.410s & no & -- & -- \\
-SYN812-1.p & 0.17 & 4.161s & no & -- & -- \\
-SYN814-1.p & 0.33 & 0.518s & no & -- & -- \\
-SYN815-1.p & 0.33 & 1.695s & no & -- & -- \\
-SYN816-1.p & 0.33 & 1.718s & no & -- & -- \\
-SYN817-1.p & 0.17 & 1.692s & no & -- & -- \\
-SYN818-1.p & 0.33 & 4.974s & no & -- & -- \\	
-SYN821-1.p & 0.50 & 1.812s & no & -- & -- \\
-SYN822-1.p & 0.33 & 1.867s & no & -- & -- \\
-SYN823-1.p & 0.17 & 0.116s & no & -- & -- \\
-SYN824-1.p & 0.33 & 1.118s & no & -- & -- \\
-SYN825-1.p & 0.33 & 3.577s & no & -- & -- \\
-SYN826-1.p & 0.33 & 3.613s & no & -- & -- \\
-SYN827-1.p & 0.17 & 0.172s & no & -- & -- \\
-SYN828-1.p & 0.17 & 1.618s & no & -- & -- \\
-SYN829-1.p & 0.33 & 5.230s & no & -- & -- \\
-SYN830-1.p & 0.33 & 5.822s & no & -- & -- \\
-SYN831-1.p & 0.33 & 5.053s & no & -- & -- \\
-SYN832-1.p & 0.33 & 4.969s & no & -- & -- \\
-SYN835-1.p & 0.17 & 0.179s & no & -- & -- \\
-SYN838-1.p & 0.33 & 2.001s & no & -- & -- \\
-SYN839-1.p & 0.33 & 6.292s & no & -- & -- \\
-SYN840-1.p & 0.33 & 5.765s & no & -- & -- \\
-SYN841-1.p & 0.33 & 5.769s & no & -- & -- \\
-SYN842-1.p & 0.33 & 6.003s & no & -- & -- \\
-SYN851-1.p & 0.33 & 1.916s & no & -- & -- \\
-SYN852-1.p & 0.33 & 6.684s & no & -- & -- \\
-SYN853-1.p & 0.33 & 6.246s & no & -- & -- \\
-SYN854-1.p & 0.33 & 6.619s & no & -- & -- \\
-SYN855-1.p & 0.33 & 6.050s & no & -- & -- \\
-SYN863-1.p & 0.33 & 2.042s & no & -- & -- \\
-SYN864-1.p & 0.33 & 2.144s & no & -- & -- \\
-SYN867-1.p & 0.17 & 0.035s & no & -- & -- \\
-SYN868-1.p & 0.17 & 0.023s & no & -- & -- \\
-SYN870-1.p & 0.17 & 0.014s & no & -- & -- \\
-SYN872-1.p & 0.33 & 0.200s & no & -- & -- \\
-SYN888-1.p & 0.33 & 0.241s & no & -- & -- \\
-SYN902-1.p & 0.33 & 0.275s & no & -- & -- \\
-SYO583-1.p & 1.00 & 24.277s & no & -- & -- \\
-SYO584-1.p & 1.00 & 3.549s & no & -- & -- \\
-SYO585-1.p & 1.00 & 3.456s & no & -- & -- \\
-SYO586-1.p & 1.00 & 0.604s & no & -- & -- \\
-SYO590-1.p & 1.00 & 1.047s & no & -- & -- \\
-SYO593-1.p & 0.67 & 0.231s & no & -- & -- \\
-SYO595-1.p & 0.67 & 0.192s & no & -- & -- \\
-SYO599-1.p & 1.00 & 48.557s & no & -- & -- \\
-SYO603-1.p & 1.00 & 1.192s & no & -- & -- \\
+SYN545-1.p & 0.33 & 0.013s & no & -- & -- \\
+SYN546-1.p & 0.33 & 0.015s & no & -- & -- \\
+SYN547-1.p & 0.33 & 0.011s & no & -- & -- \\
+SYN720-1.p & 0.00 & 0.010s & yes & 0.268s & 0.036s \\
+SYN811-1.p & 0.33 & 0.260s & no & -- & -- \\
+SYN812-1.p & 0.17 & 2.332s & no & -- & -- \\
+SYN814-1.p & 0.33 & 0.335s & no & -- & -- \\
+SYN815-1.p & 0.33 & 0.976s & no & -- & -- \\
+SYN816-1.p & 0.33 & 0.934s & no & -- & -- \\
+SYN817-1.p & 0.17 & 1.084s & no & -- & -- \\
+SYN818-1.p & 0.33 & 3.163s & no & -- & -- \\	
+SYN821-1.p & 0.50 & 1.144s & no & -- & -- \\
+SYN822-1.p & 0.33 & 1.160s & no & -- & -- \\
+SYN823-1.p & 0.17 & 0.079s & no & -- & -- \\
+SYN824-1.p & 0.33 & 0.657s & no & -- & -- \\
+SYN825-1.p & 0.33 & 2.141s & no & -- & -- \\
+SYN826-1.p & 0.33 & 2.291s & no & -- & -- \\
+SYN827-1.p & 0.17 & 0.114s & no & -- & -- \\
+SYN828-1.p & 0.17 & 0.955s & no & -- & -- \\
+SYN829-1.p & 0.33 & 3.001s & no & -- & -- \\
+SYN830-1.p & 0.33 & 3.315s & no & -- & -- \\
+SYN831-1.p & 0.33 & 3.066s & no & -- & -- \\
+SYN832-1.p & 0.33 & 2.805s & no & -- & -- \\
+SYN835-1.p & 0.17 & 0.114s & no & -- & -- \\
+SYN838-1.p & 0.33 & 1.127s & no & -- & -- \\
+SYN839-1.p & 0.33 & 3.504s & no & -- & -- \\
+SYN840-1.p & 0.33 & 3.297s & no & -- & -- \\
+SYN841-1.p & 0.33 & 3.585s & no & -- & -- \\
+SYN842-1.p & 0.33 & 3.995s & no & -- & -- \\
+SYN851-1.p & 0.33 & 1.143s & no & -- & -- \\
+SYN852-1.p & 0.33 & 3.922s & no & -- & -- \\
+SYN853-1.p & 0.33 & 3.921s & no & -- & -- \\
+SYN854-1.p & 0.33 & 3.785s & no & -- & -- \\
+SYN855-1.p & 0.33 & 3.872s & no & -- & -- \\
+SYN863-1.p & 0.33 & 1.165s & no & -- & -- \\
+SYN864-1.p & 0.33 & 1.206s & no & -- & -- \\
+SYN867-1.p & 0.17 & 0.021s & no & -- & -- \\
+SYN868-1.p & 0.17 & 0.019s & no & -- & -- \\
+SYN870-1.p & 0.17 & 0.013s & no & -- & -- \\
+SYN872-1.p & 0.33 & 0.113s & no & -- & -- \\
+SYN888-1.p & 0.33 & 0.151s & no & -- & -- \\
+SYN902-1.p & 0.33 & 0.164s & no & -- & -- \\
+SYO583-1.p & 1.00 & 21.599s & no & -- & -- \\
+SYO584-1.p & 1.00 & 3.091s & no & -- & -- \\
+SYO585-1.p & 1.00 & 2.859s & no & -- & -- \\
+SYO586-1.p & 1.00 & 0.457s & no & -- & -- \\
+SYO590-1.p & 1.00 & 0.881s & no & -- & -- \\
+SYO593-1.p & 0.67 & 0.180s & no & -- & -- \\
+SYO595-1.p & 0.67 & 0.137s & no & -- & -- \\
+SYO599-1.p & 1.00 & 42.541s & no & -- & -- \\
+SYO603-1.p & 1.00 & 1.055s & no & -- & -- \\
 		\bottomrule
 		\caption{Results of Sat EPR TPTP problems}
 		\label{table:sat_epr_results}
 		\end{longtable}
 	\end{center}
 
+%\begin{comment}
+\paragraph{}
 Another test were made but the time limit was 300 seconds instead of 180 seconds and 2GB memory limit. Only two more problems were solved within that limit. The below table ~\ref{table:more_sat_epr_results} shows them:
 
 \begin{table}[H]
@@ -424,14 +484,14 @@ Another test were made but the time limit was 300 seconds instead of 180 seconds
 		\cellcolor[HTML]{CCCCCC} Problem & \cellcolor[HTML]{CCCCCC} rating & \cellcolor[HTML]{CCCCCC} transformations t. & \cellcolor[HTML]{CCCCCC} saturation t. & \cellcolor[HTML]{CCCCCC} model extraction t. \\ %[0.5ex] 
 		\midrule
 		\midrule
-GRP130-2.005.p & 0.17 & 0.007s & 3m21.354s & 0.009s \\
-PUZ079+2.p & 0.00 & 0.660s & 3m34.068s & 0.048s \\
+GRP130-2.005.p & 0.17 & 0.004s & 3m16.420s & 0.006s \\
+PUZ079+2.p & 0.00 & 0.606s & 3m30.429s & 0.039s \\
 		\bottomrule
 	\end{tabular}
 	\caption{More Solved Sat EPR TPTP problems}
 	\label{table:more_sat_epr_results}
 \end{table}
-
+%\end{comment}
 
 
 

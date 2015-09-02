@@ -1,127 +1,189 @@
 \contentsline {chapter}{Acknowledgments}{III}{chapter*.1}
-\contentsline {paragraph}{}{IV}{section*.3}
-\contentsline {paragraph}{}{IV}{section*.4}
-\contentsline {paragraph}{}{IV}{section*.5}
+\contentsline {paragraph}{}{III}{chapter*.1}
+\contentsline {paragraph}{}{III}{chapter*.1}
+\contentsline {paragraph}{}{III}{chapter*.1}
+\contentsline {paragraph}{}{III}{chapter*.1}
+\contentsline {paragraph}{}{III}{chapter*.1}
+\contentsline {paragraph}{}{IV}{chapter*.2}
+\contentsline {paragraph}{}{IV}{chapter*.2}
+\contentsline {paragraph}{}{IV}{chapter*.2}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {paragraph}{}{1}{section*.9}
-\contentsline {paragraph}{}{1}{section*.10}
-\contentsline {paragraph}{}{1}{section*.11}
-\contentsline {paragraph}{}{1}{section*.12}
-\contentsline {paragraph}{}{2}{section*.13}
-\contentsline {paragraph}{}{2}{section*.14}
-\contentsline {paragraph}{}{2}{section*.15}
+\contentsline {paragraph}{}{1}{chapter.1}
+\contentsline {paragraph}{}{1}{chapter.1}
+\contentsline {paragraph}{}{1}{chapter.1}
+\contentsline {paragraph}{}{1}{chapter.1}
+\contentsline {paragraph}{}{2}{chapter.1}
+\contentsline {paragraph}{}{2}{chapter.1}
+\contentsline {paragraph}{}{2}{chapter.1}
 \contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}\acf {fol}}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}\ac {fol} overview and Example on it}{4}{subsection.2.1.1}
-\contentsline {subsubsection}{Overview on \ac {fol}}{4}{section*.16}
-\contentsline {subsubsection}{Example on \ac {fol}}{4}{section*.17}
+\contentsline {subsubsection}{Overview on \ac {fol}}{4}{subsection.2.1.1}
+\contentsline {subsubsection}{Example on \ac {fol}}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Decidability of \ac {fol}}{4}{subsection.2.1.2}
-\contentsline {paragraph}{}{4}{section*.18}
+\contentsline {paragraph}{}{4}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Universe of \ac {fol}}{5}{subsection.2.1.3}
-\contentsline {paragraph}{}{5}{section*.19}
+\contentsline {paragraph}{}{5}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Equality}{5}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}\acf {epr}}{5}{section.2.2}
-\contentsline {paragraph}{}{5}{section*.20}
+\contentsline {paragraph}{}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}What is \ac {epr}}{6}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Example on \ac {epr}}{6}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Decidability and Universe of \ac {epr}}{6}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Equality in \ac {epr}}{6}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Problem Set}{7}{section.2.3}
-\contentsline {paragraph}{}{7}{section*.21}
-\contentsline {paragraph}{}{7}{section*.22}
-\contentsline {paragraph}{}{7}{section*.24}
-\contentsline {paragraph}{}{7}{section*.25}
+\contentsline {paragraph}{}{7}{section.2.3}
+\contentsline {paragraph}{}{7}{section.2.3}
+\contentsline {paragraph}{}{7}{section.2.3}
+\contentsline {paragraph}{}{7}{section.2.3}
 \contentsline {section}{\numberline {2.4}The theorem prover E}{9}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}What is E}{9}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}What can E do}{9}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}The Code flow of E}{9}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Latest results}{10}{subsection.2.4.4}
 \contentsline {chapter}{\numberline {3}Methodology and Implementation}{11}{chapter.3}
-\contentsline {paragraph}{}{11}{section*.27}
-\contentsline {paragraph}{}{11}{section*.28}
+\contentsline {paragraph}{}{11}{chapter.3}
+\contentsline {paragraph}{}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Transformations}{11}{section.3.1}
+\contentsline {paragraph}{}{11}{section.3.1}
+\contentsline {paragraph}{}{11}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Original transformations}{11}{subsection.3.1.1}
-\contentsline {paragraph}{The original procedures}{11}{section*.29}
-\contentsline {subsubsection}{What are the Transformations}{12}{section*.30}
-\contentsline {paragraph}{}{12}{section*.31}
-\contentsline {paragraph}{}{12}{section*.32}
-\contentsline {subsubsection}{How do the transformations work}{12}{section*.33}
-\contentsline {paragraph}{}{12}{section*.34}
-\contentsline {paragraph}{}{13}{section*.40}
+\contentsline {paragraph}{}{11}{subsection.3.1.1}
+\contentsline {subsubsection}{What are the Transformations}{12}{subsection.3.1.1}
+\contentsline {paragraph}{}{12}{subsection.3.1.1}
+\contentsline {paragraph}{}{12}{subsection.3.1.1}
+\contentsline {subsubsection}{How do the transformations work}{12}{lstnumber.3.1.5}
+\contentsline {paragraph}{}{12}{lstnumber.3.1.5}
+\contentsline {paragraph}{}{13}{lstnumber.3.1.5}
+\contentsline {paragraph}{}{13}{Item.4}
 \contentsline {subsection}{\numberline {3.1.2}Simplified transformations}{15}{subsection.3.1.2}
-\contentsline {paragraph}{}{15}{section*.42}
-\contentsline {subsubsection}{The Reason for doing the simplifications}{15}{section*.43}
-\contentsline {paragraph}{}{15}{section*.44}
-\contentsline {subsubsection}{What are the steps of the simplifications}{15}{section*.45}
-\contentsline {paragraph}{}{15}{section*.46}
-\contentsline {subsubsection}{The resulted simplified transformations}{16}{section*.47}
-\contentsline {paragraph}{}{16}{section*.48}
-\contentsline {subsubsection}{The Intermediate output}{17}{section*.51}
-\contentsline {paragraph}{}{17}{section*.52}
-\contentsline {subsubsection}{Discussion on the Output of the prover}{18}{section*.53}
-\contentsline {paragraph}{}{18}{section*.54}
+\contentsline {paragraph}{}{15}{subsection.3.1.2}
+\contentsline {subsubsection}{The Reason for doing the simplifications}{15}{subsection.3.1.2}
+\contentsline {paragraph}{}{15}{subsection.3.1.2}
+\contentsline {subsubsection}{What are the steps of the simplifications}{15}{subsection.3.1.2}
+\contentsline {paragraph}{}{15}{subsection.3.1.2}
+\contentsline {subsubsection}{The resulted simplified transformations}{16}{Item.6}
+\contentsline {paragraph}{}{16}{Item.6}
+\contentsline {paragraph}{}{16}{Item.6}
+\contentsline {subsubsection}{The Intermediate output}{17}{figure.caption.15}
+\contentsline {paragraph}{}{17}{figure.caption.15}
+\contentsline {paragraph}{}{17}{figure.caption.15}
+\contentsline {subsubsection}{Discussion on the Output of the prover}{18}{lstnumber.3.4.9}
+\contentsline {paragraph}{}{18}{lstnumber.3.4.9}
+\contentsline {paragraph}{}{18}{lstnumber.3.4.9}
 \contentsline {section}{\numberline {3.2}Model Construction}{18}{section.3.2}
-\contentsline {subsubsection}{What is the used technique for Model Construction}{19}{section*.55}
-\contentsline {paragraph}{}{19}{section*.56}
-\contentsline {subsubsection}{How does Bachmair and Ganzinger Model Construction Technique works}{19}{section*.57}
-\contentsline {paragraph}{}{19}{section*.58}
-\contentsline {paragraph}{}{19}{section*.59}
-\contentsline {paragraph}{}{19}{section*.60}
-\contentsline {paragraph}{}{20}{section*.61}
-\contentsline {subsubsection}{Discussion on the Output}{21}{section*.63}
-\contentsline {paragraph}{}{21}{section*.64}
+\contentsline {paragraph}{}{18}{section.3.2}
+\contentsline {subsubsection}{What is the used technique for Model Construction}{19}{section.3.2}
+\contentsline {paragraph}{}{19}{section.3.2}
+\contentsline {subsubsection}{How does Bachmair and Ganzinger Model Construction Technique works}{19}{section.3.2}
+\contentsline {paragraph}{}{19}{section.3.2}
+\contentsline {paragraph}{}{19}{section.3.2}
+\contentsline {paragraph}{}{19}{section.3.2}
+\contentsline {paragraph}{}{20}{Item.9}
+\contentsline {paragraph}{}{20}{algorithm.1}
+\contentsline {paragraph}{}{20}{algorithm.1}
+\contentsline {subsubsection}{Discussion on the Output}{21}{lstnumber.3.6.6}
+\contentsline {paragraph}{}{21}{lstnumber.3.6.6}
+\contentsline {paragraph}{}{22}{lstnumber.3.7.3}
 \contentsline {section}{\numberline {3.3}Code FLow}{23}{section.3.3}
-\contentsline {paragraph}{}{23}{section*.66}
+\contentsline {paragraph}{}{23}{section.3.3}
 \contentsline {chapter}{\numberline {4}Related Work}{25}{chapter.4}
+\contentsline {paragraph}{}{25}{chapter.4}
+\contentsline {paragraph}{}{25}{chapter.4}
+\contentsline {paragraph}{}{25}{chapter.4}
+\contentsline {paragraph}{}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Different theorem provers}{26}{section.4.1}
+\contentsline {paragraph}{}{26}{section.4.1}
+\contentsline {paragraph}{}{26}{section.4.1}
+\contentsline {paragraph}{}{26}{section.4.1}
 \contentsline {section}{\numberline {4.2}Model Construction Techniques}{26}{section.4.2}
+\contentsline {paragraph}{}{26}{section.4.2}
+\contentsline {paragraph}{}{26}{section.4.2}
+\contentsline {paragraph}{}{26}{section.4.2}
+\contentsline {paragraph}{}{27}{section.4.2}
 \contentsline {section}{\numberline {4.3}CASC competition}{27}{section.4.3}
+\contentsline {paragraph}{}{27}{section.4.3}
+\contentsline {paragraph}{}{27}{section.4.3}
+\contentsline {paragraph}{}{27}{section.4.3}
+\contentsline {paragraph}{}{28}{figure.caption.19}
 \contentsline {section}{\numberline {4.4}\ac {epr} reasoning Techniques}{30}{section.4.4}
+\contentsline {paragraph}{}{30}{section.4.4}
+\contentsline {paragraph}{}{30}{section.4.4}
+\contentsline {paragraph}{}{30}{section.4.4}
+\contentsline {paragraph}{}{31}{section.4.4}
+\contentsline {paragraph}{}{31}{section.4.4}
+\contentsline {paragraph}{}{31}{section.4.4}
 \contentsline {section}{\numberline {4.5}Range Restricting Transformations}{31}{section.4.5}
+\contentsline {paragraph}{}{31}{section.4.5}
 \contentsline {chapter}{\numberline {5}Testing, Validation and Evaluation}{32}{chapter.5}
+\contentsline {paragraph}{}{32}{chapter.5}
 \contentsline {section}{\numberline {5.1}Simplified Transformations}{32}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Evaluating Memory Efficiency}{32}{subsection.5.1.1}
+\contentsline {paragraph}{}{32}{subsection.5.1.1}
+\contentsline {paragraph}{}{32}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Accuracy of the transformations}{33}{subsection.5.1.2}
+\contentsline {paragraph}{}{33}{subsection.5.1.2}
+\contentsline {paragraph}{}{33}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2}Bachmair and Ganzinger Model Construction Technique}{33}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Evaluating Memory Efficiency}{33}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Complexity of the algorithm}{33}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Accuracy of Implementation}{33}{subsection.5.2.3}
+\contentsline {paragraph}{}{33}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Accuracy of Implementation}{33}{subsection.5.2.2}
 \contentsline {chapter}{\numberline {6}Results}{34}{chapter.6}
 \contentsline {section}{\numberline {6.1}Testing for termination}{34}{section.6.1}
-\contentsline {section}{\numberline {6.2}Testing for Model}{35}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion}{36}{chapter.7}
-\contentsline {chapter}{\numberline {8}Future Work}{37}{chapter.8}
-\contentsline {paragraph}{ }{37}{section*.74}
-\contentsline {section}{\numberline {8.1}Implementational Future Work}{37}{section.8.1}
-\contentsline {paragraph}{ }{37}{section*.75}
-\contentsline {subsection}{\numberline {8.1.1}Extension for Transformations}{37}{subsection.8.1.1}
-\contentsline {paragraph}{ }{37}{section*.76}
-\contentsline {subsection}{\numberline {8.1.2}Adding Splitting Techniques}{37}{subsection.8.1.2}
-\contentsline {paragraph}{ }{37}{section*.77}
-\contentsline {paragraph}{ }{38}{section*.78}
-\contentsline {subsection}{\numberline {8.1.3}Implement Other Model Construction Techniques}{38}{subsection.8.1.3}
-\contentsline {paragraph}{ }{38}{section*.79}
-\contentsline {subsection}{\numberline {8.1.4}More on Bachmair and Ganzinger Model Construction Technique}{38}{subsection.8.1.4}
-\contentsline {paragraph}{ }{38}{section*.80}
-\contentsline {section}{\numberline {8.2}Testing and Evaluational Future Work}{38}{section.8.2}
-\contentsline {paragraph}{ }{38}{section*.81}
-\contentsline {subsection}{\numberline {8.2.1}Testing on a Server}{38}{subsection.8.2.1}
-\contentsline {paragraph}{ }{38}{section*.82}
-\contentsline {subsection}{\numberline {8.2.2}More Testing on the Transformations}{38}{subsection.8.2.2}
-\contentsline {paragraph}{ }{38}{section*.83}
-\contentsline {subsection}{\numberline {8.2.3}More Testing on the Bachmair and Ganzinger Model Construction Technique}{39}{subsection.8.2.3}
-\contentsline {paragraph}{ }{39}{section*.84}
-\contentsline {chapter}{Appendix}{40}{section*.85}
-\contentsline {chapter}{\numberline {A}Lists}{41}{appendix.A}
-\contentsline {section}{List of Abbreviations}{41}{section*.86}
-\contentsline {section}{List of Figures}{42}{appendix*.87}
-\contentsline {section}{List of Tables}{43}{appendix*.88}
-\contentsline {section}{List of Examples}{44}{appendix*.89}
-\contentsline {section}{List of Algorithms}{45}{appendix*.90}
-\contentsline {chapter}{\numberline {B}Syntax of FOL}{46}{appendix.B}
-\contentsline {subsubsection}{Syntax of \ac {fol}}{46}{section*.91}
-\contentsline {chapter}{\numberline {C}Implementation Details}{48}{appendix.C}
-\contentsline {section}{\numberline {C.1}Transformations}{48}{section.C.1}
-\contentsline {section}{\numberline {C.2}Bachmair and Ganzinger Model Construction}{48}{section.C.2}
-\contentsline {chapter}{\numberline {D}Detailed Results}{49}{appendix.D}
-\contentsline {chapter}{References}{59}{appendix*.93}
+\contentsline {paragraph}{}{34}{section.6.1}
+\contentsline {paragraph}{}{34}{section.6.1}
+\contentsline {paragraph}{}{35}{figure.caption.23}
+\contentsline {paragraph}{}{35}{table.caption.24}
+\contentsline {section}{\numberline {6.2}Testing for Model}{36}{section.6.2}
+\contentsline {paragraph}{}{36}{section.6.2}
+\contentsline {paragraph}{}{36}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusion}{37}{chapter.7}
+\contentsline {paragraph}{}{37}{chapter.7}
+\contentsline {paragraph}{}{37}{chapter.7}
+\contentsline {paragraph}{}{37}{chapter.7}
+\contentsline {paragraph}{}{37}{chapter.7}
+\contentsline {paragraph}{}{37}{chapter.7}
+\contentsline {paragraph}{}{37}{chapter.7}
+\contentsline {paragraph}{}{38}{chapter.7}
+\contentsline {chapter}{\numberline {8}Future Work}{39}{chapter.8}
+\contentsline {paragraph}{ }{39}{chapter.8}
+\contentsline {section}{\numberline {8.1}Implementational future work}{39}{section.8.1}
+\contentsline {paragraph}{ }{39}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Extension for transformations}{39}{subsection.8.1.1}
+\contentsline {paragraph}{ }{39}{subsection.8.1.1}
+\contentsline {paragraph}{}{39}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Adding splitting techniques}{40}{subsection.8.1.2}
+\contentsline {paragraph}{ }{40}{subsection.8.1.2}
+\contentsline {paragraph}{ }{40}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Implement other model construction techniques}{40}{subsection.8.1.3}
+\contentsline {paragraph}{ }{40}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}More on Bachmair and Ganzinger model construction technique}{40}{subsection.8.1.4}
+\contentsline {paragraph}{ }{40}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Testing and evaluational future work}{40}{section.8.2}
+\contentsline {paragraph}{ }{40}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}More testing on the transformations}{40}{subsection.8.2.1}
+\contentsline {paragraph}{ }{40}{subsection.8.2.1}
+\contentsline {paragraph}{}{41}{subsection.8.2.1}
+\contentsline {paragraph}{}{41}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}More testing on the Bachmair and Ganzinger model construction technique}{41}{subsection.8.2.2}
+\contentsline {paragraph}{ }{41}{subsection.8.2.2}
+\contentsline {chapter}{Appendix}{42}{section*.26}
+\contentsline {chapter}{\numberline {A}Lists}{43}{appendix.A}
+\contentsline {section}{List of Abbreviations}{43}{section*.27}
+\contentsline {section}{List of Figures}{44}{appendix*.28}
+\contentsline {section}{List of Tables}{45}{appendix*.29}
+\contentsline {section}{List of Examples}{46}{appendix*.30}
+\contentsline {section}{List of Algorithms}{47}{appendix*.31}
+\contentsline {chapter}{\numberline {B}Syntax of FOL}{48}{appendix.B}
+\contentsline {subsubsection}{Syntax of \ac {fol}}{48}{appendix.B}
+\contentsline {chapter}{\numberline {C}Validation Details}{50}{appendix.C}
+\contentsline {paragraph}{}{50}{appendix.C}
+\contentsline {paragraph}{}{50}{appendix.C}
+\contentsline {paragraph}{}{50}{appendix.C}
+\contentsline {paragraph}{}{50}{appendix.C}
+\contentsline {chapter}{\numberline {D}Detailed Results}{52}{appendix.D}
+\contentsline {paragraph}{}{52}{appendix.D}
+\contentsline {paragraph}{}{52}{appendix.D}
+\contentsline {paragraph}{}{52}{appendix.D}
+\contentsline {paragraph}{}{58}{table.D.1}
+\contentsline {chapter}{References}{62}{appendix*.33}

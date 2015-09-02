@@ -1,5 +1,6 @@
 \section{Model Construction}\label{sec:c3s2}
-A Model Construction Technique had to be applied to the saturated set of clauses as discussed in the part related to the discussion on the output of the prover when the input was the range restricted version of the original set of clauses, and that was explained in subsection \ref{sub:c3s1s2}. Here in this section we will cover the following points:
+\paragraph{}
+A Model Construction Technique had to be applied to the saturated set of clauses. This saturated set came from applying the normal prover to the transformed set of clauses. In our case the simplified version of the range restricting transformations is the one implemented. Here in this section we will cover the following points:
 
 	\begin{itemize}
 		\item What is the Model Construction Technique used
@@ -10,27 +11,28 @@ A Model Construction Technique had to be applied to the saturated set of clauses
 	
 	\subsubsection{What is the used technique for Model Construction}
 		\paragraph{}
-		\textbf{The Model Construction Technique used} is specific for resolution based theorem provers, and it is the ground positive case of Bachmair and Ganzinger Model Construction Technique that was devised here in \cite{BGMC}. This technique originated from the proof of Bachmair and Ganzinger that their resolution based theorem proving technique is complete. That proof will be found in \cite{BAGA01}.
+		The Model Construction Technique used is specific for resolution based theorem provers, and it is the ground positive case of Bachmair and Ganzinger Model Construction Technique that was devised here in \cite{BGMC}. This technique originated from the proof of Bachmair and Ganzinger that their resolution based theorem proving technique is complete. That proof will be found in \cite{BAGA01}.
 		 %TODO check this info later ??
 		
 		
 	\subsubsection{How does Bachmair and Ganzinger Model Construction Technique works}
 		\paragraph{}		
-		\textbf{The chosen and implemented Bachmair and Ganzinger Model Construction Technique} works for a saturated (counter) satisfiable set positive ground set of clauses. That has been generated using an ordered resolution system with simplification. 
+		The chosen and implemented Bachmair and Ganzinger Model Construction Technique works for a saturated (counter) satisfiable set of positive ground set of clauses. That has been generated using an ordered resolution system with simplification. 
 		
 		\paragraph{}
-		\textbf{This Technique needs a term ordering} that has been lifted to literals then lifted to clauses. That clause ordering should be total on ground clauses, and it should be the same one used in the saturation procedure.
+		This Technique needs a term ordering that has been lifted to literals then lifted to clauses. That clause ordering should be total on ground clauses, and it should be the same one used in the saturation procedure. For an explanation of term orderings, you can refer to \cite{BAGA94}. And for specific discussion on the implemented orderings in the theorem prover E refer to \cite{E13}. 
 		
 		\paragraph{}
-		\textbf{The algorithm works} as follows:
+		The algorithm works as follows:
 			
 			\begin{enumerate}
 				\item sort the positive ground clauses using the ordering in an ascending order
-				\item sort the literals in each clause to define the maximal literal
+				\item sort the literals in each clause to define the maximal literal in descending order in terms of the ordering
 				\item for each of the clauses starting from the smaller in terms of the ordering if not already true by the chosen true literals, then add the its maximal literal to the set of the chosen true literals 
 			\end{enumerate}
 		
-		\textbf{A pseudo-code} for the implemented version of the algorithm is given below:
+		\paragraph{}
+		A pseudo-code for the implemented version of the algorithm is given below:
 
 
 
@@ -113,7 +115,7 @@ Output: model
 					\EndFor
 					
 					
-\Return $model$
+					\State \textbf{return} $model$
 
 					\EndProcedure
 	\begin{comment}
@@ -150,10 +152,12 @@ Output: model
 			\end{algorithm}
 %			\end{minipage}	
 
+		\paragraph{}
+		In the implementation, We made a great use of the shared terms implemented in E. Since each term is only represented once in a term bank. So we added an attribute for the term structure representing whether it is evaluated to true or false. Comparison functions that takes the ordering into consideration were implemented. One is used for sorting the literals in a given clause. The other is for sorting the clauses in the clause set.		
 		
 		
 		\paragraph{}
-		\textbf{An Example} for applying the Bachmair and Ganzinger Model Construction Technique is given below:
+		An Example for applying the Bachmair and Ganzinger Model Construction Technique is given below:
 
 			\begin{minipage}{\textwidth}
 			\begin{lstlisting}[caption=Example for applying Bachmair and Ganzinger Model Construction Technique (SETUP),frame=single,mathescape]
@@ -214,7 +218,7 @@ Output: model
 
 	\subsubsection{Discussion on the Output}
 		\paragraph{}		
-		\textbf{The output of the Model Construction Technique} is the final one. It gives back the positive literals in the constructed explicit model. An Example for the output is given below in \ref{list:model_example}.
+		The output of the Model Construction Technique is the final one. It gives back the positive literals in the constructed explicit model. An Example for the output is given below in \ref{list:model_example}.
 		
 		
 			\begin{minipage}{\textwidth}
@@ -224,9 +228,9 @@ Output: model
 		fly(t).
 			\end{lstlisting} 
 			\end{minipage}						
-		
-		
-		\textbf{Moreover, we augmented} the output with a visual part. It prints out a dot graph representing the positive clauses linked with the positive literal, that belongs to the model, that makes them true or satisfiable in other words. Example of the returned dot graph will be listed in \ref{list:dot_graph}, and a rendered Figure for the same graph will be in \ref{fig:dot_graph}.
+				
+		\paragraph{}
+		Moreover, we augmented the output with a visual part. It prints out a dot graph representing the positive clauses linked with the positive literal, that belongs to the model, that makes them true or satisfiable in other words. Example of the returned dot graph will be listed in \ref{list:dot_graph}, and a rendered Figure for the same graph will be in \ref{fig:dot_graph}.
 		
 			\begin{minipage}{\textwidth}
 			\begin{lstlisting}[caption=Example of returned dot graph,label={list:dot_graph},breaklines=true,frame=single]

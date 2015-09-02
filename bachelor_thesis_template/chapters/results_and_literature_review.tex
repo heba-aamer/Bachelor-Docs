@@ -2,11 +2,11 @@
 
 \section{Testing for termination}
 
-
-The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.0, and they were 267 problem. Only 109 were terminated within 5 minutes time limit. Tables ~\ref{table:sat_epr_results} and ~\ref{table:more_sat_epr_results} show detailed results of running all the 267 problem with the time needed to terminate the problem.
-
-
-Figure ~\ref{fig:res_dist} is a pie chart that shows the distribution of the terminated 109 problems with respect of rating of the problem. 
+\paragraph{}
+The tests ran over all the (counter) satisfiable \ac{epr} problems in TPTP v6.1.0, and they were 267 problem. Only 101, which represents 37.8\%, were terminated within 3 minutes time limit and 1GB memory limit. Table ~\ref{table:sat_epr_results} shows detailed results of running all the 267 problem with the time needed to terminate the problem.
+Another test were made but this time with 5 min. time limit and 2GB memory limit, and the results showed more 2 problems to terminate within that limit. Table ~\ref{table:more_sat_epr_results} shows the details of those 2 problems.
+\paragraph{}
+Figure ~\ref{fig:res_dist} is a pie chart that shows the distribution of the terminated 101 problems with respect of rating of the problem. 
 
 
 \begin{figure}[H]
@@ -27,26 +27,54 @@ Figure ~\ref{fig:res_dist} is a pie chart that shows the distribution of the ter
 %      16.51/0.17 Rating,
 %      1.83/0.33 Rating
     \pie[values of coltello/.style={pos=1.1}]%
-        {}{81.65/comet,16.51/sedia,1.83/coltello}
+        {}{81.19/comet,18.81/coltello}
    
     \legend[shift={(-1.5cm,-1cm)}]{{0.00 Rating}/comet}
-    \legend[shift={(0cm,-1cm)}]{{0.17 Rating}/sedia}
-    \legend[shift={(1.5cm,-1cm)}]{{0.33 Rating}/coltello}
+    %\legend[shift={(0cm,-1cm)}]{{0.17 Rating}/sedia}
+    \legend[shift={(1.5cm,-1cm)}]{{0.17 Rating}/coltello}
 
 \end{tikzpicture}
 \caption{Distribution of terminated problems over different ratings\label{fig:res_dist}}
 \end{figure}
 
+\paragraph{}
+Table \ref{table:category_solved} shows how many problems were terminated in each category.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|| c | c | c ||}
+		\toprule
+		Category & Number of problems & Number of problems terminated \\
+		\midrule
+		GRP & 50 & 15 \\
+		HWV & 24 & 0 \\
+		MGT & 2 & 0 \\
+		NLP & 22 & 22 \\
+		PUZ & 13 & 9 \\
+		SYN & 114 & 32 \\
+		HWC & 1 & 1 \\
+		KRS & 24 & 19 \\
+		MSC & 1 & 0 \\
+		PLA & 4 & 0 \\
+		SWB & 3 & 3 \\
+		SYO & 9 & 0 \\
+		\midrule
+		Sum & 276 & 101 \\ 
+		\bottomrule
+	\end{tabular}
+	\caption{Problems solved per category}
+	\label{table:category_solved}
+\end{table}
 
-
+\paragraph{}
 Some random problems were chosen to be tested thoroughly. SYN867-1 was one of them that gave interesting and weird results. The normal problem specification given to the prover terminated in 0.046s, however, when the transformed set was given to the prover, it did not terminate till 1000 seconds passed. So this shows that transformations may add a burden over the prover itself, since the transformations add a lot of new clauses to original problem specification. In the case of SYN867-1 problem, the original specification composed of 58 clauses, however it increased tremendously after the transformations to be 722.
 
 
 
-\section{Testing for Model}
+\section{Testing for Model}\label{sec:test_model}
+\paragraph{}
+11 problems were chosen to test their explicit model; one time with applying the transformations, another time without applying them. The models in the 2 cases were exactly the same, the only difference was that the models with the transformations included extra elements for the domain predict introduced in the transformations. Also it is notable that the all 11 problems were almost range restricted from the beginning.
 
-12 problems were chosen to test their explicit model; one time with applying the transformations, another time without applying them. The models in the 2 cases were exactly the same, the only difference was that the models with the transformations included extra elements for the domain predict introduced in the transformations. Also it is notable that the all 12 problems were almost range restricted from the beginning.
-
+\paragraph{}
 Those problems with their rating are listed in the below table:
 
 \begin{table}[H]
@@ -59,8 +87,8 @@ Those problems with their rating are listed in the below table:
 		PUZ028-1.p      &  0.00  &  PUZ028-2.p      &  0.00 \\
 		PUZ028-3.p      &  0.00  &  PUZ028-4.p      &  0.00 \\
 		PUZ068+2.p      &  0.00  &  PUZ069+2.p      &  0.00 \\
-		HWC004-1.p      &  0.00  &  GRP123-8.004.p  &  0.17 \\
 		GRP125-4.004.p  &  0.17  &  GRP128-4.004.p  &  0.17 \\		
+		GRP123-8.004.p  &  0.17  &                  &       \\
 		\bottomrule
 	\end{tabular}
 	\caption{Problems used to test the Model}

@@ -1,4 +1,5 @@
 \chapter{Testing, Validation and Evaluation}\label{chap:test_and_val}
+\paragraph{}
 Here in this chapter, we explain what was done for validating the output and Evaluating the program. So we divide this chapter into two sections:
 \begin{itemize}
 	\item Validating and Evaluating the Simplified Transformations.
@@ -8,10 +9,12 @@ Here in this chapter, we explain what was done for validating the output and Eva
 \section{Simplified Transformations}
 
 \subsection{Evaluating Memory Efficiency}\label{sub:val_tran_mem}
-The first part of the implementation which is related to applying the transformations to the the clause set introduces no memory leaks to the whole program.
+\paragraph{}
+The first part of the implementation which is related to applying the transformations to the clause set introduces no memory leaks to the whole program.
 %TODO add number of problems checked upon
 
 
+\paragraph{}
 Tools to check this:
 \begin{enumerate}
 	\item Script implemented in E for giving a summary on the allocated and de-allocated memory structures, and the results showed that they are equal.
@@ -30,20 +33,23 @@ Tools to check this:
 
 
 \subsection{Accuracy of the transformations}
-In all tested problems, The results of the Transformations were the same as an implemented program called Yarralumla \url{http://users.cecs.anu.edu.au/~baumgart/systems/yarralumla/}, implemented by Peter Baumgartner, one of the authors of \cite{BMUG06}. So we believe it is correct.
+\paragraph{}
+We tested the transformations over 204 out of 267 of the TPTP EPR SAT problems only over the \acf{rr} procedure. The results of the transformations were exactly the same, except one, as a Prolog program called Yarralumla \url{http://users.cecs.anu.edu.au/~baumgart/systems/yarralumla/}, implemented by Peter Baumgartner, one of the authors of \cite{BMUG06}. It worth mentioning that in our implementation we made an enhancement to the second step in the \ac{crr} transformation, which is the term abstraction step. According to the definition of second step, a clause like $~P(a)|~R(X)$ would result in the following two clauses $dom(a)|~P(X)$ and $dom(X)|~R(X)$. We only generated the first of them that gives the domain element a constant. The reason why we did that since the second clause is redundant with the definition of the forth step in \ac{rr}. For the mentioned above clause, The following clauses would be generated from the forth step $dom(X)|~P(X)$ and $dom(X)|~R(X)$. So we only added the second clause in the forth step not in both the first and the forth steps. However, this modification did not affect the accuracy of the transformations. And only the absence of some redundant clauses were the difference between our implementation and Yarralumla's one.
 
-In order to check the correctness of the transformations, we implemented a c program "tptp2tme" that takes a tptp problem and then transform it to tme syntax, which is extended prolog language and the one used in the yarralumla program. Then we applied yarralumla to the outputed problem and Our transformations to the original tptp problem. Afterwards, we compared the output of both implementations. In all tested problems they were exactly the same. So we believe in this case our implementation is correct.
+\paragraph{}
+We only tested over 204 of the 267 since the number of clauses in all of the remaining 63 problems exceeded 900 and that makes the program that transforms the two outputs to the same language crashes. But since in the rest of the 204 problems, 203 of them it was correct. Then we believe that our implementation is correct. The only problem that had a difference was HWC004-1.p. The reason for the difference between the two implementations was that in its SPC it is $CNF\char`_SAT\char`_EPR$. However, it is not an \ac{epr} problem since it contained function symbols. So this problem should not count in the $EPR\char`_SAT$ set. Details of the steps done in testing the accuracy of the transformations could be found in appendix \ref{chap:appendix_valid}.
 
 
 \section{Bachmair and Ganzinger Model Construction Technique}
 \subsection{Evaluating Memory Efficiency}
-The same tools mentioned for The Transformations in \ref{sub:val_tran_mem} part were used. And the same results were achieved for the Implemented Model Construction Technique.
+\paragraph{}
+The same tools mentioned for the transformations in \ref{sub:val_tran_mem} part were used. And the same results were achieved for the implemented model construction technique.
 
 
-
+\begin{comment}
 \subsection{Complexity of the algorithm}
-
+\end{comment}
 
 
 \subsection{Accuracy of Implementation}
-To Be added later 
+The accuracy of the implementation were done manually for 11 problems. Those 11 problems will be mentioned in \ref{sec:test_model}. 

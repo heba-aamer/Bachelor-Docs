@@ -10,6 +10,8 @@
 % \setlength{\headheight}{20pt} 
 % \usepackage{graphics}
 
+%\usepackage{tocloft}
+
 \usepackage{graphicx}
 \usepackage{float}
 %\usepackage{subfig}
@@ -34,7 +36,18 @@
 \usepackage{pgfplots}
 \usepackage[T1]{fontenc}
 
+\usepackage{fancyhdr}
+\usepackage{titlesec}
 
+%
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+%\usepackage{fontspec}
+
+%\setromanfont{Times New Roman}
+%\setsansfont{Arial}
+%\setmonofont[Color={0019D4}]{Courier New}
 
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -126,7 +139,10 @@
 
 %\graphicspath{{<~/home/mohammed/Desktop/bachelor_thesis_template/>}}%added
 
-\newcommand{\submissionDay}{XX}
+%\newcommand{\noaddvspace}{\renewcommand{\addvspace}[1]{}}
+
+
+\newcommand{\submissionDay}{31}
 \newcommand{\submissionMonth}{August}
 \newcommand{\submissionYear}{2015}
 \newcommand{\submissionDate}{\submissionDay~\submissionMonth,~\submissionYear}
@@ -176,6 +192,9 @@
 }
 \fi
 
+
+%\setlength{\parskip}{0.1em}
+
 \begin{document}
 % \overfullrule=5pt
 \pagestyle{plain}
@@ -190,10 +209,17 @@
 % \addcontentsline{toc}{chapter}{Contents}
 \clearpage 
 
-\pagestyle{headings}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\nouppercase\leftmark}
+\fancyhead[OR]{\nouppercase\rightmark}
+\fancyhead[ER,OL]{\thepage}
+
+%\pagestyle{headings}
 \pagenumbering{arabic}
 
-% \setlength\parskip{15pt}
+% \setlength\parskip{8pt}
 \setlength\parskip{.5\baselineskip plus .2\baselineskip
 	minus .4\baselineskip}
 % \setlength\parskip{.5\baselineskip \@plus .1\baselineskip \@minus ..1\baselineskip}
