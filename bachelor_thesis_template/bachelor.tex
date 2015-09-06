@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, oneside]{book}%, oneside to be removed if printing needed
+\documentclass[12pt, a4paper]{book}%, oneside to be removed if printing needed
 
 \usepackage{longtable}
 \usepackage[headings]{fullpage}
@@ -38,6 +38,8 @@
 
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+
+\usepackage[bottom]{footmisc}
 
 %
 \titleformat{\section}
@@ -148,7 +150,7 @@
 \newcommand{\submissionDate}{\submissionDay~\submissionMonth,~\submissionYear}
 \newcommand{\typeOfThesis}{Bachelor Thesis}
 
-\newcommand{\titleOfThesisOne}{Mission impossible: Disproving failed conjectures}
+\newcommand{\titleOfThesisOne}{Mission Impossible: Disproving Failed Conjectures}
 
 \newcommand{\authorOfThesis}{Heba Aamer Anwar Mohamed}
 \newcommand{\supervisorOne}{Professor Dr. Stephan Schulz}
@@ -192,8 +194,11 @@
 }
 \fi
 
+%
+%\setlength{\parskip}{0.01pt}
+\setlength{\parindent}{12pt}
 
-%\setlength{\parskip}{0.1em}
+\raggedbottom
 
 \begin{document}
 % \overfullrule=5pt
@@ -213,8 +218,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[EL]{\nouppercase\leftmark}
-\fancyhead[OR]{\nouppercase\rightmark}
-\fancyhead[ER,OL]{\thepage}
+\fancyhead[OR]{\nouppercase\leftmark}
+\fancyhead[EC,OC]{\thepage}
 
 %\pagestyle{headings}
 \pagenumbering{arabic}
@@ -223,6 +228,9 @@
 \setlength\parskip{.5\baselineskip plus .2\baselineskip
 	minus .4\baselineskip}
 % \setlength\parskip{.5\baselineskip \@plus .1\baselineskip \@minus ..1\baselineskip}
+
+
+\nocite{*}
 
 
 \include{chapters/introduction}
